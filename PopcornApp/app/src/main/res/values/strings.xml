@@ -4,4 +4,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="fname">First Name:</string>
+    <string name="lname">Last Name:</string>
+    <string name="address">Address:</string>
+    <string name="city">City:</string>
+    <string name="state">State:</string>
+    <string name="zip">Zip Code:</string>
+    <string name="phone">Phone Number:</string>
+    <string name="email">E-mail:</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
 </resources>
