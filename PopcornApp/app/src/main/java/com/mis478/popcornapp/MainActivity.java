@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.content.Intent;
 
 public class MainActivity extends ActionBarActivity {
-    public final static String EXTRA_MESSAGE = "com.example.joe.MESSAGE";
+    public final static String EXTRA_MESSAGE = "com.mis478.popcornapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
