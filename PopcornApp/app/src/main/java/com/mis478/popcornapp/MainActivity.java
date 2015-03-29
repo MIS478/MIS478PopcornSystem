@@ -46,6 +46,10 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.scoutGoal) {
+            Intent intent = new Intent(this, ScoutGoal.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }

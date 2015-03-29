@@ -1,17 +1,32 @@
 package com.mis478.popcornapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 public class ScoutGoal extends ActionBarActivity {
+    int PersonalGoalInt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_goal);
+        Intent intent = getIntent();
+        TextView textView = (TextView) findViewById(R.id.PersonalAmt);
+        String message = textView.getText().toString();
+        PersonalGoalInt=Integer.parseInt(message.replaceAll("[\\D]", ""));
+        TextView textView2 = (TextView) findViewById(R.id.TotalSoldAmt);
+        String message2 = textView2.getText().toString();
+        int i=Integer.parseInt(message2.replaceAll("[\\D]", ""));
+        ProgressBar progressBar = (ProgressBar) findViewById(R.id.SaleProgressBar);
+        progressBar.setMax(PersonalGoalInt);
+        progressBar.setProgress(i);
+
     }
 
 
