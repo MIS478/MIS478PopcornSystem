@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mis478.popcornapp" >
+    package="com.mis478.popcornapp"
+    android:versionCode="1"
+    android:versionName="0.0.1">
 
     <application
         android:allowBackup="true"
@@ -31,6 +33,22 @@
         <activity
             android:name=".ScoutGoal"
             android:label="@string/title_activity_scout_goal"
+            android:parentActivityName=".DisplayMessageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DisplayMessageActivity" />
+        </activity>
+        <activity
+            android:name=".DeliveryMode"
+            android:label="@string/title_activity_delivery_mode"
+            android:parentActivityName=".DisplayMessageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DisplayMessageActivity" />
+        </activity>
+        <activity
+            android:name=".PastSales"
+            android:label="@string/title_activity_past_sales"
             android:parentActivityName=".DisplayMessageActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
