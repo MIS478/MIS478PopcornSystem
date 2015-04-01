@@ -16,4 +16,6 @@
     <string name="back">Back</string>
     <string name="title_activity_customer_info">Customer Information</string>
     <string name="title_activity_scout_goal">Goal</string>
+    <string name="title_activity_delivery_mode">DeliveryMode</string>
+    <string name="title_activity_past_sales">PastSales</string>
 </resources>
