@@ -9,4 +9,6 @@
         android:orderInCategory="102" app:showAsAction="never" />
     <item android:id="@+id/pastSales" android:title="Past Sales"
         android:orderInCategory="103" app:showAsAction="never" />
+    <item android:id="@+id/denLeaderMain" android:title="Den Leader Main"
+        android:orderInCategory="103" app:showAsAction="never" />
 </menu>

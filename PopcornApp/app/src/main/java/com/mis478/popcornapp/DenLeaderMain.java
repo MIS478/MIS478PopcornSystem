@@ -16,6 +16,9 @@ public class DenLeaderMain extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.denleadermain);
+
+        //Get info from the previous screen
+        Intent intent = getIntent();
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

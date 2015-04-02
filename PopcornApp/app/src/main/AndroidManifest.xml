@@ -54,6 +54,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.DisplayMessageActivity" />
         </activity>
+        <activity
+            android:name=".DenLeaderMain"
+            android:label="@string/title_activity_DenLeaderMain"
+            android:parentActivityName=".DisplayMessageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DisplayMessageActivity" />
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
