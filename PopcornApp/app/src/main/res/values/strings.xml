@@ -19,4 +19,6 @@
     <string name="title_activity_delivery_mode">DeliveryMode</string>
     <string name="title_activity_past_sales">PastSales</string>
     <string name="title_activity_DenLeaderMain">Den Leader Main</string>
+    <string name="title_activity_den_sales_tracking" />
+    <string name="title_activity_view_scouts" />
 </resources>

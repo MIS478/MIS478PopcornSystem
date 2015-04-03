@@ -62,6 +62,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.DisplayMessageActivity" />
         </activity>
+        <activity
+            android:name=".DenSalesTracking"
+            android:label="@string/title_activity_den_sales_tracking"
+            android:parentActivityName=".DisplayMessageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DisplayMessageActivity" />
+        </activity>
+        <activity
+            android:name=".ViewScouts"
+            android:label="@string/title_activity_view_scouts"
+            android:parentActivityName=".DisplayMessageActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DisplayMessageActivity" />
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
