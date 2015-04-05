@@ -1,5 +1,6 @@
 package com.mis478.popcornapp;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,8 +11,9 @@ import android.widget.EditText;
 import android.content.Intent;
 
 public class MainActivity extends ActionBarActivity {
-    public final static String EXTRA_MESSAGE = "com.mis478.popcornapp.MESSAGE";
-
+   // public final static String EXTRA_MESSAGE = "com.mis478.popcornapp.MESSAGE";
+    Integer x = 1;
+    Integer y = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,14 +22,39 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, ScoutStatusPage.class);
         EditText editText = (EditText) findViewById(R.id.editText);
+        EditText pass = (EditText) findViewById(R.id.editText2);
         String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+        String testUN = "test";
+        String passmessage = pass.getText().toString();
+        if (message.equals("test") && passmessage.equals("123") ) {
+            startActivity(intent);
+        } else { new AlertDialog.Builder(this)
+                .setTitle("Incorrect login")
+                .setMessage("You entered the wrong password or username")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
+        }
+    }
+    public void clrUN(View view) {
+        EditText username = (EditText) findViewById(R.id.editText);
+        //so it doesn't reset if they hit it again
+        if (x == 1) {
+            username.setText("");
+            x++;
+        }
 
     }
-
+    public void clrPASS(View view) {
+        EditText pass = (EditText) findViewById(R.id.editText2);
+        //so it doesn't reset if they hit it again
+        if (y == 1) {
+            pass.setText("");
+            y++;
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -5,23 +5,25 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
 
 
-public class DisplayMessageActivity extends ActionBarActivity {
+public class ScoutMainPage extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle("Hooray it worked if you're seeing this");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_message);
+        setContentView(R.layout.activity_scout_main_page);
     }
 
-
+    public void Sales(View view) {
+        Intent back = new Intent(this, SalesMode.class);
+        startActivity(back);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_display_message, menu);
+        getMenuInflater().inflate(R.menu.menu_scout_main_page, menu);
         return true;
     }
 

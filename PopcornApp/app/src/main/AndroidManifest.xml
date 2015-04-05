@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mis478.popcornapp"
     android:versionCode="3"
-    android:versionName="0.0.2">
+    android:versionName="0.0.2" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -78,8 +80,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.DisplayMessageActivity" />
         </activity>
+        <activity
+            android:name=".ScoutStatusPage"
+            android:label="@string/title_activity_scout_status_page" >
+        </activity>
+        <activity
+            android:name=".ScoutMainPage"
+            android:label="@string/title_activity_scout_main_page" >
+        </activity>
+        <activity
+            android:name=".SalesMode"
+            android:label="@string/title_activity_sales_mode" >
+        </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

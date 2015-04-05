@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.mis478.popcornapp.ScoutStatusPage"
+    android:id="@+id/plz"
+    android:clickable="true"
+    android:nestedScrollingEnabled="false"
+    android:onClick="Next">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome Scout:"
+        android:id="@+id/Weclome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scout name from Server"
+        android:id="@+id/ScoutNameInput"
+        android:layout_alignBottom="@+id/Weclome"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Total Sales are: "
+        android:id="@+id/TotalSales"
+        android:layout_below="@+id/Weclome"
+        android:layout_alignLeft="@+id/Weclome"
+        android:layout_alignStart="@+id/Weclome"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total from server"
+        android:id="@+id/TotalSalesInput"
+        android:layout_alignBottom="@+id/TotalSales"
+        android:layout_alignRight="@+id/ScoutNameInput"
+        android:layout_alignEnd="@+id/ScoutNameInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Personal Goal:"
+        android:id="@+id/PersonalGoal"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/TotalSalesInput"
+        android:layout_alignLeft="@+id/TotalSales"
+        android:layout_alignStart="@+id/TotalSales" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Den Goal:"
+        android:id="@+id/DenGoal"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/PersonalGoal"
+        android:layout_alignLeft="@+id/PersonalGoal"
+        android:layout_alignStart="@+id/PersonalGoal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="--------------------------------------------"
+        android:id="@+id/TopBorder"
+        android:layout_below="@+id/PlaceHolderLB"
+        android:layout_alignRight="@+id/TopSeller"
+        android:layout_alignEnd="@+id/TopSeller"
+        android:layout_marginTop="92dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="--------------------------------------------"
+        android:id="@+id/BottomBorder"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/TopSeller"
+        android:layout_alignEnd="@+id/TopSeller" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Leader Board"
+        android:id="@+id/PlaceHolderLB"
+        android:layout_below="@+id/BottomBorder"
+        android:layout_alignLeft="@+id/ScoutNameInput"
+        android:layout_alignStart="@+id/ScoutNameInput"
+        android:layout_marginTop="94dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="The Current Top Seller!"
+        android:id="@+id/TopSeller"
+        android:layout_above="@+id/TopSellerInput"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Seller/photo?"
+        android:id="@+id/TopSellerInput"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/TotalSales"
+        android:layout_toEndOf="@+id/TotalSales"
+        android:layout_marginBottom="53dp" />
+
+</RelativeLayout>

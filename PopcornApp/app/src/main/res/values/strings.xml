@@ -21,4 +21,7 @@
     <string name="title_activity_DenLeaderMain">Den Leader Main</string>
     <string name="title_activity_den_sales_tracking" />
     <string name="title_activity_view_scouts" />
+    <string name="title_activity_scout_status_page">ScoutStatusPage</string>
+    <string name="title_activity_scout_main_page">ScoutMainPage</string>
+    <string name="title_activity_sales_mode">SalesMode</string>
 </resources>
