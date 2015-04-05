@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/scoutGoal" android:title="Scout Goal"
+        android:orderInCategory="101" app:showAsAction="never" />
+    <item android:id="@+id/deliveryMode" android:title="Delivery Mode"
+        android:orderInCategory="102" app:showAsAction="never" />
+    <item android:id="@+id/pastSales" android:title="Past Sales"
+        android:orderInCategory="103" app:showAsAction="never" />
+    <item android:id="@+id/denLeaderMain" android:title="Den Leader Main"
+        android:orderInCategory="103" app:showAsAction="never" />
+</menu>
