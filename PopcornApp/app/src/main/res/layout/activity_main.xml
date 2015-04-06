@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to the Cub Scout App"
+        android:text="Welcome to the Cub Scout App(test/123)"
         android:id="@+id/WelcomeBanner"
         android:layout_marginTop="71dp"
         android:layout_alignParentTop="true"

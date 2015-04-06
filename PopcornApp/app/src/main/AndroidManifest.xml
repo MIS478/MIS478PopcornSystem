@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mis478.popcornapp"
-    android:versionCode="3"
-    android:versionName="0.0.2" >
+    android:versionCode="4"
+    android:versionName="0.1" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -91,6 +91,14 @@
         <activity
             android:name=".SalesMode"
             android:label="@string/title_activity_sales_mode" >
+        </activity>
+        <activity
+            android:name=".DeliveryCustomerInfo"
+            android:label="@string/title_activity_delivery_customer_info"
+            android:parentActivityName=".DeliveryMode" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DeliveryMode" />
         </activity>
     </application>
 

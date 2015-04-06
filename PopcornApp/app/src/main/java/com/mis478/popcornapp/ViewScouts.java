@@ -33,7 +33,7 @@ public class ViewScouts extends ActionBarActivity
         Intent intent = getIntent();
 
         // get the listview
-        expListView = (ExpandableListView) findViewById(R.id.DeliveryExpandableListView);
+        expListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
         prepareListData();

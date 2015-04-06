@@ -24,4 +24,5 @@
     <string name="title_activity_scout_status_page">ScoutStatusPage</string>
     <string name="title_activity_scout_main_page">ScoutMainPage</string>
     <string name="title_activity_sales_mode">SalesMode</string>
+    <string name="title_activity_delivery_customer_info">Delivery Customer Info</string>
 </resources>
