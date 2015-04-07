@@ -100,6 +100,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.DeliveryMode" />
         </activity>
+        <activity
+            android:name=".Donation"
+            android:label="@string/title_activity_donation"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".OrderFinalization"
+            android:label="@string/title_activity_order_finalization" >
+        </activity>
+        <activity
+            android:name=".ViewProducts"
+            android:label="@string/title_activity_view_products"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
