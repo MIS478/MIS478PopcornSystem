@@ -24,10 +24,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Den Sales Tracking"
+            android:onClick="sendMessage"
             android:id="@+id/button2"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:clickable="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -36,6 +38,7 @@
             android:id="@+id/button3"
             android:layout_alignTop="@+id/button2"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:clickable="true" />
     </RelativeLayout>
 </LinearLayout>

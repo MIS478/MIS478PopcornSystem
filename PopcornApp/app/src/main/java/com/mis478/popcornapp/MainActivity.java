@@ -89,6 +89,10 @@ public class MainActivity extends ActionBarActivity {
             Intent intent = new Intent(this, DenLeaderMain.class);
             startActivity(intent);
         }
+        if (id == R.id.den_sales_tracking) {
+            Intent intent = new Intent(this, DenSalesTracking.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
