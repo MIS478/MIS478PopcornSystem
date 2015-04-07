@@ -693,7 +693,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="244dp"
-        android:id="@+id/">
+        android:id="@+id/brandonadded6">
 
         <Button
             android:layout_width="wrap_content"
