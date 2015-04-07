@@ -5,9 +5,23 @@
     android:orientation="vertical"
     android:background="#f4f4f4" >
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Den Leader Main"
+        android:id="@+id/button11"
+        android:layout_gravity="right" />
+
     <ExpandableListView
         android:id="@+id/lvExp"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
+        android:layout_width="wrap_content"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="71dp"
+        android:text="New Button"
+        android:id="@+id/button10"
+        android:layout_gravity="right" />
 
 </LinearLayout>

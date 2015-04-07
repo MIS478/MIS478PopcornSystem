@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by Lloyd on 3/29/2015.
@@ -18,6 +19,11 @@ public class DenSalesTracking extends ActionBarActivity
 
         //Get info from the previous screen
         Intent intent = getIntent();
+    }
+    public void sendMessage (View view)
+    {
+        Intent intent = new Intent(this, DenLeaderMain.class);
+        startActivity(intent);
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

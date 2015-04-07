@@ -64,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Den Leader Main Menu"
+            android:onClick="sendMessage"
             android:id="@+id/button4"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
