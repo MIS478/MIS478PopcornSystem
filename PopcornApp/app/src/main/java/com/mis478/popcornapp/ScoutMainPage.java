@@ -20,6 +20,37 @@ public class ScoutMainPage extends ActionBarActivity {
         Intent back = new Intent(this, SalesMode.class);
         startActivity(back);
     }
+    public void Donation(View view) {
+
+        Intent donate = new Intent(this, Donation.class);
+        startActivity(donate);
+    }
+    public void Delivery(View view) {
+        Intent x = new Intent(this, DeliveryMode.class);
+        startActivity(x);
+    }
+    public void Status(View view) {
+        Intent x = new Intent(this, ScoutStatusPage.class);
+        startActivity(x);
+    }
+    public void Log(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+    public void Past(View view) {
+        Intent x = new Intent(this, PastSales.class);
+        startActivity(x);
+    }
+    public void View(View view) {
+
+         Intent x = new Intent(this, ViewProducts.class);
+        startActivity(x);
+    }
+    public void Goal(View view) {
+        Intent x = new Intent(this, ScoutGoal.class);
+        startActivity(x);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

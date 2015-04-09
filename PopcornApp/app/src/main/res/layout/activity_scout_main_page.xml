@@ -19,20 +19,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sales Tracking"
-        android:id="@+id/Tracking"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Goals"
         android:id="@+id/GoalBtn"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="Goal" />
 
     <Button
         android:layout_width="wrap_content"
@@ -40,9 +32,6 @@
         android:text="Sales Mode"
         android:id="@+id/SalesModeBtn"
         android:layout_marginTop="293dp"
-        android:layout_below="@+id/Tracking"
-        android:layout_alignRight="@+id/Tracking"
-        android:layout_alignEnd="@+id/Tracking"
         android:onClick="Sales" />
 
     <Button
@@ -52,7 +41,8 @@
         android:id="@+id/DonateBtn"
         android:layout_alignTop="@+id/SalesModeBtn"
         android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignStart="@+id/textView"
+        android:onClick="Donation" />
 
     <Button
         android:layout_width="wrap_content"
@@ -62,7 +52,8 @@
         android:layout_alignBottom="@+id/DonateBtn"
         android:layout_toRightOf="@+id/textView"
         android:layout_toLeftOf="@+id/GoalBtn"
-        android:layout_toStartOf="@+id/GoalBtn" />
+        android:layout_toStartOf="@+id/GoalBtn"
+        android:onClick="View" />
 
     <Button
         android:layout_width="wrap_content"
@@ -72,7 +63,8 @@
         android:layout_below="@+id/SalesModeBtn"
         android:layout_alignLeft="@+id/SalesModeBtn"
         android:layout_alignStart="@+id/SalesModeBtn"
-        android:layout_marginTop="55dp" />
+        android:layout_marginTop="55dp"
+        android:onClick="Delivery" />
 
     <Button
         android:layout_width="wrap_content"
@@ -80,7 +72,8 @@
         android:text="Status"
         android:id="@+id/StatusBtn"
         android:layout_alignTop="@+id/DeliverBtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="Status" />
 
     <Button
         android:layout_width="wrap_content"
@@ -89,7 +82,8 @@
         android:id="@+id/PastBtn"
         android:layout_alignTop="@+id/StatusBtn"
         android:layout_alignRight="@+id/ViewProductsBtn"
-        android:layout_alignEnd="@+id/ViewProductsBtn" />
+        android:layout_alignEnd="@+id/ViewProductsBtn"
+        android:onClick="Past" />
 
     <Button
         android:layout_width="wrap_content"
@@ -98,5 +92,6 @@
         android:id="@+id/LogoutBtn"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="Log" />
 </RelativeLayout>
