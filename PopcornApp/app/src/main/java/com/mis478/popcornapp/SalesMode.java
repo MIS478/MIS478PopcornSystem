@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -20,6 +21,7 @@ public class SalesMode extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_mode);
+
     }
     public void Back(View view) {
         Intent back = new Intent(this, ScoutMainPage.class);
@@ -38,7 +40,7 @@ public class SalesMode extends ActionBarActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
-    public void Final(View view) {
+    public void CustInfo(View view) {
         //to cust info
 
         Intent intent = new Intent(this, CustomerInfo.class);

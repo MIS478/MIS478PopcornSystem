@@ -50,10 +50,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Finalize Sale"
-        android:id="@+id/FinalBtn"
+        android:text="@string/next"
+        android:id="@+id/SalesNextButton"
         android:clickable="true"
-        android:onClick="Final"
+        android:onClick="CustInfo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
