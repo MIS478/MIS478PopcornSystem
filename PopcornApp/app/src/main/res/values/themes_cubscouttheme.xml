@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="CubScoutTheme" parent="@style/_CubScoutTheme"/>
+
+  <style name="_CubScoutTheme" parent="Theme.AppCompat.Light">
+
+    <item name="android:editTextStyle">@style/EditTextCubScoutTheme</item>
+
+    <item name="android:textColorHighlight">#99ffbb33</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewCubScoutTheme</item>
+
+    <item name="android:checkboxStyle">@style/CheckBoxCubScoutTheme</item>
+
+    <item name="android:radioButtonStyle">@style/RadioButtonCubScoutTheme</item>
+
+    <item name="android:buttonStyle">@style/ButtonCubScoutTheme</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonCubScoutTheme</item>
+
+    <item name="android:spinnerStyle">@style/SpinnerCubScoutTheme</item>
+
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemCubScoutTheme</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarCubScoutTheme</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarCubScoutTheme</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleCubScoutTheme</item>
+
+    <item name="android:listViewStyle">@style/ListViewCubScoutTheme</item>
+
+    <item name="android:listViewWhiteStyle">@style/ListViewCubScoutTheme.White</item>
+
+    <item name="android:spinnerItemStyle">@style/SpinnerItemCubScoutTheme</item>
+
+  </style>
+    <!-- the theme applied to the application or activity -->
+    <style name="CustomActionBarTheme"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/actionbar_background</item>
+    </style>
+</resources>
