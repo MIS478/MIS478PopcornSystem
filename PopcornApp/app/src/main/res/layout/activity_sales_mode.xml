@@ -42,10 +42,10 @@
         android:layout_height="wrap_content"
         android:text="Total"
         android:id="@+id/TotalBtn"
+        android:onClick="Total"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/SMlbl"
-        android:layout_alignEnd="@+id/SMlbl"
-        android:onClick="Total" />
+        android:layout_toRightOf="@+id/DonateBtn"
+        android:layout_toEndOf="@+id/DonateBtn" />
 
     <Button
         android:layout_width="wrap_content"
@@ -63,23 +63,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/pop1btn"
         android:src="@mipmap/pop1"
-        android:layout_marginTop="54dp"
         android:onClick="one"
-        android:layout_below="@+id/textView2"
-        android:layout_toLeftOf="@+id/textView13"
-        android:layout_toStartOf="@+id/textView13" />
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pop2btn"
         android:src="@mipmap/pop2"
-        android:layout_alignTop="@+id/pop1btn"
-        android:layout_alignLeft="@+id/TotalBtn"
-        android:layout_alignStart="@+id/TotalBtn"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="45dp"
-        android:onClick="two" />
+        android:onClick="two"
+        android:layout_below="@+id/SMlbl"
+        android:layout_toRightOf="@+id/textView8"
+        android:layout_toEndOf="@+id/textView8" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,29 +85,28 @@
         android:text="Page 1"
         android:id="@+id/textView2"
         android:layout_below="@+id/SMlbl"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_toLeftOf="@+id/lbl1"
+        android:layout_toStartOf="@+id/lbl1" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pop3btn"
         android:src="@mipmap/pop3"
-        android:layout_marginTop="121dp"
-        android:layout_below="@+id/pop1btn"
-        android:layout_alignLeft="@+id/pop1btn"
-        android:layout_alignStart="@+id/pop1btn"
-        android:onClick="three" />
+        android:onClick="three"
+        android:layout_below="@+id/lbl1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pop4btn"
         android:src="@mipmap/pop4"
-        android:layout_alignTop="@+id/pop3btn"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:onClick="four" />
+        android:onClick="four"
+        android:layout_below="@+id/textView13"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -120,7 +116,8 @@
         android:id="@+id/textView3"
         android:layout_below="@+id/pop1btn"
         android:layout_alignLeft="@+id/pop1btn"
-        android:layout_alignStart="@+id/pop1btn" />
+        android:layout_alignStart="@+id/pop1btn"
+        android:textSize="17dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -128,9 +125,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Price: $5 "
         android:id="@+id/textView4"
-        android:layout_below="@+id/pop2btn"
-        android:layout_alignLeft="@+id/pop2btn"
-        android:layout_alignStart="@+id/pop2btn" />
+        android:textSize="17dp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toRightOf="@+id/textView8"
+        android:layout_toEndOf="@+id/textView8" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -140,7 +138,8 @@
         android:id="@+id/textView5"
         android:layout_below="@+id/pop3btn"
         android:layout_alignLeft="@+id/pop3btn"
-        android:layout_alignStart="@+id/pop3btn" />
+        android:layout_alignStart="@+id/pop3btn"
+        android:textSize="17dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -148,9 +147,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Price: $5 "
         android:id="@+id/textView6"
-        android:layout_below="@+id/pop4btn"
-        android:layout_alignLeft="@+id/pop4btn"
-        android:layout_alignStart="@+id/pop4btn" />
+        android:textSize="17dp"
+        android:layout_above="@+id/textView11"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -160,7 +160,11 @@
         android:id="@+id/textView8"
         android:layout_below="@+id/textView3"
         android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:layout_alignStart="@+id/textView3"
+        android:layout_toStartOf="@+id/textView10"
+        android:textSize="17dp"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_toLeftOf="@+id/textView10" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -168,9 +172,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Number Selected:"
         android:id="@+id/textView10"
+        android:textSize="17dp"
         android:layout_below="@+id/textView4"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
+        android:layout_alignRight="@+id/textView12"
+        android:layout_alignEnd="@+id/textView12" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -178,7 +183,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Number Selected:"
         android:id="@+id/textView11"
+        android:textSize="17dp"
         android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/textView8"
         android:layout_alignEnd="@+id/textView8" />
 
@@ -188,9 +196,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Number Selected:"
         android:id="@+id/textView12"
+        android:textSize="17dp"
         android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/textView10"
-        android:layout_alignStart="@+id/textView10" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -207,10 +216,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/lbl1"
         android:text="0"
-        android:layout_alignTop="@+id/textView13"
-        android:layout_toRightOf="@+id/textView3"
         android:layout_toEndOf="@+id/textView3"
-        android:editable="true" />
+        android:editable="true"
+        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:textSize="17dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -219,9 +230,13 @@
         android:id="@+id/lbl2"
         android:text="0"
         android:layout_alignTop="@+id/textView13"
-        android:layout_toRightOf="@+id/textView6"
-        android:layout_toEndOf="@+id/textView6"
-        android:editable="true" />
+        android:editable="true"
+        android:layout_above="@+id/pop4btn"
+        android:layout_alignLeft="@+id/pop2btn"
+        android:layout_alignStart="@+id/pop2btn"
+        android:layout_alignRight="@+id/lbl4"
+        android:layout_alignEnd="@+id/lbl4"
+        android:textSize="17dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -232,7 +247,10 @@
         android:layout_below="@+id/textView11"
         android:layout_alignLeft="@+id/lbl1"
         android:layout_alignStart="@+id/lbl1"
-        android:editable="true" />
+        android:editable="true"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:textSize="17dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -240,9 +258,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/lbl4"
         android:text="0"
-        android:layout_alignTop="@+id/lbl3"
-        android:layout_alignLeft="@+id/lbl2"
-        android:layout_alignStart="@+id/lbl2"
-        android:editable="true" />
+        android:editable="true"
+        android:layout_below="@+id/textView12"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12"
+        android:layout_toLeftOf="@+id/SalesNextButton"
+        android:layout_toStartOf="@+id/SalesNextButton"
+        android:textSize="17dp" />
 
 </RelativeLayout>
