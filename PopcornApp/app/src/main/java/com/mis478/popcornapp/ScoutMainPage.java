@@ -14,6 +14,9 @@ public class ScoutMainPage extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_main_page);
+
+        //Get info from the previous screen
+        Intent intent = getIntent();
     }
 
     public void Sales(View view) {

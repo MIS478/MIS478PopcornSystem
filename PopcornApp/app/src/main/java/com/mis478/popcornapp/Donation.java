@@ -1,5 +1,6 @@
 package com.mis478.popcornapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,10 +9,12 @@ import android.view.MenuItem;
 
 public class Donation extends ActionBarActivity {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation);
+
+        //Get info from the previous screen
+        Intent intent = getIntent();
     }
 
 

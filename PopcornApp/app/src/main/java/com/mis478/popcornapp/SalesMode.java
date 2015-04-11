@@ -17,41 +17,41 @@ public class SalesMode extends ActionBarActivity {
     Integer three = 0;
     Integer four = 0;
     Integer tot = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_mode);
+    }
 
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, Donation.class);
+        startActivity(intent);
     }
-    public void Back(View view) {
-        Intent back = new Intent(this, ScoutMainPage.class);
-        startActivity(back);
-    }
-    public void Donate(View view) {
-        // needs donate file
-        // Intent back = new Intent(this, Donate.class);
-        //startActivity(back);
-    }
+
     public void Total(View view) {
         //calculate total
         new AlertDialog.Builder(this)
                 .setTitle("Your total so far is")
-                .setMessage("$"+ tot.toString())
+                .setMessage("$" + tot.toString())
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
+
     public void CustInfo(View view) {
         //to cust info
 
         Intent intent = new Intent(this, CustomerInfo.class);
         startActivity(intent);
     }
+
     public void one(View view) {
         one++;
         TextView t = (TextView) findViewById(R.id.lbl1);
         t.setText(one.toString());
         tot = tot + 5;
     }
+
     public void two(View view) {
         two++;
         TextView r = (TextView) findViewById(R.id.lbl2);
@@ -65,12 +65,14 @@ public class SalesMode extends ActionBarActivity {
         t.setText(three.toString());
         tot = tot + 5;
     }
+
     public void four(View view) {
         four++;
         TextView t = (TextView) findViewById(R.id.lbl4);
         t.setText(four.toString());
         tot = tot + 5;
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -78,7 +80,6 @@ public class SalesMode extends ActionBarActivity {
         return true;
     }
 
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -89,7 +90,23 @@ public class SalesMode extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
+        if (id == R.id.BackBtn) {
+            Intent intent = new Intent(this, ScoutMainPage.class);
+            startActivity(intent);
+        }
+        if (id == R.id.DonateBtn) {
+            Intent intent = new Intent(this, Donation.class);
+            startActivity(intent);
+        }
+        if (id == R.id.TotalBtn) {
+            Intent intent = new Intent(this, OrderFinalization.class);
+            startActivity(intent);
+        }
+        //Put Next Page Here
+        if (id == R.id.TotalBtn) {
+            Intent intent = new Intent(this, Donation.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
-    }
+        }
 }
