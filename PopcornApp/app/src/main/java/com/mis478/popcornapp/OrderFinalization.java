@@ -1,9 +1,11 @@
 package com.mis478.popcornapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class OrderFinalization extends ActionBarActivity {
@@ -12,6 +14,15 @@ public class OrderFinalization extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_finalization);
+        Intent intent = getIntent();
+        //set the first name of customer
+        String message = intent.getStringExtra(CustomerInfo.test);
+        TextView fName = (TextView) findViewById(R.id.FinalizationFnameBox);
+        fName.setText(message);
+        //set the last name of customer
+        String message2 = intent.getStringExtra(CustomerInfo.test2);
+        TextView lName = (TextView) findViewById(R.id.FinalizationLnameBox);
+        lName.setText(message2);
     }
 
 
