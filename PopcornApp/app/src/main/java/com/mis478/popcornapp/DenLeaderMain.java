@@ -38,14 +38,14 @@ public class DenLeaderMain extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.button2) {
-            Intent intent = new Intent(this, DenSalesTracking.class);
-            startActivity(intent);
-        }
-        if (id == R.id.button3) {
-            Intent intent = new Intent(this, ScoutGoal.class);
-            startActivity(intent);
-        }
+//        if (id == R.id.button2) {
+//            Intent intent = new Intent(this, DenSalesTracking.class);
+//            startActivity(intent);
+//        }
+//        if (id == R.id.button3) {
+//            Intent intent = new Intent(this, ScoutGoal.class);
+//            startActivity(intent);
+//        }
         return super.onOptionsItemSelected(item);
     }
 }

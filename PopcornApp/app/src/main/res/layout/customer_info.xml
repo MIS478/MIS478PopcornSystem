@@ -40,7 +40,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/LnameBox"
+                    android:nextFocusRight="@id/LnameBox"/>
 
             </TableRow>
 
@@ -65,7 +67,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/AddressBox"
+                    android:nextFocusRight="@id/AddressBox"/>
 
             </TableRow>
 
@@ -89,7 +93,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPostalAddress"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/CityBox"
+                    android:nextFocusRight="@id/CityBox"/>
 
             </TableRow>
 
@@ -113,7 +119,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/StateBox"
+                    android:nextFocusRight="@id/StateBox"/>
             </TableRow>
 
             <TableRow
@@ -136,7 +144,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/ZipBox"
+                    android:nextFocusRight="@id/ZipBox"/>
             </TableRow>
 
             <TableRow
@@ -159,7 +169,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/PnumberBox"
+                    android:nextFocusRight="@id/PnumberBox"/>
             </TableRow>
 
             <TableRow
@@ -183,7 +195,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="phone"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/EmailBox"
+                    android:nextFocusRight="@id/EmailBox"/>
             </TableRow>
 
             <TableRow
@@ -207,7 +221,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/TextColor" />
+                    android:textColor="@color/TextColor"
+                    android:nextFocusDown="@+id/NextButton"
+                    android:nextFocusRight="@id/NextButton"/>
             </TableRow>
 
         </TableLayout>

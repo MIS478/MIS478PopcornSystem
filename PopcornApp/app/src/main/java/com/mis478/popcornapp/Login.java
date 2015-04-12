@@ -20,17 +20,17 @@ public class Login extends ActionBarActivity {
 
     }
 
-    public void sendMessage(View view) {
+    public void Login(View view) {
 
-        EditText editText = (EditText) findViewById(R.id.LoginUsername);
-        EditText pass = (EditText) findViewById(R.id.LoginPassword);
-        String message = editText.getText().toString();
-        String passmessage = pass.getText().toString();
-        if (message.equals("test") && passmessage.equals("123") ) {
+        EditText LoginEditText = (EditText) findViewById(R.id.LoginUsername);
+        EditText PasswordEditText = (EditText) findViewById(R.id.LoginPassword);
+        String LoginText = LoginEditText.getText().toString();
+        String PasswordText = PasswordEditText.getText().toString();
+        if (LoginText.equals("test") && PasswordText.equals("123") ) {
             Intent intent = new Intent(this, ScoutStatusPage.class);
             startActivity(intent);
         }
-        else if (message.equals("leader") && passmessage.equals("123"))
+        else if (LoginText.equals("leader") && PasswordText.equals("123"))
         {
             Intent intent = new Intent(this, DenLeaderMain.class);
             startActivity(intent);
