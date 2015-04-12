@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class CustomerInfo extends ActionBarActivity {
     public final static String test = "com.mis478.popcornapp.test";
-    public final static String test2 = "com.mis478.popcornapp.test";
+    public final static String test2 = "com.mis478.popcornapp.test2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,10 @@ public class CustomerInfo extends ActionBarActivity {
     }
     public void ToFinalize(View view)
     {
+        //when the "Next" button is hit it creates an intent
         Intent finalize = new Intent(this, OrderFinalization.class);
+
+        //finds the EditText boxes on the screen that contain the Customer's info
         EditText fName = (EditText) findViewById(R.id.FnameBox);
         EditText lName = (EditText) findViewById(R.id.LnameBox);
         EditText address = (EditText) findViewById(R.id.AddressBox);
@@ -30,6 +33,8 @@ public class CustomerInfo extends ActionBarActivity {
         EditText zip = (EditText) findViewById(R.id.ZipBox);
         EditText phoneNumber = (EditText) findViewById(R.id.PnumberBox);
         EditText email = (EditText) findViewById(R.id.EmailBox);
+
+        //parses the EditText into a string
         String fNameText = fName.getText().toString();
         String lNameText = lName.getText().toString();
         String addressText = address.getText().toString();
@@ -38,8 +43,12 @@ public class CustomerInfo extends ActionBarActivity {
         String zipText = zip.getText().toString();
         String phoneNumberText = phoneNumber.getText().toString();
         String emailText = email.getText().toString();
+
+        //attaches the customers info to the intent
         finalize.putExtra(test, fNameText);
         finalize.putExtra(test2, lNameText);
+
+        //starts the next screen
         startActivity(finalize);
     }
     public void ToProducts(View view)

@@ -27,7 +27,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/fname"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/cubscouttheme_color" />
+                    android:textColor="@color/white"
+                    android:paddingLeft="15dp" />
 
                 <EditText
                     android:id="@+id/FnameBox"
