@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
-        android:layout_height="218dp"
+        android:layout_height="137dp"
         android:layout_column="18"
         android:layout_gravity="center_horizontal"
         android:text="Donations"
@@ -815,7 +815,9 @@
             android:layout_column="0"
             android:layout_gravity="bottom"
             android:clickable="true"
-            android:text="@string/back" />
+            android:text="@string/back"
+            android:onClick="ScoutMain" />
+
 
         <GridLayout
             android:layout_width="match_parent"
@@ -829,6 +831,7 @@
                 android:layout_gravity="right|bottom"
                 android:layout_row="29"
                 android:clickable="true"
+                android:onClick="CustomerInfo"
                 android:text="@string/next" />
         </GridLayout>
     </TableRow>
