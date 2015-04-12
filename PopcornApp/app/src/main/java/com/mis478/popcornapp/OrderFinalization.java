@@ -3,8 +3,10 @@ package com.mis478.popcornapp;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -15,35 +17,58 @@ public class OrderFinalization extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_finalization);
         Intent intent = getIntent();
-        //set the first name of customer
-        String message = intent.getStringExtra(CustomerInfo.test);
+        //Fills in the first name of customer
+        String fNamemessage = intent.getStringExtra(CustomerInfo.fNameIntent);
         TextView fName = (TextView) findViewById(R.id.FinalizationFnameBox);
-        fName.setText(message);
-        //set the last name of customer
-        String message2 = intent.getStringExtra(CustomerInfo.test2);
+        fName.setText(fNamemessage);
+        //Fills in the last name of customer
+        String lNamemessage = intent.getStringExtra(CustomerInfo.lNameIntent);
         TextView lName = (TextView) findViewById(R.id.FinalizationLnameBox);
-        lName.setText(message2);
-    }
+        lName.setText(lNamemessage);
+        //Fills in the address of customer
+        String addressmessage = intent.getStringExtra(CustomerInfo.addressIntent);
+        TextView address = (TextView) findViewById(R.id.FinalizationAddress);
+        address.setText(addressmessage);
+        //Fills in the city of customer
+        String citymessage = intent.getStringExtra(CustomerInfo.cityIntent);
+        TextView city = (TextView) findViewById(R.id.FinalizationCity);
+        city.setText(citymessage);
+        //Fills in the state of customer
+        String statemessage = intent.getStringExtra(CustomerInfo.stateIntent);
+        TextView state = (TextView) findViewById(R.id.FinalizationState);
+        state.setText(statemessage);
+        //Fills in the zip of customer
+        String zipmessage = intent.getStringExtra(CustomerInfo.zipIntent);
+        TextView zip = (TextView) findViewById(R.id.FinalizationZip);
+        zip.setText(zipmessage);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_order_finalization, menu);
-        return true;
-    }
+        //Fills in the phone number of customer if it is available
+        String phonemessage = intent.getStringExtra(CustomerInfo.phoneIntent);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        TextView phone = (TextView) findViewById(R.id.FinalizationPhone);
+        if (phonemessage.isEmpty()) {
+            phone.setText("Not given");
+        } else {
+            phone.setText(phonemessage);
         }
 
-        return super.onOptionsItemSelected(item);
+        //Fills in the email of customer
+        String emailmessage = intent.getStringExtra(CustomerInfo.emailIntent);
+        TextView email = (TextView) findViewById(R.id.FinalizationEmail);
+        if (emailmessage.isEmpty()) {
+            email.setText("Not given");
+        } else {
+            email.setText(emailmessage);
+        }
+    }
+    public void ToCustInfo (View view)
+    {
+        //return to the Customer Information Input screen
+        dispatchKeyEvent(new KeyEvent (KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK));
+        dispatchKeyEvent(new KeyEvent (KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK));
+    }
+    public void SubmitOrder (View view)
+    {
+
     }
 }

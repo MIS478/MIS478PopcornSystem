@@ -8,29 +8,34 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.content.Intent;
 
-public class MainActivity extends ActionBarActivity {
+public class Login extends ActionBarActivity {
    // public final static String EXTRA_MESSAGE = "com.mis478.popcornapp.MESSAGE";
     Integer x = 1;
     Integer y = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
     }
 
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, ScoutStatusPage.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
-        EditText pass = (EditText) findViewById(R.id.editText2);
+
+        EditText editText = (EditText) findViewById(R.id.LoginUsername);
+        EditText pass = (EditText) findViewById(R.id.LoginPassword);
         String message = editText.getText().toString();
-        String testUN = "test";
         String passmessage = pass.getText().toString();
         if (message.equals("test") && passmessage.equals("123") ) {
+            Intent intent = new Intent(this, ScoutStatusPage.class);
             startActivity(intent);
-        } else { new AlertDialog.Builder(this)
+        }
+        else if (message.equals("leader") && passmessage.equals("123"))
+        {
+            Intent intent = new Intent(this, DenLeaderMain.class);
+            startActivity(intent);
+        }
+        else { new AlertDialog.Builder(this)
                 .setTitle("Incorrect login")
                 .setMessage("You entered the wrong password or username")
                 .setIcon(android.R.drawable.ic_dialog_alert)
@@ -38,23 +43,23 @@ public class MainActivity extends ActionBarActivity {
 
         }
     }
-    public void clrUN(View view) {
-        EditText username = (EditText) findViewById(R.id.editText);
-        //so it doesn't reset if they hit it again
-        if (x == 1) {
-            username.setText("");
-            x++;
-        }
-
-    }
-    public void clrPASS(View view) {
-        EditText pass = (EditText) findViewById(R.id.editText2);
-        //so it doesn't reset if they hit it again
-        if (y == 1) {
-            pass.setText("");
-            y++;
-        }
-    }
+//    public void clrUN(View view) {
+//        EditText username = (EditText) findViewById(R.id.editText);
+//        //so it doesn't reset if they hit it again
+//        if (x == 1) {
+//            username.setText("");
+//            x++;
+//        }
+//
+//    }
+//    public void clrPASS(View view) {
+//        EditText pass = (EditText) findViewById(R.id.editText2);
+//        //so it doesn't reset if they hit it again
+//        if (y == 1) {
+//            pass.setText("");
+//            y++;
+//        }
+//    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -4,18 +4,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/sup">
+    android:background="@color/BGColor">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/LoginUsername"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:text="Username"
-        android:onClick="clrUN" />
+        android:hint="Username"
+        android:nextFocusForward="@+id/LoginPassword"
+        android:textColor="@color/TextColor"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -23,30 +24,33 @@
         android:text="Submit"
         android:id="@+id/button"
         android:onClick="sendMessage"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@id/LoginPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp" />
+        android:layout_marginTop="53dp"
+        style="@style/ButtonCubScoutTheme"
+        android:textColor="@color/TextColor"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:text="Password"
-        android:layout_below="@+id/editText"
+        android:id="@+id/LoginPassword"
+        android:hint="Password"
+        android:layout_below="@id/LoginUsername"
         android:layout_centerHorizontal="true"
-        android:onClick="clrPASS"
-        android:password="true" />
+        android:password="true"
+        android:textColor="@color/TextColor"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to the Cub Scout App(test/123)"
+        android:text="Welcome to the Cub Scout App(test/123 or leader/123)"
         android:id="@+id/WelcomeBanner"
         android:layout_marginTop="71dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/TextColor"/>
 
 </RelativeLayout>

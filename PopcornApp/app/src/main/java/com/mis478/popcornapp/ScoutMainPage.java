@@ -37,7 +37,7 @@ public class ScoutMainPage extends ActionBarActivity {
         startActivity(x);
     }
     public void Log(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), Login.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
@@ -47,8 +47,8 @@ public class ScoutMainPage extends ActionBarActivity {
     }
     public void View(View view) {
 
-         Intent x = new Intent(this, ViewProducts.class);
-        startActivity(x);
+     //    Intent x = new Intent(this, ViewProducts.class);
+     //   startActivity(x);
     }
     public void Goal(View view) {
         Intent x = new Intent(this, ScoutGoal.class);
