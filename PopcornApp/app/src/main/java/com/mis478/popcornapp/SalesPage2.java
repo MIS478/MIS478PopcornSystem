@@ -4,16 +4,13 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class SalesMode extends ActionBarActivity {
+public class SalesPage2 extends ActionBarActivity {
     Integer one = 0;
     Integer two = 0;
     Integer three = 0;
@@ -21,14 +18,20 @@ public class SalesMode extends ActionBarActivity {
     Integer five = 0;
     Integer six = 0;
     Integer tot = 0;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sales_mode);
+        setContentView(R.layout.activity_sales_page2);
+    }
 
+
+    public void PageBack(View view) {
+        Intent intent = new Intent(this, SalesMode.class);
+        startActivity(intent);
+    }
+    public void PageForward(View view) {
+        Intent intent = new Intent(this, SalesMode.class);
+        startActivity(intent);
     }
 
     public void sendMessage(View view) {
@@ -127,15 +130,6 @@ public class SalesMode extends ActionBarActivity {
         t.setText(six.toString());
         tot = tot - 5;
     }
-    public void PageBack(View view) {
-        Intent intent = new Intent(this, SalesPage2.class);
-        startActivity(intent);
-    }
-    public void PageForward(View view) {
-        Intent intent = new Intent(this, SalesPage2.class);
-        startActivity(intent);
-    }
-
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -28,4 +28,5 @@
     <string name="title_activity_donation">Donation</string>
     <string name="title_activity_order_finalization">Order Finalization</string>
     <string name="title_activity_view_products">ViewProducts</string>
+    <string name="title_activity_sales_page2">SalesPage2</string>
 </resources>

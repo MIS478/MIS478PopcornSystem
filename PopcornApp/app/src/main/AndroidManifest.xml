@@ -109,6 +109,10 @@
             android:name=".OrderFinalization"
             android:label="@string/title_activity_order_finalization" >
         </activity>
+        <activity
+            android:name=".SalesPage2"
+            android:label="@string/title_activity_sales_page2" >
+        </activity>
     </application>
 
 </manifest>

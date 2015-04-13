@@ -8,7 +8,8 @@
     android:id="@+id/plz"
     android:clickable="true"
     android:nestedScrollingEnabled="false"
-    android:onClick="Next">
+    android:onClick="Next"
+    android:background="@color/BGColor">
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,7 +21,9 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +31,9 @@
         android:text="Scout name from Server"
         android:id="@+id/ScoutNameInput"
         android:layout_alignBottom="@+id/Weclome"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +44,9 @@
         android:layout_below="@+id/Weclome"
         android:layout_alignLeft="@+id/Weclome"
         android:layout_alignStart="@+id/Weclome"
-        android:layout_marginTop="38dp" />
+        android:layout_marginTop="38dp"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,7 +55,9 @@
         android:id="@+id/TotalSalesInput"
         android:layout_alignBottom="@+id/TotalSales"
         android:layout_alignRight="@+id/ScoutNameInput"
-        android:layout_alignEnd="@+id/ScoutNameInput" />
+        android:layout_alignEnd="@+id/ScoutNameInput"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,7 +68,9 @@
         android:layout_marginTop="38dp"
         android:layout_below="@+id/TotalSalesInput"
         android:layout_alignLeft="@+id/TotalSales"
-        android:layout_alignStart="@+id/TotalSales" />
+        android:layout_alignStart="@+id/TotalSales"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,7 +81,9 @@
         android:layout_marginTop="42dp"
         android:layout_below="@+id/PersonalGoal"
         android:layout_alignLeft="@+id/PersonalGoal"
-        android:layout_alignStart="@+id/PersonalGoal" />
+        android:layout_alignStart="@+id/PersonalGoal"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,7 +94,9 @@
         android:layout_below="@+id/PlaceHolderLB"
         android:layout_alignRight="@+id/TopSeller"
         android:layout_alignEnd="@+id/TopSeller"
-        android:layout_marginTop="92dp" />
+        android:layout_marginTop="92dp"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -91,7 +106,9 @@
         android:id="@+id/BottomBorder"
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/TopSeller"
-        android:layout_alignEnd="@+id/TopSeller" />
+        android:layout_alignEnd="@+id/TopSeller"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -102,7 +119,9 @@
         android:layout_below="@+id/BottomBorder"
         android:layout_alignLeft="@+id/ScoutNameInput"
         android:layout_alignStart="@+id/ScoutNameInput"
-        android:layout_marginTop="94dp" />
+        android:layout_marginTop="94dp"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -111,7 +130,9 @@
         android:text="The Current Top Seller!"
         android:id="@+id/TopSeller"
         android:layout_above="@+id/TopSellerInput"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -121,6 +142,8 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/TotalSales"
         android:layout_toEndOf="@+id/TotalSales"
-        android:layout_marginBottom="53dp" />
+        android:layout_marginBottom="53dp"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"/>
 
 </RelativeLayout>

@@ -92,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Page 1"
+        android:text="Page 2"
         android:id="@+id/textView2"
         android:textColor="@color/TextColor"
         android:paddingLeft="15dp"
@@ -560,8 +560,8 @@
         android:id="@+id/neg2"
         android:onClick="neg2"
         android:layout_above="@+id/textView8"
-        android:layout_toRightOf="@+id/button13"
-        android:layout_toEndOf="@+id/button13" />
+        android:layout_alignLeft="@+id/btn2"
+        android:layout_alignStart="@+id/btn2" />
 
     <Button
         style="@style/ButtonCubScoutTheme"
@@ -582,8 +582,8 @@
         android:id="@+id/neg4"
         android:onClick="neg4"
         android:layout_above="@+id/textView11"
-        android:layout_toLeftOf="@+id/pop4btn"
-        android:layout_toStartOf="@+id/pop4btn" />
+        android:layout_alignLeft="@+id/btn4"
+        android:layout_alignStart="@+id/btn4" />
 
     <Button
         style="@style/ButtonCubScoutTheme"
@@ -604,15 +604,25 @@
         android:id="@+id/neg6"
         android:onClick="neg6"
         android:layout_above="@+id/textView28"
-        android:layout_toRightOf="@+id/button13"
-        android:layout_toEndOf="@+id/button13" />
+        android:layout_toLeftOf="@+id/imageButton2"
+        android:layout_toStartOf="@+id/imageButton2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TEST PAGE 2"
+        android:id="@+id/textView15"
+        android:layout_below="@+id/textView13"
+        android:layout_toRightOf="@+id/TotalBtn"
+        android:layout_toEndOf="@+id/TotalBtn" />
 
     <Button
         style="@style/ButtonCubScoutTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Page Back"
-        android:id="@+id/button122"
+        android:id="@+id/button5"
         android:onClick="PageBack"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/textView2"
@@ -623,9 +633,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Page Forward"
-        android:id="@+id/button13"
+        android:id="@+id/button6"
         android:onClick="PageForward"
-        android:layout_alignTop="@+id/SalesNextButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/lbl4"
+        android:layout_toStartOf="@+id/lbl4" />
 
 </RelativeLayout>

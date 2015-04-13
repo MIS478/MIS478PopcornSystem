@@ -63,7 +63,7 @@ public class Login extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_scout_status_page, menu);
         return true;
     }
 
@@ -90,12 +90,22 @@ public class Login extends ActionBarActivity {
             Intent intent = new Intent(this, PastSales.class);
             startActivity(intent);
         }
-        if (id == R.id.denLeaderMain) {
-            Intent intent = new Intent(this, DenLeaderMain.class);
+
+        if (id == R.id.sales_mode) {
+            Intent intent = new Intent(this, SalesMode.class);
             startActivity(intent);
         }
-        if (id == R.id.den_sales_tracking) {
-            Intent intent = new Intent(this, DenSalesTracking.class);
+        if (id == R.id.donation) {
+            Intent intent = new Intent(this, Donation.class);
+            startActivity(intent);
+        }
+        if (id == R.id.ScoutMain) {
+            Intent intent = new Intent(this, ScoutMainPage.class);
+            startActivity(intent);
+        }
+        if (id == R.id.log) {
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
 
