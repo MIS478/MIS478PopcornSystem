@@ -18,6 +18,7 @@ public class DeliveryMode extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Delivery Mode");
 
 
         //Get info from the previous screen

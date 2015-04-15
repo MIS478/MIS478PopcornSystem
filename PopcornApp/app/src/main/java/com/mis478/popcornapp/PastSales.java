@@ -13,6 +13,7 @@ public class PastSales extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_past_sales);
+        setTitle("Past Sales");
 
         //Get info from the previous screen
         Intent intent = getIntent();

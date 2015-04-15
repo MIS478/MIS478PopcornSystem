@@ -16,6 +16,7 @@ public class DenSalesTracking extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.den_sales_tracking);
+        setTitle("Sales Tracking");
 
         //Get info from the previous screen
         Intent intent = getIntent();

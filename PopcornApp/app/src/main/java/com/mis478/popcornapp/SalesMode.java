@@ -28,7 +28,7 @@ public class SalesMode extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_mode);
-
+        setTitle("Sales Mode");
     }
 
     public void sendMessage(View view) {

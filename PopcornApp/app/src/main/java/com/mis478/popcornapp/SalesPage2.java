@@ -22,6 +22,7 @@ public class SalesPage2 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_page2);
+        setTitle("Sales Mode Page 2");
     }
 
 

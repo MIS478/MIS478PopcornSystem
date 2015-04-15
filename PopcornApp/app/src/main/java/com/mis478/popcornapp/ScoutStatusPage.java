@@ -14,6 +14,7 @@ public class ScoutStatusPage extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_status_page);
+        setTitle("Scout Status");
     }
     public void Next(View view) {
         Intent ToScoutMain = new Intent(this, ScoutMainPage.class);

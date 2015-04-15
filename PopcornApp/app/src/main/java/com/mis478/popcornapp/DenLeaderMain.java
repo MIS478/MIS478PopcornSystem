@@ -17,6 +17,7 @@ public class DenLeaderMain extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.denleadermain);
+        setTitle("Welcome, Den Leader");
 
         //Get info from the previous screen
         Intent intent = getIntent();

@@ -25,6 +25,7 @@ public class CustomerInfo extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.customer_info);
         Intent intent = getIntent();
+        setTitle("Customer Information");
     }
     public void ToFinalize(View view)
     {

@@ -28,7 +28,7 @@ public class ViewScouts extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_mode);
-
+        setTitle("List of Scouts");
         //Get info from the previous screen
         Intent intent = getIntent();
 

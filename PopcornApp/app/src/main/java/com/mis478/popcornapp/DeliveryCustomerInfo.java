@@ -13,6 +13,7 @@ public class DeliveryCustomerInfo extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_customer_info);
+        setTitle("Delivery Customer Information");
     }
 
 
