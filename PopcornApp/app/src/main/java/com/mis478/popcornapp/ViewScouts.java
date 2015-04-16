@@ -27,10 +27,10 @@ public class ViewScouts extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delivery_mode);
+        setContentView(R.layout.view_scouts);
         setTitle("List of Scouts");
         //Get info from the previous screen
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvExp);

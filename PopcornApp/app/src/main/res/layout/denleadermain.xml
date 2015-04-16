@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/BGColor"
     android:orientation="vertical"
     android:weightSum="1"
-    tools:context="com.mis478.popcornapp.DenLeaderMain"
-    android:background="@color/BGColor">
+    tools:context="com.mis478.popcornapp.DenLeaderMain">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,10 +22,10 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:gravity="center"
                 android:text="Welcome Den Leader"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/TextColor"
-                android:gravity="center" />
+                android:textColor="@color/TextColor" />
 
         </TableRow>
 
@@ -37,19 +37,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Den Total Sales: "
-                android:textColor="@color/TextColor"
+                android:paddingLeft="0dp"
                 android:paddingRight="15dp"
-                android:paddingLeft="0dp" />
+                android:text="Den Total Sales: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
 
             <TextView
+                android:id="@+id/DenLeaderMainSaleAmt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="$100"
-                android:id="@+id/DenLeaderMainSaleAmt"
-                android:textColor="@color/TextColor"/>
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
 
         </TableRow>
 
@@ -60,62 +60,82 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Den's Sale Goal: "
-                android:textColor="@color/TextColor"
+                android:paddingLeft="0dp"
                 android:paddingRight="15dp"
-                android:paddingLeft="0dp" />
+                android:text="Den's Sale Goal: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
 
             <TextView
+                android:id="@+id/DenLeaderMainGoalAmt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="$300"
-                android:id="@+id/DenLeaderMainGoalAmt"
-                android:textColor="@color/TextColor"/>
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
         </TableRow>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Leaderboard"
-            android:textColor="@color/TextColor"
+            android:layout_gravity="center_horizontal"
             android:paddingTop="30dp"
-            android:layout_gravity="center_horizontal" />
+            android:text="Leaderboard"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/TextColor" />
 
         <ListView
+            android:id="@+id/listView3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listView3" />
+            android:layout_height="wrap_content" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal">
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="false"
-                android:layout_centerVertical="true"
-                android:clickable="true"
-                android:onClick="sendMessage"
-                android:text="Den Sales Tracking"
-                android:layout_alignParentEnd="false"
-                android:layout_alignParentBottom="false" />
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/DenMainViewScoutsButton"
+                style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/button2"
                 android:clickable="true"
-                android:text="Goals" />
-        </FrameLayout>
+                android:onClick="toScouts"
+                android:text="View Scouts" />
+
+            <Button
+                android:id="@+id/DenMainSalesTrackingButton"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="toSalesTracking"
+                android:text="Den Sales Tracking" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/DenMainProductsButton"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="toProducts"
+                android:text="View Products" />
+
+            <Button
+                android:id="@+id/DenMainAdminFunctions"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="toAdminButton"
+                android:text="Admin Functions" />
+        </TableRow>
     </LinearLayout>
 </ScrollView>

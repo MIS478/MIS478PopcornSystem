@@ -126,12 +126,12 @@ public class CustomerInfo extends ActionBarActivity {
     }
     public void ToProducts(View view)
     {
-        Intent products = new Intent(this, OrderFinalization.class);
+        Intent products = new Intent(this, SalesMode.class);
         startActivity(products);
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_scout_status_page, menu);
+        getMenuInflater().inflate(R.menu.menu_customer_info, menu);
         return true;
     }
 

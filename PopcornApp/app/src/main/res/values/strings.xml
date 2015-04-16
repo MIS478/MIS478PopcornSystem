@@ -29,4 +29,6 @@
     <string name="title_activity_order_finalization">Order Finalization</string>
     <string name="title_activity_view_products">ViewProducts</string>
     <string name="title_activity_sales_page2">SalesPage2</string>
+    <string name="title_activity_admin_functions">Admin Functions</string>
+    <string name="title_activity_add_scout">Add Scout</string>
 </resources>

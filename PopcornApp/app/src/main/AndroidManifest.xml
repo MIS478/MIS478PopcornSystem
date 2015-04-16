@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mis478.popcornapp"
-    android:versionCode="8"
-    android:versionName="0.1.4" >
+    android:versionCode="9"
+    android:versionName="0.2" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -22,7 +22,6 @@
         </activity>
         <activity
             android:name=".CustomerInfo"
-
             android:label="@string/title_activity_customer_info"
             android:parentActivityName=".Login" >
             <meta-data
@@ -112,6 +111,22 @@
         <activity
             android:name=".SalesPage2"
             android:label="@string/title_activity_sales_page2" >
+        </activity>
+        <activity
+            android:name=".AdminFunctions"
+            android:label="@string/title_activity_admin_functions"
+            android:parentActivityName=".DenLeaderMain" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DenLeaderMain" />
+        </activity>
+        <activity
+            android:name=".AddScout"
+            android:label="@string/title_activity_add_scout"
+            android:parentActivityName=".AdminFunctions" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.AdminFunctions" />
         </activity>
     </application>
 

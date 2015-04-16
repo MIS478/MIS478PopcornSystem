@@ -23,12 +23,26 @@ public class DenLeaderMain extends ActionBarActivity {
         Intent intent = getIntent();
     }
 
-    public void sendMessage (View view)
+    public void toScouts (View view)
     {
-        Intent intent = new Intent(this, DenSalesTracking.class);
-        startActivity(intent);
+        Intent toScouts = new Intent(this, ViewScouts.class);
+        startActivity(toScouts);
     }
-
+    public void toSalesTracking (View view)
+    {
+        Intent toSalesTracking = new Intent(this, DenSalesTracking.class);
+        startActivity(toSalesTracking);
+    }
+    public void toProducts (View view)
+    {
+        Intent toProducts = new Intent(this, SalesMode.class);
+        startActivity(toProducts);
+    }
+    public void toAdminButton (View view)
+    {
+        Intent toAdminButton = new Intent(this, AdminFunctions.class);
+        startActivity(toAdminButton);
+    }
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
