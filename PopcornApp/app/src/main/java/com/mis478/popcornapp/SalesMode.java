@@ -131,6 +131,10 @@ public class SalesMode extends ActionBarActivity {
         Intent intent = new Intent(this, ScoutMainPage.class);
         startActivity(intent);
     }
+    public void Donate(View view) {
+        Intent intent = new Intent(this, Donation.class);
+        startActivity(intent);
+    }
     public void PageBack(View view) {
         Intent intent = new Intent(this, SalesPage2.class);
         startActivity(intent);

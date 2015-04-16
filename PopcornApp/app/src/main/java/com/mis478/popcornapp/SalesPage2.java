@@ -134,6 +134,10 @@ public class SalesPage2 extends ActionBarActivity {
         t.setText(six.toString());
         tot = tot - 5;
     }
+    public void Donate(View view) {
+        Intent intent = new Intent(this, Donation.class);
+        startActivity(intent);
+    }
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
