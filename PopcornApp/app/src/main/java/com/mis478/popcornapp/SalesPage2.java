@@ -48,7 +48,10 @@ public class SalesPage2 extends ActionBarActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
-
+    public void Back(View view) {
+        Intent intent = new Intent(this, ScoutMainPage.class);
+        startActivity(intent);
+    }
     public void CustInfo(View view) {
         //to cust info
 
@@ -103,31 +106,31 @@ public class SalesPage2 extends ActionBarActivity {
     }
     public void neg2(View view) {
         two--;
-        TextView t = (TextView) findViewById(R.id.lbl1);
+        TextView t = (TextView) findViewById(R.id.lbl2);
         t.setText(two.toString());
         tot = tot - 5;
     }
     public void neg3(View view) {
         three--;
-        TextView t = (TextView) findViewById(R.id.lbl1);
+        TextView t = (TextView) findViewById(R.id.lbl3);
         t.setText(three.toString());
         tot = tot - 5;
     }
     public void neg4(View view) {
         four--;
-        TextView t = (TextView) findViewById(R.id.lbl1);
+        TextView t = (TextView) findViewById(R.id.lbl4);
         t.setText(four.toString());
         tot = tot - 5;
     }
     public void neg5(View view) {
         five--;
-        TextView t = (TextView) findViewById(R.id.lbl1);
+        TextView t = (TextView) findViewById(R.id.lbl5);
         t.setText(five.toString());
         tot = tot - 5;
     }
     public void neg6(View view) {
         six--;
-        TextView t = (TextView) findViewById(R.id.lbl1);
+        TextView t = (TextView) findViewById(R.id.lbl6);
         t.setText(six.toString());
         tot = tot - 5;
     }
