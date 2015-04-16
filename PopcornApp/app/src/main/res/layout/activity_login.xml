@@ -44,7 +44,7 @@
         android:inputType="text"
         android:password="true"
         android:textColor="@color/TextColor"
-        android:nextFocusRight="@+id/LoginSubmitButton"/>
+        android:nextFocusRight="@+id/LoginPassword"/>
 
     <TextView
         android:id="@+id/WelcomeBanner"
