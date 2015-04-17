@@ -70,7 +70,7 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         String lNameText = lName.getText().toString();
         String addressText = address.getText().toString();
         String cityText = city.getText().toString();
-        String stateText = state.getSelectedItem().toString();
+        //String stateText = state.getSelectedItem().toString();
         String zipText = zip.getText().toString();
         String phoneNumberText = phoneNumber.getText().toString();
         String emailText = email.getText().toString();
@@ -100,12 +100,12 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
                     .setMessage("A city name is required")
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
-        } else if (stateText.isEmpty()) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Missing State Name")
-                    .setMessage("A state is required")
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
+//        } else if (stateText.isEmpty()) {
+//            new AlertDialog.Builder(this)
+//                    .setTitle("Missing State Name")
+//                    .setMessage("A state is required")
+//                    .setIcon(android.R.drawable.ic_dialog_alert)
+//                    .show();
         } else if (zipText.isEmpty()) {
             new AlertDialog.Builder(this)
                     .setTitle("Missing Zip Code")
@@ -124,7 +124,7 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
             finalize.putExtra(lNameIntent, lNameText);
             finalize.putExtra(addressIntent, addressText);
             finalize.putExtra(cityIntent, cityText);
-            finalize.putExtra(stateIntent, stateText);
+            //finalize.putExtra(stateIntent, stateText);
             finalize.putExtra(zipIntent, zipText);
             finalize.putExtra(phoneIntent, phoneNumberText);
             finalize.putExtra(emailIntent, emailText);

@@ -34,9 +34,9 @@ public class OrderFinalization extends ActionBarActivity {
         TextView city = (TextView) findViewById(R.id.FinalizationCity);
         city.setText(citymessage);
         //Fills in the state of customer
-        String statemessage = intent.getStringExtra(CustomerInfo.stateIntent);
-        TextView state = (TextView) findViewById(R.id.FinalizationState);
-        state.setText(statemessage);
+//        String statemessage = intent.getStringExtra(CustomerInfo.stateIntent);
+//        TextView state = (TextView) findViewById(R.id.FinalizationState);
+//        state.setText(statemessage);
         //Fills in the zip of customer
         String zipmessage = intent.getStringExtra(CustomerInfo.zipIntent);
         TextView zip = (TextView) findViewById(R.id.FinalizationZip);
