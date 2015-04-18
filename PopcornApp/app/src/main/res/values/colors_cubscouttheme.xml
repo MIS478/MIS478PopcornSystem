@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="cubscouttheme_color">#ffbb33</color>
+    <color name="cubscouttheme_color">#FCD116</color>
     <color name="blue">#87cefa</color>
     <color name="white">#ffffff</color>
-    <color name="TextColor">#ffffff</color>
-    <color name="BGColor">#87cefa</color>
+    <color name="TextColor">#FFFFFF</color>
+    <color name="BGColor">#003F87</color>
 </resources>

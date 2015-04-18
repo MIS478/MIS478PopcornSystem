@@ -19,7 +19,8 @@
         android:hint="Username"
         android:inputType="text"
         android:textColor="@color/TextColor"
-        android:nextFocusRight="@+id/LoginPassword"/>
+        android:nextFocusRight="@+id/LoginPassword"
+        style="@style/EditTextCubScoutTheme"/>
 
     <Button
         android:id="@+id/LoginSubmitButton"
@@ -44,7 +45,8 @@
         android:inputType="text"
         android:password="true"
         android:textColor="@color/TextColor"
-        android:nextFocusRight="@+id/LoginPassword"/>
+        android:nextFocusRight="@+id/LoginPassword"
+        style="@style/EditTextCubScoutTheme"/>
 
     <TextView
         android:id="@+id/WelcomeBanner"

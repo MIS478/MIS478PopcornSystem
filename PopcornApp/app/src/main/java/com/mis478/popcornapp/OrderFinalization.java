@@ -26,17 +26,18 @@ public class OrderFinalization extends ActionBarActivity {
         TextView lName = (TextView) findViewById(R.id.FinalizationLnameBox);
         lName.setText(lNamemessage);
         //Fills in the address of customer
-        String addressmessage = intent.getStringExtra(CustomerInfo.addressIntent);
+        String streetnumbermessage = intent.getStringExtra(CustomerInfo.streetNumberIntent);
+        String streetnamemessage = intent.getStringExtra(CustomerInfo.streetNameIntent);
         TextView address = (TextView) findViewById(R.id.FinalizationAddress);
-        address.setText(addressmessage);
+        address.setText(streetnumbermessage + " " + streetnamemessage);
         //Fills in the city of customer
         String citymessage = intent.getStringExtra(CustomerInfo.cityIntent);
         TextView city = (TextView) findViewById(R.id.FinalizationCity);
         city.setText(citymessage);
         //Fills in the state of customer
-//        String statemessage = intent.getStringExtra(CustomerInfo.stateIntent);
-//        TextView state = (TextView) findViewById(R.id.FinalizationState);
-//        state.setText(statemessage);
+        String statemessage = intent.getStringExtra(CustomerInfo.stateIntent);
+        TextView state = (TextView) findViewById(R.id.FinalizationState);
+        state.setText(statemessage);
         //Fills in the zip of customer
         String zipmessage = intent.getStringExtra(CustomerInfo.zipIntent);
         TextView zip = (TextView) findViewById(R.id.FinalizationZip);
@@ -61,16 +62,17 @@ public class OrderFinalization extends ActionBarActivity {
             email.setText(emailmessage);
         }
     }
-    public void ToCustInfo (View view)
-    {
+
+    public void ToCustInfo(View view) {
         //return to the Customer Information Input screen
-        dispatchKeyEvent(new KeyEvent (KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK));
-        dispatchKeyEvent(new KeyEvent (KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK));
+        dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK));
+        dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK));
     }
-    public void SubmitOrder (View view)
-    {
+
+    public void SubmitOrder(View view) {
 
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_scout_status_page, menu);

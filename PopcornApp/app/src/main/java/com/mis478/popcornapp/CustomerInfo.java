@@ -3,8 +3,10 @@ package com.mis478.popcornapp;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.telephony.PhoneNumberUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,12 +14,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextClock;
+import android.widget.TextView;
 
 
 public class CustomerInfo extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
     public final static String fNameIntent = "com.mis478.popcornapp.fname";
     public final static String lNameIntent = "com.mis478.popcornapp.lname";
-    public final static String addressIntent = "com.mis478.popcornapp.address";
+    public final static String streetNumberIntent = "com.mis478.popcornapp.numberaddress";
+    public final static String streetNameIntent = "com.mis478.popcornapp.nameaddress";
     public final static String cityIntent = "com.mis478.popcornapp.city";
     public final static String stateIntent = "com.mis478.popcornapp.state";
     public final static String zipIntent = "com.mis478.popcornapp.zip";
@@ -40,11 +45,13 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
 // Apply the adapter to the spinner
         StateSpinner.setAdapter(adapter);
     }
+
     public void onItemSelected(AdapterView<?> parent, View view,
                                int pos, long id) {
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
         StateSpinner.setOnItemSelectedListener(this);
+        ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
@@ -58,7 +65,8 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         //finds the EditText boxes on the screen that contain the Customer's info
         EditText fName = (EditText) findViewById(R.id.FnameBox);
         EditText lName = (EditText) findViewById(R.id.LnameBox);
-        EditText address = (EditText) findViewById(R.id.AddressBox);
+        EditText streetNumber = (EditText) findViewById(R.id.StreetNumberBox);
+        EditText streetName = (EditText) findViewById(R.id.StreetNameBox);
         EditText city = (EditText) findViewById(R.id.CityBox);
         Spinner state = (Spinner) findViewById(R.id.StateSpinner);
         EditText zip = (EditText) findViewById(R.id.ZipBox);
@@ -68,9 +76,10 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         //parses the EditText into a string
         String fNameText = fName.getText().toString();
         String lNameText = lName.getText().toString();
-        String addressText = address.getText().toString();
+        String streetNumberText = streetNumber.getText().toString();
+        String streetNameText = streetName.getText().toString();
         String cityText = city.getText().toString();
-        //String stateText = state.getSelectedItem().toString();
+        String stateText = state.getSelectedItem().toString();
         String zipText = zip.getText().toString();
         String phoneNumberText = phoneNumber.getText().toString();
         String emailText = email.getText().toString();
@@ -88,7 +97,13 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
                     .setMessage("A last name is required")
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
-        } else if (addressText.isEmpty()) {
+        } else if (streetNumberText.isEmpty()) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Missing Address")
+                    .setMessage("A delivery address is required")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        } else if (streetNameText.isEmpty()) {
             new AlertDialog.Builder(this)
                     .setTitle("Missing Address")
                     .setMessage("A delivery address is required")
@@ -100,12 +115,12 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
                     .setMessage("A city name is required")
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
-//        } else if (stateText.isEmpty()) {
-//            new AlertDialog.Builder(this)
-//                    .setTitle("Missing State Name")
-//                    .setMessage("A state is required")
-//                    .setIcon(android.R.drawable.ic_dialog_alert)
-//                    .show();
+        } else if (stateText.isEmpty()) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Missing State Name")
+                    .setMessage("A state is required")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
         } else if (zipText.isEmpty()) {
             new AlertDialog.Builder(this)
                     .setTitle("Missing Zip Code")
@@ -122,9 +137,10 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
             //attaches the customers info to the intent
             finalize.putExtra(fNameIntent, fNameText);
             finalize.putExtra(lNameIntent, lNameText);
-            finalize.putExtra(addressIntent, addressText);
+            finalize.putExtra(streetNumberIntent, streetNumberText);
+            finalize.putExtra(streetNameIntent, streetNameText);
             finalize.putExtra(cityIntent, cityText);
-            //finalize.putExtra(stateIntent, stateText);
+            finalize.putExtra(stateIntent, stateText);
             finalize.putExtra(zipIntent, zipText);
             finalize.putExtra(phoneIntent, phoneNumberText);
             finalize.putExtra(emailIntent, emailText);
