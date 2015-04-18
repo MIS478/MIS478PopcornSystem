@@ -92,25 +92,43 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
 
             <Button
                 android:id="@+id/DenMainViewScoutsButton"
                 style="@style/ButtonCubScoutTheme"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="toScouts"
                 android:text="View Scouts" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
             <Button
                 android:id="@+id/DenMainSalesTrackingButton"
                 style="@style/ButtonCubScoutTheme"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="toSalesTracking"
                 android:text="Den Sales Tracking" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
 
         </TableRow>
 
@@ -119,23 +137,40 @@
             android:layout_height="fill_parent"
             android:gravity="center_horizontal">
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
             <Button
                 android:id="@+id/DenMainProductsButton"
                 style="@style/ButtonCubScoutTheme"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="toProducts"
                 android:text="View Products" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
             <Button
                 android:id="@+id/DenMainAdminFunctions"
                 style="@style/ButtonCubScoutTheme"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="toAdminButton"
                 android:text="Admin Functions" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
         </TableRow>
     </LinearLayout>
 </ScrollView>

@@ -8,7 +8,7 @@
     <string name="lname">Last Name:</string>
     <string name="streetNumber">Street Number:</string>
     <string name="streetName">Street Name:</string>
-    <string name="address">address:</string>
+    <string name="address">Address:</string>
     <string name="city">City:</string>
     <string name="state">State:</string>
     <string name="zip">Zip Code:</string>
@@ -33,4 +33,6 @@
     <string name="title_activity_sales_page2">SalesPage2</string>
     <string name="title_activity_admin_functions">Admin Functions</string>
     <string name="title_activity_add_scout">Add Scout</string>
+    <string name="title_activity_add_product">Add Products</string>
+    <string name="title_activity_den_goal">Den Goal</string>
 </resources>

@@ -1,12 +1,98 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mis478.popcornapp.AdminFunctions">
+    tools:context="com.mis478.popcornapp.AdminFunctions"
+    android:background="@color/BGColor">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="15dp">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
+            <Button
+                android:id="@+id/AdminFuncAddScoutsButton"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35"
+                android:clickable="true"
+                android:onClick="toAddScouts"
+                android:text="Add Scouts" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
+            <Button
+                android:id="@+id/AdminFuncEndSaleSeason"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35"
+                android:clickable="true"
+                android:onClick="toEndSale"
+                android:text="End Sale Season" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
+            <Button
+                android:id="@+id/AdminFuncAddProd"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35"
+                android:clickable="true"
+                android:onClick="toAddProducts"
+                android:text="Add Products" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+
+            <Button
+                android:id="@+id/AdminFuncSetGoal"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35"
+                android:clickable="true"
+                android:onClick="toDenGoal"
+                android:text="Set Den Goal" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".1" />
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>

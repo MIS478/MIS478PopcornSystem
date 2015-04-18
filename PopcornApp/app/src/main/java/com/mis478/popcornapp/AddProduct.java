@@ -1,45 +1,24 @@
 package com.mis478.popcornapp;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class AdminFunctions extends ActionBarActivity {
+public class AddProduct extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_functions);
+        setContentView(R.layout.activity_add_product);
     }
-    public void toAddScouts (View view)
-    {
-        Intent toAddScouts = new Intent(this, AddScout.class);
-        startActivity(toAddScouts);
-    }
-    public void toEndSale (View view)
-    {
-        Intent toEndSale = new Intent(this, AdminFunctions.class);
-        startActivity(toEndSale);
-    }
-    public void toAddProducts (View view)
-    {
-        Intent toAddProducts = new Intent(this, AddProduct.class);
-        startActivity(toAddProducts);
-    }
-    public void toDenGoal (View view)
-    {
-        Intent toDenGoal = new Intent(this, DenGoal.class);
-        startActivity(toDenGoal);
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_admin_functions, menu);
+        getMenuInflater().inflate(R.menu.menu_add_product, menu);
         return true;
     }
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mis478.popcornapp"
-    android:versionCode="11"
-    android:versionName="0.2.2" >
+    android:versionCode="12"
+    android:versionName="0.2.3" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -127,6 +127,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.AdminFunctions" />
+        </activity>
+        <activity
+            android:name=".AddProduct"
+            android:label="@string/title_activity_add_product"
+            android:parentActivityName=".AdminFunctions" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.AdminFunctions" />
+        </activity>
+        <activity
+            android:name=".DenGoal"
+            android:label="@string/title_activity_den_goal"
+            android:parentActivityName=".DenLeaderMain" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mis478.popcornapp.DenLeaderMain" />
         </activity>
     </application>
 
