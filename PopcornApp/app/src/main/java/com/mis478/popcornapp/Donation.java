@@ -40,7 +40,7 @@ public class Donation extends ActionBarActivity {
         startActivity(intent);
     }
 
-    public void ToFinalize(View view) {
+    public void CustInfo(View view) {
         //when the "Next" button is hit it creates an intent
         Intent finalize = new Intent(this, CustomerInfo.class);
 
