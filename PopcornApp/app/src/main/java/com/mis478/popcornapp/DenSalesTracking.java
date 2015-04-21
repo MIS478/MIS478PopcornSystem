@@ -36,10 +36,10 @@ public class DenSalesTracking extends ActionBarActivity
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.button4) {
-            Intent intent = new Intent(this, DenLeaderMain.class);
-            startActivity(intent);
-        }
+//        if (id == R.id.button4) {
+//            Intent intent = new Intent(this, DenLeaderMain.class);
+//            startActivity(intent);
+//        }
         return super.onOptionsItemSelected(item);
     }
 }

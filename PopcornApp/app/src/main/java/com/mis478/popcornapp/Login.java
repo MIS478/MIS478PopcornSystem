@@ -27,7 +27,7 @@ public class Login extends ActionBarActivity {
         EditText PasswordEditText = (EditText) findViewById(R.id.LoginPassword);
         String LoginText = LoginEditText.getText().toString();
         String PasswordText = PasswordEditText.getText().toString();
-        if (LoginText.equals("test") && PasswordText.equals("123") ) {
+        if (LoginText.equals("scout") && PasswordText.equals("123") ) {
             Intent intent = new Intent(this, ScoutStatusPage.class);
             startActivity(intent);
         }

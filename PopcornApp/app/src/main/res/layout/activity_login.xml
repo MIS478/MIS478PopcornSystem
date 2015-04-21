@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to the Cub Scout App(test/123 or leader/123)"
+            android:text="Welcome to the Cub Scout App(scout/123 or leader/123)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/TextColor"
             android:gravity="center_horizontal"
