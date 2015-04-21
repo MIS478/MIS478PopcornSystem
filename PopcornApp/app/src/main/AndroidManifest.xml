@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mis478.popcornapp"
     android:versionCode="12"
-    android:versionName="0.2.3" >
+    android:versionName="0.2.3">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,10 +10,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/appicon"
         android:label="@string/app_name"
-        android:theme="@style/CustomActionBarTheme" >
+        android:theme="@style/CustomActionBarTheme">
         <activity
             android:name=".Login"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,39 +23,39 @@
         <activity
             android:name=".CustomerInfo"
             android:label="@string/title_activity_customer_info"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".SalesMode">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
+                android:value=".SalesMode" />
         </activity>
         <activity
             android:name=".ScoutGoal"
             android:label="@string/title_activity_scout_goal"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".ScoutMainPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
+                android:value=".ScoutMainPage" />
         </activity>
         <activity
             android:name=".DeliveryMode"
             android:label="@string/title_activity_delivery_mode"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".ScoutMainPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
+                android:value=".ScoutMainPage" />
         </activity>
         <activity
             android:name=".PastSales"
             android:label="@string/title_activity_past_sales"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".ScoutMainPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
+                android:value=".ScoutMainPage" />
         </activity>
         <activity
             android:name=".DenLeaderMain"
             android:label="@string/title_activity_DenLeaderMain"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".Login">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Login" />
@@ -63,35 +63,47 @@
         <activity
             android:name=".DenSalesTracking"
             android:label="@string/title_activity_den_sales_tracking"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".DenLeaderMain">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
+                android:value=".DenLeaderMain" />
         </activity>
         <activity
             android:name=".ViewScouts"
             android:label="@string/title_activity_view_scouts"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".DenLeaderMain">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
+                android:value=".DenLeaderMain" />
         </activity>
         <activity
             android:name=".ScoutStatusPage"
-            android:label="@string/title_activity_scout_status_page" >
-        </activity>
+            android:label="@string/title_activity_scout_status_page"
+            android:parentActivityName=".Login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login" />
+            </activity>
         <activity
             android:name=".ScoutMainPage"
-            android:label="@string/title_activity_scout_main_page" >
-        </activity>
+            android:label="@string/title_activity_scout_main_page"
+            android:parentActivityName=".Login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login" />
+            </activity>
         <activity
             android:name=".SalesMode"
-            android:label="@string/title_activity_sales_mode" >
-        </activity>
+            android:label="@string/title_activity_sales_mode"
+            android:parentActivityName=".ScoutMainPage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ScoutMainPage" />
+            </activity>
         <activity
             android:name=".DeliveryCustomerInfo"
             android:label="@string/title_activity_delivery_customer_info"
-            android:parentActivityName=".DeliveryMode" >
+            android:parentActivityName=".DeliveryMode">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.DeliveryMode" />
@@ -99,23 +111,31 @@
         <activity
             android:name=".Donation"
             android:label="@string/title_activity_donation"
-            android:parentActivityName=".Login" >
+            android:parentActivityName=".ScoutMainPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login" />
+                android:value=".ScoutMainPage" />
         </activity>
         <activity
             android:name=".OrderFinalization"
-            android:label="@string/title_activity_order_finalization" >
+            android:label="@string/title_activity_order_finalization"
+            android:parentActivityName=".CustomerInfo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CustomerInfo" />
         </activity>
         <activity
             android:name=".SalesPage2"
-            android:label="@string/title_activity_sales_page2" >
+            android:label="@string/title_activity_sales_page2"
+            android:parentActivityName=".SalesMode">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SalesMode" />
         </activity>
         <activity
             android:name=".AdminFunctions"
             android:label="@string/title_activity_admin_functions"
-            android:parentActivityName=".DenLeaderMain" >
+            android:parentActivityName=".DenLeaderMain">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.DenLeaderMain" />
@@ -123,7 +143,7 @@
         <activity
             android:name=".AddScout"
             android:label="@string/title_activity_add_scout"
-            android:parentActivityName=".AdminFunctions" >
+            android:parentActivityName=".AdminFunctions">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.AdminFunctions" />
@@ -131,7 +151,7 @@
         <activity
             android:name=".AddProduct"
             android:label="@string/title_activity_add_product"
-            android:parentActivityName=".AdminFunctions" >
+            android:parentActivityName=".AdminFunctions">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.AdminFunctions" />
@@ -139,7 +159,7 @@
         <activity
             android:name=".DenGoal"
             android:label="@string/title_activity_den_goal"
-            android:parentActivityName=".DenLeaderMain" >
+            android:parentActivityName=".DenLeaderMain">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mis478.popcornapp.DenLeaderMain" />

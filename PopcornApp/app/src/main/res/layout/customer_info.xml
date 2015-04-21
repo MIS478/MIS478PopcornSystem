@@ -40,10 +40,10 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="textCapWords|textPersonName"
+                    android:maxLength="15"
                     android:nextFocusDown="@+id/LnameBox"
                     android:nextFocusRight="@id/LnameBox"
-                    android:textColor="@color/TextColor"
-                    android:maxLength="15"/>
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -68,9 +68,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="textCapWords|textPersonName"
+                    android:maxLength="15"
                     android:nextFocusRight="@+id/StreetNumberBox"
-                    android:textColor="@color/TextColor"
-                    android:maxLength="15"/>
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -94,9 +94,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="number"
+                    android:maxLength="7"
                     android:nextFocusRight="@+id/StreetNameBox"
-                    android:textColor="@color/TextColor"
-                    android:maxLength="7" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -119,10 +119,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPostalAddress"
+                    android:inputType="textCapWords|textPostalAddress"
+                    android:maxLength="15"
                     android:nextFocusRight="@id/CityBox"
-                    android:textColor="@color/TextColor"
-                    android:maxLength="15"/>
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -146,10 +146,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:nextFocusDown="@+id/StateBox"
-                    android:nextFocusRight="@id/StateBox"
+                    android:maxLength="15"
+                    android:nextFocusDown="@+id/ZipBox"
+                    android:nextFocusRight="@id/ZipBox"
                     android:textColor="@color/TextColor"
-                    android:maxLength="15"/>
+                    android:inputType="textCapWords" />
             </TableRow>
 
             <TableRow
@@ -166,12 +167,11 @@
                     android:textColor="@color/TextColor" />
 
                 <Spinner
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/StateSpinner"
                     style="@style/SpinnerCubScoutTheme"
-                    android:spinnerMode="dialog"
-                    android:touchscreenBlocksFocus="false" />
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
             </TableRow>
 
             <TableRow
@@ -194,11 +194,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="5"
                     android:nextFocusDown="@+id/PnumberBox"
                     android:nextFocusRight="@id/PnumberBox"
-                    android:textColor="@color/TextColor"
-                    android:inputType="number"
-                    android:maxLength="5"/>
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -222,10 +222,10 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="phone"
+                    android:maxLength="10"
                     android:nextFocusDown="@+id/EmailBox"
                     android:nextFocusRight="@id/EmailBox"
-                    android:textColor="@color/TextColor"
-                    android:maxLength="10"/>
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -249,43 +249,53 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textEmailAddress"
+                    android:maxLength="30"
                     android:nextFocusDown="@+id/NextButton"
                     android:nextFocusRight="@id/NextButton"
-                    android:textColor="@color/TextColor"
-                    android:maxLength="30"/>
+                    android:textColor="@color/TextColor" />
             </TableRow>
-
         </TableLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="50dp">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
 
             <Button
                 android:id="@+id/BackButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="left"
+                android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="ToProducts"
                 android:text="@string/back" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
 
             <Button
                 android:id="@+id/NextButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="bottom|right"
+                android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="ToFinalize"
                 android:text="@string/next" />
-        </RelativeLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
+        </TableRow>
 
 
     </LinearLayout>

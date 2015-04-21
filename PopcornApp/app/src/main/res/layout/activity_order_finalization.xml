@@ -223,47 +223,16 @@
             android:textColor="@color/TextColor"
             android:textSize="@dimen/abc_text_size_display_1_material" />
 
-        <FrameLayout
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/FinalizationBackButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left|bottom"
-                android:clickable="true"
-                android:text="@string/back"
-                style="@style/ButtonCubScoutTheme"
-                android:onClick="ToCustInfo"/>
-
-            <Button
-                android:id="@+id/FinalizationSubmitButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|bottom"
-                android:clickable="true"
-                android:text="Place Order"
-                style="@style/ButtonCubScoutTheme"
-                android:onClick="SubmitOrder"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <ListView
                 android:id="@+id/listView2"
                 android:layout_width="wrap_content"
                 android:layout_height="123dp"
                 android:layout_gravity="left|top" />
-
-            <TextView
-                android:id="@+id/editText15"
-                android:layout_width="267dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|center_vertical"
-                android:layout_weight="1"
-                android:ems="10"
-                android:enabled="true"
-                android:inputType="textPersonName"
-                android:text="total amount"
-                android:textColor="@color/TextColor"/>
 
             <TextView
                 android:id="@+id/textView16"
@@ -273,6 +242,34 @@
                 android:text="Total:"
                 android:textAlignment="viewStart"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-        </FrameLayout>
+
+            <TableRow android:layout_width="fill_parent">
+
+                <Button
+                    android:id="@+id/FinalizationBackButton"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|bottom"
+                    android:clickable="true"
+                    android:onClick="ToCustInfo"
+                    android:text="@string/back" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8" />
+
+                <Button
+                    android:id="@+id/FinalizationSubmitButton"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:clickable="true"
+                    android:onClick="SubmitOrder"
+                    android:text="Place Order" />
+            </TableRow>
+        </GridLayout>
     </LinearLayout>
 </ScrollView>
