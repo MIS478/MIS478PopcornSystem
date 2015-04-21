@@ -49,7 +49,10 @@ public class Login extends ActionBarActivity {
     }
     public void ConnectToDatabase(View View){
         InputStream is = null;
-
+        EditText LoginEditText = (EditText) findViewById(R.id.LoginUsername);
+        EditText PasswordEditText = (EditText) findViewById(R.id.LoginPassword);
+        String LoginText = LoginEditText.getText().toString();
+        String PasswordText = PasswordEditText.getText().toString();
         String result = "";
         //the year data to send
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -76,11 +79,21 @@ public class Login extends ActionBarActivity {
             String line = null;
             while ((line = reader.readLine()) != null) {
                 sb.append(line + "\n");
+                line.toString();
+                if (line.contains(LoginText) && line.contains(PasswordText) ) {
+                    if (LoginText.equals("John") && PasswordText.equals("111"))
+                    {
+                        Intent intent = new Intent(this, DenLeaderMain.class);
+                        startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(this, ScoutStatusPage.class);
+                        startActivity(intent);
+                    }
+                }
             }
             is.close();
             result=sb.toString();
-            EditText LoginEditText = (EditText) findViewById(R.id.LoginUsername);
-            LoginEditText.setText(result);
+
         }catch(Exception e){
             Log.e("log_tag", "Error converting result "+e.toString());
         }
