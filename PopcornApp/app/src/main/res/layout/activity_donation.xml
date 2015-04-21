@@ -22,43 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="70dp" />
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroup"
-        android:layout_alignTop="@+id/textViewSelection"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cash"
-            android:textColor="@color/TextColor"
-            android:id="@+id/radioButtonCash"
-            android:layout_above="@+id/radioButtonAnimationMovies"
-            android:layout_alignLeft="@+id/radioButtonAnimationMovies"
-            android:layout_alignStart="@+id/radioButtonAnimationMovies"
-            android:checked="false" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Credit"
-            android:textColor="@color/TextColor"
-            android:id="@+id/radioButtonCredit"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:checked="false" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Check"
-            android:id="@+id/radioButtonCheck"
-            android:textColor="@color/TextColor"
-            android:layout_below="@+id/radioButtonAnimationMovies"
-            android:layout_alignLeft="@+id/radioButtonAnimationMovies"
-            android:layout_alignStart="@+id/radioButtonAnimationMovies"
-            android:checked="false" />
-    </RadioGroup>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,4 +45,74 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         style="@style/ButtonCubScoutTheme"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/textViewSelection"
+        android:layout_centerHorizontal="true">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="143dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash"
+                android:textColor="@color/TextColor"
+                android:id="@+id/radioButtonCash"
+                android:layout_above="@+id/radioButtonAnimationMovies"
+                android:layout_alignLeft="@+id/radioButtonAnimationMovies"
+                android:layout_alignStart="@+id/radioButtonAnimationMovies"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit"
+                android:textColor="@color/TextColor"
+                android:id="@+id/radioButtonCredit"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check"
+                android:id="@+id/radioButtonCheck"
+                android:textColor="@color/TextColor"
+                android:layout_below="@+id/radioButtonAnimationMovies"
+                android:layout_alignLeft="@+id/radioButtonAnimationMovies"
+                android:layout_alignStart="@+id/radioButtonAnimationMovies"
+                android:checked="false" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Donation Amount: $"
+            android:id="@+id/donationamount"
+            android:textColor="@color/TextColor"
+            android:layout_marginTop="76dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_alignTop="@+id/donationamount"
+            android:layout_toRightOf="@+id/radioGroup"
+            android:layout_toEndOf="@+id/radioGroup" />
+    </RelativeLayout>
 </RelativeLayout>

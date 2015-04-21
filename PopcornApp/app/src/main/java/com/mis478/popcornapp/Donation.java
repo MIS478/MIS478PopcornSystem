@@ -1,5 +1,6 @@
 package com.mis478.popcornapp;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,10 +40,30 @@ public class Donation extends ActionBarActivity {
         startActivity(intent);
     }
 
-    public void CustInfo(View view) {
-        Intent intent = new Intent(this, CustomerInfo.class);
-        startActivity(intent);
+    public void ToFinalize(View view) {
+        //when the "Next" button is hit it creates an intent
+        Intent finalize = new Intent(this, CustomerInfo.class);
+
+        //finds the EditText boxes on the screen that contain the Customer's info
+        EditText damnt = (EditText) findViewById(R.id.donationamount);
+
+
+        //parses the EditText into a string
+        String damnttext = damnt.getText().toString();
+
+        //Verifies the information is inputted correctly.  If not then it will throw an error message
+        if (damnttext.isEmpty()) {
+            new AlertDialog.Builder(this)
+                    .setTitle("Missing Amount")
+                    .setMessage("An amount is required to go forward")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        } else {
+            //starts the next screen
+            startActivity(finalize);
+        }
     }
+
 
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
