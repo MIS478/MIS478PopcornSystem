@@ -49,6 +49,7 @@ public class Login extends ActionBarActivity {
     }
     public void ConnectToDatabase(View View){
         InputStream is = null;
+
         EditText LoginEditText = (EditText) findViewById(R.id.LoginUsername);
         EditText PasswordEditText = (EditText) findViewById(R.id.LoginPassword);
         String LoginText = LoginEditText.getText().toString();
@@ -83,12 +84,20 @@ public class Login extends ActionBarActivity {
                 if (line.contains(LoginText) && line.contains(PasswordText) ) {
                     if (LoginText.equals("John") && PasswordText.equals("111"))
                     {
+
                         Intent intent = new Intent(this, DenLeaderMain.class);
                         startActivity(intent);
                     } else {
+
                         Intent intent = new Intent(this, ScoutStatusPage.class);
                         startActivity(intent);
                     }
+                }else { new AlertDialog.Builder(this)
+                        .setTitle("Incorrect login")
+                        .setMessage("You entered the wrong password or username")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
                 }
             }
             is.close();
