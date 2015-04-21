@@ -45,7 +45,7 @@ public class Donation extends ActionBarActivity {
         Intent finalize = new Intent(this, CustomerInfo.class);
 
         //finds the EditText boxes on the screen that contain the Customer's info
-        EditText damnt = (EditText) findViewById(R.id.donationamount);
+        EditText damnt = (EditText) findViewById(R.id.donationamountEditText);
 
 
         //parses the EditText into a string
