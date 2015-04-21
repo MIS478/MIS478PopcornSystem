@@ -171,7 +171,8 @@
                     style="@style/SpinnerCubScoutTheme"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
-                    android:spinnerMode="dialog" />
+                    android:spinnerMode="dialog"
+                    android:textColor="@color/TextColor"/>
             </TableRow>
 
             <TableRow
