@@ -30,39 +30,18 @@ public class Donation extends ActionBarActivity {
         setContentView(R.layout.activity_donation);
         //Get info from the previous screen
         Intent intent = getIntent();
-
-        //initializing variables
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
     }
 
-    public void ScoutMain(View view) {
-        Intent intent = new Intent(this, ScoutMainPage.class);
+    public void Sales(View view) {
+        Intent intent = new Intent(this, SalesMode.class);
         startActivity(intent);
     }
 
     public void CustInfo(View view) {
-        //when the "Next" button is hit it creates an intent
-        Intent finalize = new Intent(this, CustomerInfo.class);
-
-        //finds the EditText boxes on the screen that contain the Customer's info
-        EditText damnt = (EditText) findViewById(R.id.donationamountEditText);
-
-
-        //parses the EditText into a string
-        String damnttext = damnt.getText().toString();
-
-        //Verifies the information is inputted correctly.  If not then it will throw an error message
-        if (damnttext.isEmpty()) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Missing Amount")
-                    .setMessage("An amount is required to go forward")
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
-        } else {
-            //starts the next screen
-            startActivity(finalize);
-        }
+        Intent intent = new Intent(this, CustomerInfo.class);
+        startActivity(intent);
     }
+
 
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -75,12 +54,12 @@ public class Donation extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.ScoutMain) {
-            Intent intent = new Intent(this, ScoutMainPage.class);
+        if (id == R.id.SalesModeBtn) {
+            Intent intent = new Intent(this, SalesMode.class);
             startActivity(intent);
         }
-        if (id == R.id.deliveryMode) {
-            Intent intent = new Intent(this, DeliveryMode.class);
+        if (id == R.id.CustomerInfo) {
+            Intent intent = new Intent(this, CustomerInfo.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
