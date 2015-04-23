@@ -81,7 +81,8 @@ public class Login extends ActionBarActivity {
             while ((line = reader.readLine()) != null) {
                 sb.append(line + "\n");
                 line.toString();
-                if (line.contains(LoginText) && line.contains(PasswordText) ) {
+                if (line.contains(LoginText) && line.contains(PasswordText)
+                        && !LoginText.contains("") && !PasswordText.contains("")) {
                     if (LoginText.equals("John") && PasswordText.equals("111"))
                     {
 
