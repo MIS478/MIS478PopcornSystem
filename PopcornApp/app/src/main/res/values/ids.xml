@@ -2,4 +2,5 @@
 <resources>
     <item name="densalestracking" type="id" />
     <item name="den_sales_tracking" type="id" />
+    <item name="customSpinnerItemTextView" type="id" />
 </resources>
