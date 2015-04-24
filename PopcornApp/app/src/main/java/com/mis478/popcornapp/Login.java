@@ -81,26 +81,38 @@ public class Login extends ActionBarActivity {
             while ((line = reader.readLine()) != null) {
                 sb.append(line + "\n");
                 line.toString();
-                if (line.contains(LoginText) && line.contains(PasswordText)
-                        && !LoginText.equals("") && !PasswordText.equals("")) {
-                    if (LoginText.equals("John") && PasswordText.equals("111"))
+                String[] splitArray = line.split("\\}");
+
+                for (int i = 0; i < splitArray.length; i++) {
+
+                    if (splitArray[i].contains(LoginText) && splitArray[i].contains(PasswordText)
+                            && !LoginText.equals("") && !PasswordText.equals(""))
                     {
+                        if (LoginText.equals("John") && PasswordText.equals("111"))
+                        {
 
-                        Intent intent = new Intent(this, DenLeaderMain.class);
-                        startActivity(intent);
-                    } else {
+                            Intent intent = new Intent(this, DenLeaderMain.class);
+                            startActivity(intent);
+                            break;
+                        } else {
 
-                        Intent intent = new Intent(this, ScoutStatusPage.class);
-                        startActivity(intent);
+                            Intent intent = new Intent(this, ScoutStatusPage.class);
+                            startActivity(intent);
+                            break;
+                                }
+                    } else if( i == (splitArray.length -1))
+                       {
+                           new AlertDialog.Builder(this)
+                                   .setTitle("Incorrect login")
+                                   .setMessage("You entered the wrong password or username")
+                                   .setIcon(android.R.drawable.ic_dialog_alert)
+                                   .show();
+                       }
                     }
-                }else { new AlertDialog.Builder(this)
-                        .setTitle("Incorrect login")
-                        .setMessage("You entered the wrong password or username")
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
+
 
                 }
-            }
+
             is.close();
             result=sb.toString();
 
