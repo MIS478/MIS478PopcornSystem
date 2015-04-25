@@ -151,7 +151,7 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
     }
 
     public void ToProducts(View view) {
-        Intent products = new Intent(this, SalesMode.class);
+        Intent products = new Intent(this, SellProducts.class);
         startActivity(products);
     }
 
