@@ -169,6 +169,20 @@ public class SellProducts extends ActionBarActivity {
         }
 
     }
+    public void Donate(View view) {
+        Intent intent = new Intent(this, Donation.class);
+        startActivity(intent);
+    }
+    public void CustInfo(View view) {
+        //to cust info
+
+        Intent intent = new Intent(this, CustomerInfo.class);
+        startActivity(intent);
+    }
+    public void Back(View view) {
+        Intent intent = new Intent(this, ScoutMainPage.class);
+        startActivity(intent);
+    }
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

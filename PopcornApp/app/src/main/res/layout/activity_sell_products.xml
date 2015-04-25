@@ -616,12 +616,13 @@
             android:paddingTop="20dp">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/backbtn"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:text="Back" />
+                android:text="Back"
+                android:onClick="Back" />
 
             <Button
                 android:id="@+id/button2"
@@ -629,7 +630,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Donation" />
+                android:text="Donation"
+                android:onClick="Donate" />
 
             <Button
                 android:id="@+id/button3"
@@ -637,7 +639,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:text="Next" />
+                android:text="Next"
+                android:onClick="CustInfo" />
         </FrameLayout>
     </LinearLayout>
 </ScrollView>
