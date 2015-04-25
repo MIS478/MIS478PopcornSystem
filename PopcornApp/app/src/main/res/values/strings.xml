@@ -35,4 +35,5 @@
     <string name="title_activity_add_scout">Add Scout</string>
     <string name="title_activity_add_product">Add Products</string>
     <string name="title_activity_den_goal">Den Goal</string>
+    <string name="title_activity_sale_products">Products</string>
 </resources>

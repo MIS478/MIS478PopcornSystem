@@ -1,0 +1,195 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/_CubScoutTheme"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/BGColor"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mis478.popcornapp.SellProducts">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Buffalo Cheddar Cheese"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center_horizontal"
+                android:text="Premium Caramel Corn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:gravity="right"
+                android:text="Price: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"
+                android:text="$30"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" />
+
+            <TextView
+                android:id="@+id/textView293"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:gravity="right"
+                android:text="Price:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/textView294"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".23"
+                android:text="$30"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".15"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/buffalochedcheese" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".025" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/TextColor" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
+
+            <ImageButton
+                android:id="@+id/imageButton32"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".15"
+                android:scaleType="fitCenter"
+                android:src="@drawable/caramelcorn" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".025" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button21"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/textView192"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/TextColor" />
+
+                <Button
+                    android:id="@+id/button22"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -20,7 +20,7 @@ public class ScoutMainPage extends ActionBarActivity {
     }
 
     public void Sales(View view) {
-        Intent back = new Intent(this, SalesMode.class);
+        Intent back = new Intent(this, SellProducts.class);
         startActivity(back);
     }
     public void Donation(View view) {
