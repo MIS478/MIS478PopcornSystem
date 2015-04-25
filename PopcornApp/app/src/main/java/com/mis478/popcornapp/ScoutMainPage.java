@@ -17,6 +17,12 @@ public class ScoutMainPage extends ActionBarActivity {
         setTitle("Welcome, Scout");
         //Get info from the previous screen
         Intent intent = getIntent();
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+           String test = extras.getString("string");
+           String value = extras.getString("name");
+           String[] alldata = extras.getStringArray("all");
+        }
     }
 
     public void Sales(View view) {
@@ -34,6 +40,16 @@ public class ScoutMainPage extends ActionBarActivity {
     }
     public void Status(View view) {
         Intent x = new Intent(this, ScoutStatusPage.class);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String test = extras.getString("string");
+            String value = extras.getString("name");
+            String[] alldata = extras.getStringArray("all");
+            x.putExtra("name", value);
+            x.putExtra("all", alldata);
+            x.putExtra("string",test);
+        }
+
         startActivity(x);
     }
     public void Log(View view) {

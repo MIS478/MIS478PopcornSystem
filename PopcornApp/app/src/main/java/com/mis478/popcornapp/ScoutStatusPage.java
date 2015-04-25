@@ -15,7 +15,7 @@ import java.util.Collections;
 
 
 public class ScoutStatusPage extends ActionBarActivity {
-
+    String value;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,7 @@ public class ScoutStatusPage extends ActionBarActivity {
         setTitle("Scout Status");
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String value = extras.getString("name");
+             value = extras.getString("name");
             TextView a = (TextView) findViewById(R.id.ScoutNameInput);
             a.setText(value);
 
@@ -177,6 +177,19 @@ public class ScoutStatusPage extends ActionBarActivity {
 
     public void Next(View view) {
         Intent ToScoutMain = new Intent(this, ScoutMainPage.class);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+
+            value = extras.getString("name");
+       ToScoutMain.putExtra("name", value);
+
+       String[] alldata = extras.getStringArray("all");
+        ToScoutMain.putExtra("all", alldata);
+
+            String test =  extras.getString("string");
+        ToScoutMain.putExtra("string",test);
+        }
+
         startActivity(ToScoutMain);
     }
 
