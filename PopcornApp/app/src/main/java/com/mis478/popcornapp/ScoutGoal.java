@@ -35,6 +35,13 @@ public class ScoutGoal extends ActionBarActivity {
         progressBar.setMax(PersonalGoalInt);
         progressBar.setProgress(i);
 
+        //db stuff
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String test = extras.getString("string");
+            String value = extras.getString("name");
+            String[] alldata = extras.getStringArray("all");
+        }
     }
 
 
