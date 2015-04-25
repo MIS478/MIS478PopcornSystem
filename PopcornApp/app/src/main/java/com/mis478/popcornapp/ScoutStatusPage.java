@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
 
 
 public class ScoutStatusPage extends ActionBarActivity {
@@ -89,172 +91,84 @@ public class ScoutStatusPage extends ActionBarActivity {
             //name holder
             String[] namehold;
             String namehold2;
+            //integer holding area
+            Integer anarray[];
+            anarray = new Integer[10];
+            //had to do some dome delim
+            Integer delim = 8;
+            Integer delimname = 2;
 
             Integer inthold;
             String inttostring;
+
+            //name and int holder
+            String[] dub = new String[10];
+
+            //final holders before display
+            String[] finalarrayname = new String[10];
+            String[] finalarraytot = new String[10];
             //       temp = alldata[1];
             for (int i = 0; i < alldata.length -1; i++)
             {
                 //tot
               holder = alldata[i].split(",");
-              holder = holder[9].split(":");
+              holder = holder[delim].split(":");
+                //for whatever reason 8 is the total sales point for the first loop
+                // and 9 is the total sales point for all others
+                delim = 9;
               holder2 = holder[1];
               holder2 = holder2;
               holder2 = holder2.substring(1, holder2.length() -1);
               inthold = Integer.parseInt(holder2);
+              anarray[i] = inthold;
               //name
               namehold = alldata[i].split(",");
-              namehold = namehold[2].split(":");
+              namehold = namehold[delimname].split(":");
+              delimname =3;
               namehold2 = namehold[1];
               namehold2 = namehold2.substring(1, namehold2.length() -1);
-                //top
-              if (inthold > top)
-               {
-                   //update the old
-                   two = top;
-                   name2.setText(name1.getText());
-                   tot2.setText(top.toString());
+                //loading the double
+              dub[i] = (namehold2 +":"+ inthold.toString());
 
-                   top = inthold;
+            }
+            Arrays.sort(anarray, Collections.reverseOrder());
+            for (int i = 0; i < dub.length; i++)
+            {
 
-                   name1.setText(namehold2);
-                   inttostring = inthold.toString();
-                   tot1.setText(inttostring);
+                namehold = dub[i].split(":");
+                namehold2 = namehold[1];
+                inthold = Integer.parseInt(namehold2);
+                for (int h = 0; h < anarray.length ; h++) {
 
-               }
-                //2
-                if (inthold >= two  && inthold <= top)
-                {
-                    //update the old
-                    three = two;
-                    name3.setText(name2.getText());
-                    tot3.setText(two.toString());
-
-                    two = inthold;
-
-                    name2.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot2.setText(inttostring);
-
-                }
-                //3
-                if (inthold >= three && inthold <= two )
-                {
-                    //update the old
-                    four = three;
-                    name4.setText(name3.getText());
-                    tot4.setText(three.toString());
-
-                    three = inthold;
-
-                    name3.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot3.setText(inttostring);
-
-                }
-                //4
-
-                if (inthold >= four&& inthold <= three )
-                {
-                    //update the old
-                    five = four;
-                    name5.setText(name4.getText());
-                    tot5.setText(four.toString());
-
-                    four = inthold;
-
-                    name4.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot4.setText(inttostring);
-
-                }
-                //5
-                if (inthold >= five && inthold <= four)
-                {
-                    //update the old
-                    six = five;
-                    name6.setText(name5.getText());
-                    tot6.setText(six.toString());
-
-                    five = inthold;
-
-                    name5.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot5.setText(inttostring);
-
-                }
-                //6
-                if (inthold >= six && inthold <= five)
-                {
-                    //update the old
-                    seven = six;
-                    name7.setText(name6.getText());
-                    tot7.setText(six.toString());
-
-                    six = inthold;
-
-                    name6.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot6.setText(inttostring);
-
-                }
-                //7
-                if (inthold >= seven && inthold <= six )
-                {
-                    //update the old
-                    eight = seven;
-                    name8.setText(name7.getText());
-                    tot8.setText(seven.toString());
-
-                    seven = inthold;
-
-                    name7.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot7.setText(inttostring);
-
-                }
-                //8
-                if (inthold >= eight && inthold <= seven)
-                {
-                    //update the old
-                    nine = eight;
-                    name9.setText(name8.getText());
-                    tot9.setText(eight.toString());
-
-                    eight = inthold;
-
-                    name8.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot8.setText(inttostring);
-
-                }
-                //9
-                if (inthold >= nine && inthold <= eight )
-                {
-                    //update the old
-                    ten = nine;
-                    name10.setText(name9.getText());
-                    tot10.setText(nine.toString());
-
-                    nine = inthold;
-
-                    name9.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot9.setText(inttostring);
-
-                }
-                //10
-                if (inthold >= ten && inthold <= nine )
-                {
-                    ten = inthold;
-
-                    name10.setText(namehold2);
-                    inttostring = inthold.toString();
-                    tot10.setText(inttostring);
-
+                    if (inthold == anarray[h]) {
+                        finalarrayname[h] = namehold[0];
+                        finalarraytot[h] = namehold[1];
+                    }
                 }
             }
+            //names
+            name1.setText(finalarrayname[0]);
+            name2.setText(finalarrayname[1]);
+            name3.setText(finalarrayname[2]);
+            name4.setText(finalarrayname[3]);
+            name5.setText(finalarrayname[4]);
+            name6.setText(finalarrayname[5]);
+            name7.setText(finalarrayname[6]);
+            name8.setText(finalarrayname[7]);
+            name9.setText(finalarrayname[8]);
+            name10.setText(finalarrayname[9]);
 
+            //totals
+            tot1.setText("$" + finalarraytot[0].toString());
+            tot2.setText("$" + finalarraytot[1].toString());
+            tot3.setText("$" + finalarraytot[2].toString());
+            tot4.setText("$" + finalarraytot[3].toString());
+            tot5.setText("$" + finalarraytot[4].toString());
+            tot6.setText("$" + finalarraytot[5].toString());
+            tot7.setText("$" + finalarraytot[6].toString());
+            tot8.setText("$" + finalarraytot[7].toString());
+            tot9.setText("$" + finalarraytot[8].toString());
+            tot10.setText("$" + finalarraytot[9].toString());
 
 
         }
