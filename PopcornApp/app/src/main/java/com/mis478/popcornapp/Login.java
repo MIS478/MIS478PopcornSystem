@@ -92,11 +92,16 @@ public class Login extends ActionBarActivity {
                         {
 
                             Intent intent = new Intent(this, DenLeaderMain.class);
+                            intent.putExtra("name", LoginText);
                             startActivity(intent);
                             break;
                         } else {
 
                             Intent intent = new Intent(this, ScoutStatusPage.class);
+                           intent.putExtra("name", LoginText);
+                            intent.putExtra("all", splitArray);
+
+                            intent.putExtra("string", splitArray[i]);
                             startActivity(intent);
                             break;
                                 }

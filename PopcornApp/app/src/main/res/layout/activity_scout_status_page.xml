@@ -30,10 +30,10 @@
         android:layout_height="wrap_content"
         android:text="Scout name from Server"
         android:id="@+id/ScoutNameInput"
-        android:layout_alignBottom="@+id/Weclome"
-        android:layout_centerHorizontal="true"
         android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/TotalSales"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,13 +51,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total from server"
+        android:text="from server"
         android:id="@+id/TotalSalesInput"
-        android:layout_alignBottom="@+id/TotalSales"
-        android:layout_alignRight="@+id/ScoutNameInput"
-        android:layout_alignEnd="@+id/ScoutNameInput"
         android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:layout_alignBottom="@+id/TotalSales"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,62 +87,397 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="--------------------------------------------"
-        android:id="@+id/TopBorder"
-        android:layout_below="@+id/PlaceHolderLB"
-        android:layout_alignRight="@+id/TopSeller"
-        android:layout_alignEnd="@+id/TopSeller"
-        android:layout_marginTop="92dp"
+        android:text="from server"
+        android:id="@+id/PersonalGoalAmt"
         android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/DenGoal"
+        android:layout_alignLeft="@+id/TotalSalesInput"
+        android:layout_alignStart="@+id/TotalSalesInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/DenGoalAmt"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignBottom="@+id/DenGoal"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="--------------------------------------------"
-        android:id="@+id/BottomBorder"
+        android:text="1"
+        android:id="@+id/textView17"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/TopSeller"
-        android:layout_alignEnd="@+id/TopSeller"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:layout_alignLeft="@+id/DenGoal"
+        android:layout_alignStart="@+id/DenGoal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Leader Board"
-        android:id="@+id/PlaceHolderLB"
-        android:layout_below="@+id/BottomBorder"
-        android:layout_alignLeft="@+id/ScoutNameInput"
-        android:layout_alignStart="@+id/ScoutNameInput"
-        android:layout_marginTop="94dp"
+        android:text="2"
+        android:id="@+id/textView18"
         android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView17"
+        android:layout_alignLeft="@+id/textView17"
+        android:layout_alignStart="@+id/textView17" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="The Current Top Seller!"
-        android:id="@+id/TopSeller"
-        android:layout_above="@+id/TopSellerInput"
-        android:layout_centerHorizontal="true"
+        android:text="3"
+        android:id="@+id/textView19"
         android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView18"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Top Seller/photo?"
-        android:id="@+id/TopSellerInput"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/TotalSales"
-        android:layout_toEndOf="@+id/TotalSales"
-        android:layout_marginBottom="53dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="4"
+        android:id="@+id/textView29"
         android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView19"
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="5"
+        android:id="@+id/textView30"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView29"
+        android:layout_alignLeft="@+id/textView29"
+        android:layout_alignStart="@+id/textView29" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="6"
+        android:id="@+id/textView31"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView30"
+        android:layout_alignLeft="@+id/textView30"
+        android:layout_alignStart="@+id/textView30" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="7"
+        android:id="@+id/textView32"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView31"
+        android:layout_alignLeft="@+id/textView31"
+        android:layout_alignStart="@+id/textView31" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="8"
+        android:id="@+id/textView33"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView32"
+        android:layout_alignLeft="@+id/textView32"
+        android:layout_alignStart="@+id/textView32" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="9"
+        android:id="@+id/textView34"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView33"
+        android:layout_alignLeft="@+id/textView33"
+        android:layout_alignStart="@+id/textView33" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="10"
+        android:id="@+id/textView35"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView34"
+        android:layout_alignLeft="@+id/textView34"
+        android:layout_alignStart="@+id/textView34" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/name1"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name2"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView19"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name3"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_alignLeft="@+id/name2"
+        android:layout_alignStart="@+id/name2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name4"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView30"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name5"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView31"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name6"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView32"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name7"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignBottom="@+id/textView32"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name8"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView34"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name9"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView35"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from server"
+        android:id="@+id/name10"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignBottom="@+id/textView35"
+        android:layout_toLeftOf="@+id/DenGoalAmt"
+        android:layout_toStartOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rank"
+        android:id="@+id/textView46"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView17"
+        android:layout_alignRight="@+id/textView35"
+        android:layout_alignEnd="@+id/textView35" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/textView47"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/textView46"
+        android:layout_alignRight="@+id/PersonalGoal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Total Sold"
+        android:id="@+id/textView48"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/textView47"
+        android:layout_toRightOf="@+id/DenGoalAmt"
+        android:layout_toEndOf="@+id/DenGoalAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total1"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name1"
+        android:layout_alignRight="@+id/textView48"
+        android:layout_alignEnd="@+id/textView48" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total2"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name2"
+        android:layout_alignLeft="@+id/total1"
+        android:layout_alignStart="@+id/total1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total3"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name3"
+        android:layout_alignLeft="@+id/total2"
+        android:layout_alignStart="@+id/total2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total4"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name4"
+        android:layout_alignLeft="@+id/total3"
+        android:layout_alignStart="@+id/total3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total5"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name5"
+        android:layout_alignLeft="@+id/total4"
+        android:layout_alignStart="@+id/total4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total6"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name6"
+        android:layout_alignRight="@+id/textView48"
+        android:layout_alignEnd="@+id/textView48" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total7"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name7"
+        android:layout_alignRight="@+id/textView48"
+        android:layout_alignEnd="@+id/textView48" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total8"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name8"
+        android:layout_alignLeft="@+id/total7"
+        android:layout_alignStart="@+id/total7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total9"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_above="@+id/textView35"
+        android:layout_alignRight="@+id/textView48"
+        android:layout_alignEnd="@+id/textView48" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" from server"
+        android:id="@+id/total10"
+        android:textColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        android:layout_alignTop="@+id/name10"
+        android:layout_alignRight="@+id/textView48"
+        android:layout_alignEnd="@+id/textView48" />
 
 </RelativeLayout>
