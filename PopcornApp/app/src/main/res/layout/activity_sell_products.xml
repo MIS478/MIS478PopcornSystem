@@ -16,22 +16,22 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/FirstRowFirstLine"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="30dp">
 
             <TextView
-                android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
+                android:gravity="center_horizontal"
                 android:text="Buffalo Cheddar Cheese"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/TextColor"
-                android:gravity="center_horizontal"/>
+                android:textColor="@color/TextColor" />
 
             <TextView
-                android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
@@ -43,12 +43,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/FirstRowSecondLine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".15"
@@ -58,11 +58,18 @@
                 android:textColor="@color/TextColor" />
 
             <TextView
-                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/BuffChedPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".10"
-                android:text="$30"
+                android:text="20"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/TextColor" />
 
@@ -72,7 +79,6 @@
                 android:layout_weight=".5" />
 
             <TextView
-                android:id="@+id/textView293"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".15"
@@ -82,22 +88,30 @@
                 android:textColor="@color/TextColor" />
 
             <TextView
-                android:id="@+id/textView294"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/CarmCornPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".23"
-                android:text="$30"
+                android:text="25"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/TextColor" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/FirstRowThirdLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/BuffChedBtn"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
@@ -117,14 +131,14 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/BuffChedUp"
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+" />
 
                 <TextView
-                    android:id="@+id/textView19"
+                    android:id="@+id/BuffChedAmt"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -133,7 +147,7 @@
                     android:textColor="@color/TextColor" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/BuffChedDown"
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -147,7 +161,7 @@
                 android:layout_weight=".1" />
 
             <ImageButton
-                android:id="@+id/imageButton32"
+                android:id="@+id/CarmCornBtn"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
@@ -166,14 +180,14 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button21"
+                    android:id="@+id/CarmCornUp"
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+" />
 
                 <TextView
-                    android:id="@+id/textView192"
+                    android:id="@+id/CarmCornAmt"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -182,7 +196,7 @@
                     android:textColor="@color/TextColor" />
 
                 <Button
-                    android:id="@+id/button22"
+                    android:id="@+id/CarmCornDown"
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -191,5 +205,439 @@
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/SecondRowFirstLine"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center_horizontal"
+                android:text="Cheese Lover's Collection"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center_horizontal"
+                android:text="White Chocolatey Pretzels"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SecondRowSecondLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:gravity="right"
+                android:text="Price: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/CheeseLovePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"
+                android:text="45"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:gravity="right"
+                android:text="Price:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/WhitePretzelPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".23"
+                android:text="30"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SecondRowThirdLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/CheeseLoveBtn"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".15"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cheeselovers" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".025" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/CheeseLoveUp"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/CheeseLoveAmt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/TextColor" />
+
+                <Button
+                    android:id="@+id/CheeseLoveDown"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
+
+            <ImageButton
+                android:id="@+id/WhitePretzelBtn"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".15"
+                android:scaleType="fitCenter"
+                android:src="@drawable/whitechocpretzel" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".025" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/WhitePretzelUp"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/WhitePretzelAmt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/TextColor" />
+
+                <Button
+                    android:id="@+id/WhitePretzelDown"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ThirdRowFirstLine"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center_horizontal"
+                android:text="Gold Level\nMilitary"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center_horizontal"
+                android:text="Silver Level\nMilitary"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ThirdRowSecondLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:gravity="right"
+                android:text="Price: "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/GoldMilitaryPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"
+                android:text="55"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:gravity="right"
+                android:text="Price:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/SilverMilitaryPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".23"
+                android:text="35"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ThirdRowThirdLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/GoldMilitaryBtn"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".15"
+                android:cropToPadding="false"
+                android:scaleType="fitCenter"
+                android:src="@drawable/military" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".025" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/GoldMilitaryUp"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/GoldMilitaryAmt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/TextColor" />
+
+                <Button
+                    android:id="@+id/GoldMilitaryDown"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
+
+            <ImageButton
+                android:id="@+id/SilverMilitaryBtn"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight=".15"
+                android:scaleType="fitCenter"
+                android:src="@drawable/military" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".025" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/SilverMilitaryUp"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/SilverMilitaryAmt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/TextColor" />
+
+                <Button
+                    android:id="@+id/SilverMilitaryDown"
+                    style="@style/ButtonCubScoutTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
+
+            <TextView
+                android:id="@+id/TotalAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/button"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Donation" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Next" />
+        </FrameLayout>
     </LinearLayout>
 </ScrollView>
