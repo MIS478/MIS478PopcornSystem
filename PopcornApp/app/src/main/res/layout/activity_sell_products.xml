@@ -16,11 +16,26 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Products"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/FirstRowFirstLine"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:paddingTop="30dp">
+            android:paddingTop="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -117,6 +132,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".15"
                 android:cropToPadding="false"
+                android:onClick="BuffChedDesc"
                 android:scaleType="fitCenter"
                 android:src="@drawable/buffalochedcheese" />
 
@@ -135,6 +151,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="BuffChedUp"
                     android:text="+" />
 
                 <TextView
@@ -151,6 +168,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="BuffChedDown"
                     android:text="-" />
 
             </LinearLayout>
@@ -166,6 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight=".15"
+                android:onClick="CarmCornDesc"
                 android:scaleType="fitCenter"
                 android:src="@drawable/caramelcorn" />
 
@@ -184,6 +203,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="CarmCornUp"
                     android:text="+" />
 
                 <TextView
@@ -200,6 +220,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="CarmCornDown"
                     android:text="-" />
 
             </LinearLayout>
@@ -210,7 +231,7 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:paddingTop="30dp">
+            android:paddingTop="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -307,6 +328,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".15"
                 android:cropToPadding="false"
+                android:onClick="CheeseLoveDesc"
                 android:scaleType="fitCenter"
                 android:src="@drawable/cheeselovers" />
 
@@ -325,6 +347,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="CheeseLoveUp"
                     android:text="+" />
 
                 <TextView
@@ -341,6 +364,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="CheeseLoveDown"
                     android:text="-" />
 
             </LinearLayout>
@@ -356,6 +380,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight=".15"
+                android:onClick="WhitePretzelDesc"
                 android:scaleType="fitCenter"
                 android:src="@drawable/whitechocpretzel" />
 
@@ -374,6 +399,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="WhitePretzelUp"
                     android:text="+" />
 
                 <TextView
@@ -390,6 +416,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="WhitePretzelDown"
                     android:text="-" />
 
             </LinearLayout>
@@ -400,7 +427,7 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:paddingTop="30dp">
+            android:paddingTop="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -497,6 +524,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".15"
                 android:cropToPadding="false"
+                android:onClick="GoldMilitaryDesc"
                 android:scaleType="fitCenter"
                 android:src="@drawable/military" />
 
@@ -515,6 +543,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="GoldMilitaryUp"
                     android:text="+" />
 
                 <TextView
@@ -531,6 +560,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="GoldMilitaryDown"
                     android:text="-" />
 
             </LinearLayout>
@@ -546,6 +576,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_weight=".15"
+                android:onClick="SilverMilitaryDesc"
                 android:scaleType="fitCenter"
                 android:src="@drawable/military" />
 
@@ -564,6 +595,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="SilverMilitaryUp"
                     android:text="+" />
 
                 <TextView
@@ -580,6 +612,7 @@
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="SilverMilitaryDown"
                     android:text="-" />
 
             </LinearLayout>
@@ -616,31 +649,32 @@
             android:paddingTop="20dp">
 
             <Button
-                android:id="@+id/backbtn"
+                android:id="@+id/ProductsBackBtn"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:text="Back"
-                android:onClick="Back" />
+                android:onClick="Back"
+                android:text="Back" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/ProductsDonateButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Donation"
-                android:onClick="Donate" />
+                android:onClick="Donate"
+                android:text="Donation" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/ProductsNextBtn"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:text="Next"
-                android:onClick="CustInfo" />
+                android:onClick="CustInfo"
+                android:text="Next" />
         </FrameLayout>
+
     </LinearLayout>
 </ScrollView>

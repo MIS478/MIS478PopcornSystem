@@ -33,7 +33,7 @@ public class Donation extends ActionBarActivity {
     }
 
     public void Sales(View view) {
-        Intent intent = new Intent(this, SalesMode.class);
+        Intent intent = new Intent(this, SellProducts.class);
         startActivity(intent);
     }
 
@@ -55,7 +55,7 @@ public class Donation extends ActionBarActivity {
             return true;
         }
         if (id == R.id.SalesModeBtn) {
-            Intent intent = new Intent(this, SalesMode.class);
+            Intent intent = new Intent(this, SellProducts.class);
             startActivity(intent);
         }
         if (id == R.id.CustomerInfo) {

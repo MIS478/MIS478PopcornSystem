@@ -35,7 +35,7 @@ public class DenLeaderMain extends ActionBarActivity {
     }
     public void toProducts (View view)
     {
-        Intent toProducts = new Intent(this, SalesMode.class);
+        Intent toProducts = new Intent(this, SellProducts.class);
         startActivity(toProducts);
     }
     public void toAdminButton (View view)
@@ -74,7 +74,7 @@ public class DenLeaderMain extends ActionBarActivity {
         }
 
         if (id == R.id.sales_mode) {
-            Intent intent = new Intent(this, SalesMode.class);
+            Intent intent = new Intent(this, SellProducts.class);
             startActivity(intent);
         }
         if (id == R.id.donation) {
