@@ -17,34 +17,41 @@ public class OrderFinalization extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_finalization);
         Intent intent = getIntent();
+        Bundle info = intent.getExtras();
+
         //Fills in the first name of customer
-        String fNamemessage = intent.getStringExtra(CustomerInfo.fNameIntent);
+        String fNamemessage = info.getString("FNAME");
         TextView fName = (TextView) findViewById(R.id.FinalizationFnameBox);
         fName.setText(fNamemessage);
+
         //Fills in the last name of customer
-        String lNamemessage = intent.getStringExtra(CustomerInfo.lNameIntent);
+        String lNamemessage = info.getString("LNAME");
         TextView lName = (TextView) findViewById(R.id.FinalizationLnameBox);
         lName.setText(lNamemessage);
+
         //Fills in the address of customer
-        String streetnumbermessage = intent.getStringExtra(CustomerInfo.streetNumberIntent);
-        String streetnamemessage = intent.getStringExtra(CustomerInfo.streetNameIntent);
+        String streetnumbermessage = info.getString("STREETNUMBER");
+        String streetnamemessage = info.getString("STREETNAME");
         TextView address = (TextView) findViewById(R.id.FinalizationAddress);
         address.setText(streetnumbermessage + " " + streetnamemessage);
+
         //Fills in the city of customer
-        String citymessage = intent.getStringExtra(CustomerInfo.cityIntent);
+        String citymessage = info.getString("CITY");
         TextView city = (TextView) findViewById(R.id.FinalizationCity);
         city.setText(citymessage);
+
         //Fills in the state of customer
-        String statemessage = intent.getStringExtra(CustomerInfo.stateIntent);
+        String statemessage = info.getString("STATE");
         TextView state = (TextView) findViewById(R.id.FinalizationState);
         state.setText(statemessage);
+
         //Fills in the zip of customer
-        String zipmessage = intent.getStringExtra(CustomerInfo.zipIntent);
+        String zipmessage = info.getString("ZIP");
         TextView zip = (TextView) findViewById(R.id.FinalizationZip);
         zip.setText(zipmessage);
 
         //Fills in the phone number of customer if it is available
-        String phonemessage = intent.getStringExtra(CustomerInfo.phoneIntent);
+        String phonemessage = info.getString("PHONE");
 
         TextView phone = (TextView) findViewById(R.id.FinalizationPhone);
         if (phonemessage.isEmpty()) {
@@ -54,7 +61,7 @@ public class OrderFinalization extends ActionBarActivity {
         }
 
         //Fills in the email of customer
-        String emailmessage = intent.getStringExtra(CustomerInfo.emailIntent);
+        String emailmessage = info.getString("EMAIL");
         TextView email = (TextView) findViewById(R.id.FinalizationEmail);
         if (emailmessage.isEmpty()) {
             email.setText("Not given");

@@ -83,8 +83,7 @@ public class SellProducts extends ActionBarActivity {
         TotalBox.setText("$" + Total.toString());
     }
 
-    public void BuffChedDesc (View view)
-    {
+    public void BuffChedDesc(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("Buffalo Cheddar Cheese Corn")
                 .setMessage("Spicy buffalo flavors unite with our traditional cheddar cheese popcorn to ignite your taste buds!")
@@ -106,13 +105,14 @@ public class SellProducts extends ActionBarActivity {
         }
 
     }
-    public void CarmCornDesc (View view)
-    {
+
+    public void CarmCornDesc(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("Caramel Corn with Almonds, Cashews & Pecans")
                 .setMessage("Sweet caramel corn with crunchy almonds, cashews and pecans!")
                 .show();
     }
+
     public void CarmCornUp(View view) {
         CarmCornAmt++;
         CarmCornAmtBox.setText(CarmCornAmt.toString());
@@ -128,13 +128,14 @@ public class SellProducts extends ActionBarActivity {
         }
 
     }
-    public void CheeseLoveDesc (View view)
-    {
+
+    public void CheeseLoveDesc(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("Cheese Lover's Collection")
                 .setMessage("The perfect collection of Cheddar Cheese, White Cheddar Cheese and Buffalo Cheddar Cheese all in one box.")
                 .show();
     }
+
     public void CheeseLoveUp(View view) {
         CheeseLoveAmt++;
         CheeseLoveAmtBox.setText(CheeseLoveAmt.toString());
@@ -150,13 +151,14 @@ public class SellProducts extends ActionBarActivity {
         }
 
     }
-    public void WhitePretzelDesc (View view)
-    {
+
+    public void WhitePretzelDesc(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("White Chocolatey Pretzels")
                 .setMessage("The perfect blend of crispy pretzels wrapped in creamy white chocolatey goodness.")
                 .show();
     }
+
     public void WhitePretzelUp(View view) {
         WhitePretzelAmt++;
         WhitePretzelAmtBox.setText(WhitePretzelAmt.toString());
@@ -172,13 +174,14 @@ public class SellProducts extends ActionBarActivity {
         }
 
     }
-    public void GoldMilitaryDesc (View view)
-    {
+
+    public void GoldMilitaryDesc(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("Gold Level Military")
                 .setMessage("Send a gift of popcorn to our military men and women, their families, and veterans' organizations. Over $38 returned to local Scouting!")
                 .show();
     }
+
     public void GoldMilitaryUp(View view) {
         GoldMilitaryAmt++;
         GoldMilitaryAmtBox.setText(GoldMilitaryAmt.toString());
@@ -194,13 +197,14 @@ public class SellProducts extends ActionBarActivity {
         }
 
     }
-    public void SilverMilitaryDesc (View view)
-    {
+
+    public void SilverMilitaryDesc(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("Silver Level Military")
                 .setMessage("Send a gift of popcorn to our military men and women, their families, and veterans' organizations. Over $24 returned to local Scouting!")
                 .show();
     }
+
     public void SilverMilitaryUp(View view) {
         SilverMilitaryAmt++;
         SilverMilitaryAmtBox.setText(SilverMilitaryAmt.toString());
@@ -238,30 +242,19 @@ public class SellProducts extends ActionBarActivity {
 
     public void BundleIntent() {
         Bundle Products = new Bundle();
-        if (BuffChedAmt != 0) {
-            Products.putString("BUFFCHEDAMT", BuffChedAmt.toString());
-            Products.putString("BUFFCHEDPRICE", BuffChedCost.toString());
-        }
-        if (CarmCornAmt != 0) {
-            Products.putString("CARMCORNAMT", CarmCornAmt.toString());
-            Products.putString("CARMCORNPRICE", CarmCornCost.toString());
-        }
-        if (CheeseLoveAmt != 0) {
-            Products.putString("CHEESELOVEAMT", CheeseLoveAmt.toString());
-            Products.putString("CHEESELOVEPRICE", CheeseLoveCost.toString());
-        }
-        if (WhitePretzelAmt != 0) {
-            Products.putString("WHITEPRETZELAMT", WhitePretzelAmt.toString());
-            Products.putString("WHITEPRETZELPRICE", WhitePretzelCost.toString());
-        }
-        if (GoldMilitaryAmt != 0) {
-            Products.putString("GOLDMILITARYAMT", GoldMilitaryAmt.toString());
-            Products.putString("GOLDMILITARYPRICE", GoldMilitaryCost.toString());
-        }
-        if (SilverMilitaryAmt != 0) {
-            Products.putString("SILVERMILITARYAMT", SilverMilitaryAmt.toString());
-            Products.putString("SILVERMILITARYPRICE", SilverMilitaryCost.toString());
-        }
+        Products.putString("BUFFCHEDAMT", BuffChedAmt.toString());
+        Products.putString("BUFFCHEDPRICE", BuffChedCost.toString());
+        Products.putString("CARMCORNAMT", CarmCornAmt.toString());
+        Products.putString("CARMCORNPRICE", CarmCornCost.toString());
+        Products.putString("CHEESELOVEAMT", CheeseLoveAmt.toString());
+        Products.putString("CHEESELOVEPRICE", CheeseLoveCost.toString());
+        Products.putString("WHITEPRETZELAMT", WhitePretzelAmt.toString());
+        Products.putString("WHITEPRETZELPRICE", WhitePretzelCost.toString());
+        Products.putString("GOLDMILITARYAMT", GoldMilitaryAmt.toString());
+        Products.putString("GOLDMILITARYPRICE", GoldMilitaryCost.toString());
+        Products.putString("SILVERMILITARYAMT", SilverMilitaryAmt.toString());
+        Products.putString("SILVERMILITARYPRICE", SilverMilitaryCost.toString());
+        OrderedProducts.putExtras(Products);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -19,22 +19,14 @@ import android.widget.TextView;
 
 
 public class CustomerInfo extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
-    public final static String fNameIntent = "com.mis478.popcornapp.fname";
-    public final static String lNameIntent = "com.mis478.popcornapp.lname";
-    public final static String streetNumberIntent = "com.mis478.popcornapp.numberaddress";
-    public final static String streetNameIntent = "com.mis478.popcornapp.nameaddress";
-    public final static String cityIntent = "com.mis478.popcornapp.city";
-    public final static String stateIntent = "com.mis478.popcornapp.state";
-    public final static String zipIntent = "com.mis478.popcornapp.zip";
-    public final static String phoneIntent = "com.mis478.popcornapp.phone";
-    public final static String emailIntent = "com.mis478.popcornapp.email";
     Spinner StateSpinner;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.customer_info);
-        Intent intent = getIntent();
+        intent = getIntent();
         setTitle("Customer Information");
         StateSpinner = (Spinner) findViewById(R.id.StateSpinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -61,6 +53,8 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
     public void ToFinalize(View view) {
         //when the "Next" button is hit it creates an intent
         Intent finalize = new Intent(this, OrderFinalization.class);
+        Bundle OrderedProducts = intent.getExtras();
+        Bundle Finalization = new Bundle();
 
         //finds the EditText boxes on the screen that contain the Customer's info
         EditText fName = (EditText) findViewById(R.id.FnameBox);
@@ -135,17 +129,31 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
                     .show();
         } else {
             //attaches the customers info to the intent
-            finalize.putExtra(fNameIntent, fNameText);
-            finalize.putExtra(lNameIntent, lNameText);
-            finalize.putExtra(streetNumberIntent, streetNumberText);
-            finalize.putExtra(streetNameIntent, streetNameText);
-            finalize.putExtra(cityIntent, cityText);
-            finalize.putExtra(stateIntent, stateText);
-            finalize.putExtra(zipIntent, zipText);
-            finalize.putExtra(phoneIntent, phoneNumberText);
-            finalize.putExtra(emailIntent, emailText);
+            Finalization.putString("FNAME", fNameText);
+            Finalization.putString("LNAME", lNameText);
+            Finalization.putString("STREETNUMBER", streetNumberText);
+            Finalization.putString("STREETNAME", streetNameText);
+            Finalization.putString("CITY", cityText);
+            Finalization.putString("STATE", stateText);
+            Finalization.putString("ZIP", zipText);
+            Finalization.putString("PHONE", phoneNumberText);
+            Finalization.putString("EMAIL", emailText);
+
+            Finalization.putString("BUFFCHEDAMT", OrderedProducts.getString("BUFFCHEDAMT"));
+            Finalization.putString("BUFFCHEDPRICE", OrderedProducts.getString("BUFFCHEDPRICE"));
+            Finalization.putString("CARMCORNAMT", OrderedProducts.getString("CARMCORNAMT"));
+            Finalization.putString("CARMCORNPRICE", OrderedProducts.getString("CARMCORNPRICE"));
+            Finalization.putString("CHEESELOVEAMT", OrderedProducts.getString("CHEESELOVEAMT"));
+            Finalization.putString("CHEESELOVEPRICE", OrderedProducts.getString("CHEESELOVEPRICE"));
+            Finalization.putString("WHITEPRETZELAMT", OrderedProducts.getString("WHITEPRETZELAMT"));
+            Finalization.putString("WHITEPRETZELPRICE", OrderedProducts.getString("WHITEPRETZELPRICE"));
+            Finalization.putString("GOLDMILITARYAMT", OrderedProducts.getString("GOLDMILITARYAMT"));
+            Finalization.putString("GOLDMILITARYPRICE", OrderedProducts.getString("GOLDMILITARYPRICE"));
+            Finalization.putString("SILVERMILITARYAMT", OrderedProducts.getString("SILVERMILITARYAMT"));
+            Finalization.putString("SILVERMILITARYPRICE", OrderedProducts.getString("SILVERMILITARYPRICE"));
 
             //starts the next screen
+            finalize.putExtras(Finalization);
             startActivity(finalize);
         }
     }
