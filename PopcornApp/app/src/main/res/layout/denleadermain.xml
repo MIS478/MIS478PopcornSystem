@@ -150,8 +150,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".35"
                 android:clickable="true"
-                android:onClick="toProducts"
-                android:text="View Products" />
+                android:text="View Products"
+                android:onClick="toProducts" />
 
             <Space
                 android:layout_width="wrap_content"

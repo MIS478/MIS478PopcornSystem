@@ -35,8 +35,8 @@ public class DenLeaderMain extends ActionBarActivity {
     }
     public void toProducts (View view)
     {
-        Intent toProducts = new Intent(this, SellProducts.class);
-        startActivity(toProducts);
+        Intent toDenProducts = new Intent(this, DenSalesItems.class);
+        startActivity(toDenProducts);
     }
     public void toAdminButton (View view)
     {
@@ -60,29 +60,12 @@ public class DenLeaderMain extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.scoutGoal) {
-            Intent intent = new Intent(this, ScoutGoal.class);
+        if (id == R.id.DenGoal) {
+            Intent intent = new Intent(this, DenGoal.class);
             startActivity(intent);
         }
-        if (id == R.id.deliveryMode) {
-            Intent intent = new Intent(this, DeliveryMode.class);
-            startActivity(intent);
-        }
-        if (id == R.id.pastSales) {
-            Intent intent = new Intent(this, PastSales.class);
-            startActivity(intent);
-        }
-
-        if (id == R.id.sales_mode) {
-            Intent intent = new Intent(this, SellProducts.class);
-            startActivity(intent);
-        }
-        if (id == R.id.donation) {
-            Intent intent = new Intent(this, Donation.class);
-            startActivity(intent);
-        }
-        if (id == R.id.ScoutMain) {
-            Intent intent = new Intent(this, ScoutMainPage.class);
+        if (id == R.id.densalestracking) {
+            Intent intent = new Intent(this, DenSalesTracking.class);
             startActivity(intent);
         }
         if (id == R.id.log) {

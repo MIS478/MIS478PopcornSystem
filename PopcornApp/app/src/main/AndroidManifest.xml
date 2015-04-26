@@ -88,6 +88,10 @@
             android:name=".SellProducts"
             android:label="@string/title_activity_sale_products">
         </activity>
+        <activity
+            android:name=".DenSalesItems"
+            android:label="DenItems">
+        </activity>
     </application>
 
 </manifest>
