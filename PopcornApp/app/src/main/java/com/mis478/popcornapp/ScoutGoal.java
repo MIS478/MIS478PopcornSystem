@@ -18,29 +18,46 @@ public class ScoutGoal extends ActionBarActivity {
         setContentView(R.layout.activity_scout_goal);
         setTitle("Your Goals");
         //Get info from the previous screen
-        Intent intent = getIntent();
-
-        //find the Scout's personal goal amount
-        TextView textView = (TextView) findViewById(R.id.PersonalAmt);
-        String message = textView.getText().toString();
-        PersonalGoalInt=Integer.parseInt(message.replaceAll("[\\D]", ""));
-
-        //find the total amount of goods sold
-        TextView textView2 = (TextView) findViewById(R.id.TotalSoldAmt);
-        String message2 = textView2.getText().toString();
-        int i=Integer.parseInt(message2.replaceAll("[\\D]", ""));
-
-        //find the progress bar and then set the progress amount
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.SaleProgressBar);
-        progressBar.setMax(PersonalGoalInt);
-        progressBar.setProgress(i);
-
-        //db stuff
+      //  Intent intent = getIntent();
+        //db world
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
+
             String test = extras.getString("string");
+            String[] SplitByComma = test.split(",");
+            String[] personal = SplitByComma[9].split(":");
+            String temp = personal[1];
+            temp = temp.substring(1,temp.length() -1);
+
             String value = extras.getString("name");
+
             String[] alldata = extras.getStringArray("all");
+
+            //find the Scout's personal goal amount
+            TextView textView = (TextView) findViewById(R.id.PersonalAmt);
+            PersonalGoalInt = Integer.parseInt(temp);
+            textView.setText("$" + PersonalGoalInt);
+
+            //find the total amount of goods sold
+            TextView textView2 = (TextView) findViewById(R.id.TotalSoldAmt);
+            String[] TotalSales = SplitByComma[8].split(":");
+            String temp2 = TotalSales[1];
+            temp2 = temp2.substring(1,temp2.length() -1);
+            textView2.setText("$" + temp2);
+
+            //pack goal
+            TextView textView3 = (TextView) findViewById(R.id.PackAmt);
+            String[] pack = SplitByComma[10].split(":");
+            String temp3 = pack[1];
+            temp3 = temp3.substring(1,temp3.length() -1);
+            textView3.setText("$" + temp3);
+
+            int hold = Integer.parseInt(temp2);
+            //find the progress bar and then set the progress amount
+            ProgressBar progressBar = (ProgressBar) findViewById(R.id.SaleProgressBar);
+            progressBar.setMax(PersonalGoalInt);
+            progressBar.setProgress(hold);
+
         }
     }
 
