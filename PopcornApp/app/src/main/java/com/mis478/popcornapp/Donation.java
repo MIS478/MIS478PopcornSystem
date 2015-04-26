@@ -56,6 +56,7 @@ public class Donation extends ActionBarActivity {
         EditText DonationAmt = (EditText) findViewById(R.id.DonationAmount);
         String DonationAmtText = DonationAmt.getText().toString();
 
+
         //attaches the radio button that was selected or throws an error if there was no method selected
         if (check.isChecked()) {
             CustInfoBundle.putString("PAYMENTTYPE", "check");

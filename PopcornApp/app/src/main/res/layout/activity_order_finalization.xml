@@ -209,57 +209,118 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
             android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp"
             android:text="Items purchased:"
             android:textColor="@color/TextColor"
             android:textSize="@dimen/abc_text_size_headline_material" />
 
-        <GridLayout
+
+        <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:columnCount="2"
-            android:orientation="vertical"
-            android:rowCount="6">
+            android:paddingBottom="10dp">
 
-            <TableRow
+            <TextView
+                android:id="@+id/FinalizationBuffChed"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Buffalo Cheddar Cheese"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Buffalo Cheddar Cheese"
-                    android:layout_weight=".5"
-                    android:gravity="right"
-                    android:textColor="@color/TextColor"/>
+        </TableRow>
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".05"/>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="0"
-                    android:id="@+id/textView3"
-                    android:layout_weight=".5"
-                    android:gravity="left"
-                    android:textColor="@color/TextColor"/>
-            </TableRow>
-        </GridLayout>
+            <TextView
+                android:id="@+id/FinalizationCarmCorn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Premium Caramel Corn"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/FinalizationCheeseLove"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Cheese Lover's Collection"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/FinalizationWhitePretzels"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="White Chocolatey Pretzels"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/FinalizationGoldMilitary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Gold Level Military"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/FinalizationSilverMilitary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Silver Level Military"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColor" />
+
+        </TableRow>
 
         <TextView
+            android:id="@+id/FinalizationDonationAmt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Donation Amount: $"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/abc_text_size_medium_material"
-            android:id="@+id/FinalizationDonationAmt"/>
+            android:textSize="@dimen/abc_text_size_medium_material" />
 
         <TextView
             android:id="@+id/textView16"
@@ -269,35 +330,36 @@
             android:text="Total:"
             android:textAlignment="viewStart"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/TextColor"/>
+            android:textColor="@color/TextColor" />
 
-            <TableRow android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/FinalizationBackButton"
-                    style="@style/ButtonCubScoutTheme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left|bottom"
-                    android:clickable="true"
-                    android:onClick="ToCustInfo"
-                    android:text="@string/back" />
+            <Button
+                android:id="@+id/FinalizationBackButton"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:clickable="true"
+                android:onClick="ToCustInfo"
+                android:text="@string/back" />
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".8" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8" />
 
-                <Button
-                    android:id="@+id/FinalizationSubmitButton"
-                    style="@style/ButtonCubScoutTheme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:clickable="true"
-                    android:onClick="SubmitOrder"
-                    android:text="Place Order" />
-            </TableRow>
+            <Button
+                android:id="@+id/FinalizationSubmitButton"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:clickable="true"
+                android:onClick="SubmitOrder"
+                android:text="Place Order" />
+        </TableRow>
     </LinearLayout>
 </ScrollView>

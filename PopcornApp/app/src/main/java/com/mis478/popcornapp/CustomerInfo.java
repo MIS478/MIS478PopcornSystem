@@ -160,9 +160,9 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         }
     }
 
-    public void ToProducts(View view) {
-        Intent products = new Intent(this, SellProducts.class);
-        startActivity(products);
+    public void ToDonation (View view) {
+        Intent donation = new Intent(this, Donation.class);
+        startActivity(donation);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
