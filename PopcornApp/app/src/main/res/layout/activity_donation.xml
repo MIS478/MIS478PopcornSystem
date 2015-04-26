@@ -16,117 +16,107 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="140dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:paddingBottom="50dp"
-                android:text="Select the Amount and Method of Payment"
+                android:text="Select the Method of Payment and Possible Donation Amount"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/TextColor" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Sales Mode"
-                android:id="@+id/SMlbl"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/TextColor"
-                android:paddingLeft="15dp"/>
 
         </TableRow>
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Check"
-                android:id="@+id/radioButtonCheck"
-                style="@style/RadioButtonCubScoutTheme"/>
-                android:checked="false" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cash"
-                android:id="@+id/radioButtonCash"
-                style="@style/RadioButtonCubScoutTheme"/>
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:checked="false" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Credit"
-                android:id="@+id/radioButtonCredit"
-                style="@style/RadioButtonCubScoutTheme"/>
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:checked="false" />
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingBottom="40dp">
 
-            <EditText
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radioButtonCheck"
+                style="@style/RadioButtonCubScoutTheme"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                style="@style/EditTextCubScoutTheme"
-                android:id="@+id/editText"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1" />
+                android:checked="false"
+                android:text="Check"
+                android:textColor="@color/TextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCash"
+                style="@style/RadioButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Cash"
+                android:textColor="@color/TextColor" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCredit"
+                style="@style/RadioButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Credit"
+                android:textColor="@color/TextColor" />
+        </RadioGroup>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Donation Amount: "
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Donation Amount"
-                android:id="@+id/textView" />
+                android:textColor="@color/TextColor" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:weightSum="1">
+            <EditText
+                android:id="@+id/DonationAmount"
+                style="@style/EditTextCubScoutTheme"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:inputType="number" />
+        </TableRow>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sales"
-                    android:id="@+id/SalesModeBtn"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:clickable="true"
-                    android:onClick="Sales"
-                    style="@style/ButtonCubScoutTheme"
-                    android:layout_gravity="bottom" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="40dp">
 
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="bottom"></TableRow>
+            <Button
+                android:id="@+id/SalesModeBtn"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="Sales"
+                android:text="Back"
+                android:layout_weight=".2"/>
 
-                <FrameLayout
-                    android:layout_width="164dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical">
 
-                </FrameLayout>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"/>
 
-                <Button
-                    android:layout_width="92dp"
-                    android:layout_height="wrap_content"
-                    android:text="Info"
-                    android:id="@+id/CustomerInfo"
-                    android:onClick="CustInfo"
-                    style="@style/ButtonCubScoutTheme"
-                    android:layout_gravity="bottom" />
+            <Button
+                android:id="@+id/CustomerInfo"
+                style="@style/ButtonCubScoutTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="CustInfo"
+                android:text="Next"
+                android:layout_weight=".2"/>
 
-            </TableRow>
+        </TableRow>
 
-        </RadioGroup>
 
     </LinearLayout>
 </ScrollView>

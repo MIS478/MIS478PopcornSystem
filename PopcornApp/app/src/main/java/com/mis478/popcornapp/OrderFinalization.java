@@ -68,6 +68,11 @@ public class OrderFinalization extends ActionBarActivity {
         } else {
             email.setText(emailmessage);
         }
+
+        //fills in the donation amount if any
+        String donationmessage = info.getString("DONATIONAMT");
+        TextView donation = (TextView) findViewById(R.id.DonationAmount);
+        donation.setText(donationmessage);
     }
 
     public void ToCustInfo(View view) {

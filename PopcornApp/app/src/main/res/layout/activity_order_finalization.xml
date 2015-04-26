@@ -258,7 +258,8 @@
             android:text="Donation Amount: $"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/TextColor"
-            android:textSize="@dimen/abc_text_size_medium_material" />
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:id="@+id/FinalizationDonationAmt"/>
 
         <TextView
             android:id="@+id/textView16"

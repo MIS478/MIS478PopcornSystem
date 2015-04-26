@@ -662,18 +662,10 @@
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:onClick="Donate"
-                android:text="Donation" />
-
-            <Button
-                android:id="@+id/ProductsNextBtn"
-                style="@style/ButtonCubScoutTheme"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:onClick="CustInfo"
+                android:onClick="Donate"
                 android:text="Next" />
+
         </FrameLayout>
 
     </LinearLayout>

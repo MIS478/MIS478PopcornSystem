@@ -228,6 +228,7 @@ public class SellProducts extends ActionBarActivity {
         startActivity(OrderedProducts);
     }
 
+//not used at the moment
     public void CustInfo(View view) {
         //bundles the ordered products into an intent and then goes to the customer screen
         OrderedProducts = new Intent(this, CustomerInfo.class);

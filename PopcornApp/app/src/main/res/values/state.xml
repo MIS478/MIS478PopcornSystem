@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="state_array">
-        <item></item>
+        <item>IL</item>
         <item>AK</item>
         <item>AZ</item>
         <item>AR</item>

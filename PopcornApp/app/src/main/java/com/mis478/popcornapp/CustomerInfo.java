@@ -151,6 +151,8 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
             Finalization.putString("GOLDMILITARYPRICE", OrderedProducts.getString("GOLDMILITARYPRICE"));
             Finalization.putString("SILVERMILITARYAMT", OrderedProducts.getString("SILVERMILITARYAMT"));
             Finalization.putString("SILVERMILITARYPRICE", OrderedProducts.getString("SILVERMILITARYPRICE"));
+            Finalization.putString("PAYMENTTYPE", OrderedProducts.getString("PAYMENTTYPE"));
+            Finalization.putString("DONATIONAMT", OrderedProducts.getString("DONATIONAMT"));
 
             //starts the next screen
             finalize.putExtras(Finalization);
