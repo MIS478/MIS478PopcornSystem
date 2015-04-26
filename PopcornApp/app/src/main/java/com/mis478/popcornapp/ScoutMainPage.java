@@ -111,7 +111,7 @@ public class ScoutMainPage extends ActionBarActivity {
         }
 
         if (id == R.id.sales_mode) {
-            Intent intent = new Intent(this, SalesMode.class);
+            Intent intent = new Intent(this, SellProducts.class);
             startActivity(intent);
         }
         if (id == R.id.donation) {
