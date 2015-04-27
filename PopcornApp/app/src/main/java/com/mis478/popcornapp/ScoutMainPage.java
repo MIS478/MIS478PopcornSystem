@@ -36,15 +36,6 @@ public class ScoutMainPage extends ActionBarActivity {
     }
     public void Delivery(View view) {
         Intent x = new Intent(this, DeliveryMode.class);
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            String test = extras.getString("string");
-            String value = extras.getString("name");
-            String[] alldata = extras.getStringArray("all");
-            x.putExtra("name", value);
-            x.putExtra("all", alldata);
-            x.putExtra("string",test);
-        }
         startActivity(x);
     }
     public void Status(View view) {
