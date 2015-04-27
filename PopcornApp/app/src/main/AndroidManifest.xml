@@ -90,7 +90,7 @@
         </activity>
         <activity
             android:name=".DenSalesItems"
-            android:label="DenItems">
+            android:label="Items">
         </activity>
     </application>
 
