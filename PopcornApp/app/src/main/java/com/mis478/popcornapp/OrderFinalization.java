@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 public class OrderFinalization extends ActionBarActivity {
-
+    public static final String url_create_product = "http://207.179.202.218:1515/joe/send.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
