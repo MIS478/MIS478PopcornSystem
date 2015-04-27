@@ -20,8 +20,8 @@ public class DenSalesItems extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState)
     {
-        setContentView(R.layout.den_sales_page);
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.den_sales_page);
         //Get info from the previous screen
         Intent intent = getIntent();
     }
