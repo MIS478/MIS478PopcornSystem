@@ -282,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".35"
                 android:clickable="true"
-                android:onClick="ToProducts"
+                android:onClick="ToDonation"
                 android:text="@string/back" />
 
             <Space

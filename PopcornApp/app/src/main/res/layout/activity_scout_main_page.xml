@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
                     android:onClick="Donation"
-                    android:text="Donations" />
+                    android:text="Donations (Broken)" />
 
                 <Space
                     android:layout_width="0dp"
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
                     android:onClick="Status"
-                    android:text="Status" />
+                    android:text="Status (Broken)" />
 
                 <Space
                     android:layout_width="0dp"

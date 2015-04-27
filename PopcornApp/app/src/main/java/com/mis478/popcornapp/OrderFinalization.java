@@ -71,8 +71,8 @@ public class OrderFinalization extends ActionBarActivity {
 
         //fills in the donation amount if any
         String donationmessage = info.getString("DONATIONAMT");
-        TextView donation = (TextView) findViewById(R.id.DonationAmount);
-        donation.setText(donationmessage);
+        TextView donation = (TextView) findViewById(R.id.FinalizationDonationAmt);
+        donation.setText("Donation Amount: $" + donationmessage);
     }
 
     public void ToCustInfo(View view) {
