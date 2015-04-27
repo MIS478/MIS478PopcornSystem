@@ -1,6 +1,7 @@
 package com.mis478.popcornapp;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -14,6 +15,9 @@ public class OrderFinalization extends ActionBarActivity {
     public static final String url_create_product = "http://207.179.202.218:1515/joe/send.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_finalization);
         Intent intent = getIntent();
@@ -170,7 +174,7 @@ public class OrderFinalization extends ActionBarActivity {
     }
 
     public void SubmitOrder(View view) {
-
+        JSONParser jsonParser = new JSONParser();
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
