@@ -174,6 +174,22 @@ public class OrderFinalization extends ActionBarActivity {
     }
 
     public void SubmitOrder(View view) {
+        TextView fName = (TextView) findViewById(R.id.FinalizationFnameBox);
+        TextView lName = (TextView) findViewById(R.id.FinalizationLnameBox);
+        TextView address = (TextView) findViewById(R.id.FinalizationAddress);
+        TextView city = (TextView) findViewById(R.id.FinalizationCity);
+        TextView state = (TextView) findViewById(R.id.FinalizationState);
+        TextView zip = (TextView) findViewById(R.id.FinalizationZip);
+        TextView phone = (TextView) findViewById(R.id.FinalizationPhone);
+        TextView email = (TextView) findViewById(R.id.FinalizationEmail);
+        TextView BuffChed = (TextView) findViewById(R.id.FinalizationBuffChed);
+        TextView CarmCorn = (TextView) findViewById(R.id.FinalizationCarmCorn);
+        TextView CheeseLove = (TextView) findViewById(R.id.FinalizationCheeseLove);
+        TextView WhitePretzel = (TextView) findViewById(R.id.FinalizationWhitePretzel);
+        TextView GoldMilitary = (TextView) findViewById(R.id.FinalizationGoldMilitary);
+        TextView SilverMilitary = (TextView) findViewById(R.id.FinalizationSilverMilitary);
+        TextView donation = (TextView) findViewById(R.id.FinalizationDonationAmt);
+        TextView total = (TextView) findViewById(R.id.FinalizationTotal);
         JSONParser jsonParser = new JSONParser();
     }
 
