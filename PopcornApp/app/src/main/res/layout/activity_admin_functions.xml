@@ -11,6 +11,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Den Leader Admin Functions"
+            android:id="@+id/textView"
+            android:textColor="@color/TextColor"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:paddingBottom="20dp"/>
+
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -36,42 +47,12 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".1" />
 
-            <Button
-                android:id="@+id/AdminFuncEndSaleSeason"
-                style="@style/ButtonCubScoutTheme"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".35"
-                android:clickable="true"
-                android:onClick="toEndSale"
-                android:text="End Sale Season" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_weight=".1" />
-
         </TableRow>
 
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center_horizontal">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_weight=".1" />
-
-            <Button
-                android:id="@+id/AdminFuncAddProd"
-                style="@style/ButtonCubScoutTheme"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".35"
-                android:clickable="true"
-                android:onClick="toAddProducts"
-                android:text="Add Products" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -86,7 +67,8 @@
                 android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="toDenGoal"
-                android:text="Set Den Goal" />
+                android:text="Set Den Goal"
+                android:enabled="false"/>
 
             <Space
                 android:layout_width="wrap_content"

@@ -57,13 +57,13 @@
                     android:layout_weight=".1" />
 
                 <Button
-                    android:id="@+id/DonateBtn"
+                    android:id="@+id/GoalBtn"
                     style="@style/ButtonCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
-                    android:onClick="Donation"
-                    android:text="Donations (Broken)" />
+                    android:onClick="Goal"
+                    android:text="Goals" />
 
                 <Space
                     android:layout_width="0dp"
@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
                     android:onClick="Delivery"
-                    android:text="Delivery Mode" />
+                    android:text="Delivery Mode\n(not finished)" />
 
                 <Space
                     android:layout_width="0dp"
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
                     android:onClick="Past"
-                    android:text="Past Sales" />
+                    android:text="Past Sales\n(not finished)" />
 
                 <Space
                     android:layout_width="0dp"
@@ -110,44 +110,6 @@
                     android:layout_weight=".1" />
             </TableRow>
 
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp">
-
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1" />
-
-                <Button
-                    android:id="@+id/GoalBtn"
-                    style="@style/ButtonCubScoutTheme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".35"
-                    android:onClick="Goal"
-                    android:text="Goals" />
-
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1" />
-
-                <Button
-                    android:id="@+id/StatusBtn"
-                    style="@style/ButtonCubScoutTheme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".35"
-                    android:onClick="Status"
-                    android:text="Status (Broken)" />
-
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1" />
-            </TableRow>
         </TableLayout>
 
         <TableRow

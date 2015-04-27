@@ -109,7 +109,8 @@
                 android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="toScouts"
-                android:text="View Scouts" />
+                android:text="View Scouts"
+                android:enabled="false" />
 
             <Space
                 android:layout_width="wrap_content"

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mis478.popcornapp"
-    android:versionCode="18"
-    android:versionName="0.4.7" >
+    android:versionCode="20"
+    android:versionName="0.5 Alpha" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/appicon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/CustomActionBarTheme" >
+        android:theme="@style/CustomActionBarTheme">
         <activity
             android:name=".Login"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,74 +23,92 @@
         </activity>
         <activity
             android:name=".CustomerInfo"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_customer_info">
         </activity>
         <activity
             android:name=".ScoutGoal"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_scout_goal">
         </activity>
         <activity
             android:name=".DeliveryMode"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_delivery_mode">
         </activity>
         <activity
             android:name=".PastSales"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_past_sales">
         </activity>
         <activity
             android:name=".DenLeaderMain"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_DenLeaderMain">
         </activity>
         <activity
             android:name=".DenSalesTracking"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_den_sales_tracking">
         </activity>
         <activity
             android:name=".ViewScouts"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_view_scouts">
         </activity>
         <activity
             android:name=".ScoutStatusPage"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_scout_status_page">
         </activity>
         <activity
             android:name=".ScoutMainPage"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_scout_main_page">
         </activity>
         <activity
             android:name=".DeliveryCustomerInfo"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_delivery_customer_info">
         </activity>
         <activity
             android:name=".Donation"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_donation">
         </activity>
         <activity
             android:name=".OrderFinalization"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_order_finalization">
         </activity>
         <activity
             android:name=".AdminFunctions"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_admin_functions">
         </activity>
         <activity
             android:name=".AddScout"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_add_scout">
         </activity>
         <activity
             android:name=".AddProduct"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_add_product">
         </activity>
         <activity
             android:name=".DenGoal"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_den_goal">
         </activity>
         <activity
             android:name=".SellProducts"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_sale_products">
         </activity>
         <activity
             android:name=".DenSalesItems"
+            android:screenOrientation="portrait"
             android:label="Items">
         </activity>
     </application>
