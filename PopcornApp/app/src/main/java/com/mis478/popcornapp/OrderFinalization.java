@@ -68,11 +68,99 @@ public class OrderFinalization extends ActionBarActivity {
         } else {
             email.setText(emailmessage);
         }
+        //Fills in the number of Buffalo Cheddar Cheese
+        int BuffChedMessage = Integer.parseInt(info.getString("BUFFCHEDAMT"));
+        TextView BuffChed = (TextView) findViewById(R.id.FinalizationBuffChed);
+        if(BuffChedMessage == 0)
+        {
+        BuffChed.setVisibility(View.GONE);
+        } else if (BuffChedMessage == 1){
+            BuffChed.setText("Buffalo Cheddar Cheese");
+        } else {
+            BuffChed.setText("Buffalo Cheddar Cheese x" + BuffChedMessage);
+        }
+
+        //Fills in the number of Premium Caramel Corn
+        int CarmCornMessage = Integer.parseInt(info.getString("CARMCORNAMT"));
+        TextView CarmCorn = (TextView) findViewById(R.id.FinalizationCarmCorn);
+        if(CarmCornMessage == 0)
+        {
+            CarmCorn.setVisibility(View.GONE);
+        } else if (CarmCornMessage == 1){
+            CarmCorn.setText("Premium Caramel Corn");
+        } else {
+            CarmCorn.setText("Premium Caramel Corn x" + CarmCornMessage);
+        }
+
+        //Fills in the number of Cheese Lover's Collection
+        int CheeseLoveMessage = Integer.parseInt(info.getString("CHEESELOVEAMT"));
+        TextView CheeseLove = (TextView) findViewById(R.id.FinalizationCheeseLove);
+        if(CheeseLoveMessage == 0)
+        {
+            CheeseLove.setVisibility(View.GONE);
+        } else if (CheeseLoveMessage == 1){
+            CheeseLove.setText("Cheese Lover's Collection");
+        } else {
+            CheeseLove.setText("Cheese Lover's Collection x" + CheeseLoveMessage);
+        }
+
+        //Fills in the number of White Chocolatey Pretzels
+        int WhitePretzelMessage = Integer.parseInt(info.getString("WHITEPRETZELAMT"));
+        TextView WhitePretzel = (TextView) findViewById(R.id.FinalizationWhitePretzel);
+        if(WhitePretzelMessage == 0)
+        {
+            WhitePretzel.setVisibility(View.GONE);
+        } else if (WhitePretzelMessage == 1){
+            WhitePretzel.setText("White Chocolatey Pretzels");
+        } else {
+            WhitePretzel.setText("White Chocolatey Pretzels x" + WhitePretzelMessage);
+        }
+
+        //Fills in the number of Gold Level Military
+        int GoldMilitaryMessage = Integer.parseInt(info.getString("GOLDMILITARYAMT"));
+        TextView GoldMilitary = (TextView) findViewById(R.id.FinalizationGoldMilitary);
+        if(GoldMilitaryMessage == 0)
+        {
+            GoldMilitary.setVisibility(View.GONE);
+        } else if (GoldMilitaryMessage == 1){
+            GoldMilitary.setText("Gold Level Military");
+        } else {
+            GoldMilitary.setText("Gold Level Military x" + GoldMilitaryMessage);
+        }
+
+        //Fills in the number of Silver Level Military
+        int SilverMilitaryMessage = Integer.parseInt(info.getString("SILVERMILITARYAMT"));
+        TextView SilverMilitary = (TextView) findViewById(R.id.FinalizationSilverMilitary);
+        if(SilverMilitaryMessage == 0)
+        {
+            SilverMilitary.setVisibility(View.GONE);
+        } else if (SilverMilitaryMessage == 1){
+            SilverMilitary.setText("Silver Level Military");
+        } else {
+            SilverMilitary.setText("Silver Level Military x" + SilverMilitaryMessage);
+        }
 
         //fills in the donation amount if any
-        String donationmessage = info.getString("DONATIONAMT");
+        int donationmessage = Integer.parseInt(info.getString("DONATIONAMT"));
         TextView donation = (TextView) findViewById(R.id.FinalizationDonationAmt);
-        donation.setText("Donation Amount: $" + donationmessage);
+        if (donationmessage == 0)
+        {
+            donation.setVisibility(View.GONE);
+        } else {
+            donation.setText("Donation of $" + donationmessage);
+        }
+
+        //find out total
+        int BuffChedPrice = Integer.parseInt(info.getString("BUFFCHEDPRICE"));
+        int CarmCornPrice = Integer.parseInt(info.getString("CARMCORNPRICE"));
+        int CheeseLovePrice = Integer.parseInt(info.getString("CHEESELOVEPRICE"));
+        int WhitePretzelPrice = Integer.parseInt(info.getString("WHITEPRETZELPRICE"));
+        int GoldMilitaryPrice = Integer.parseInt(info.getString("GOLDMILITARYPRICE"));
+        int SilverMilitaryPrice = Integer.parseInt(info.getString("SILVERMILITARYPRICE"));
+
+        int totalamt = BuffChedMessage * BuffChedPrice + CarmCornMessage * CarmCornPrice + CheeseLoveMessage * CheeseLovePrice + WhitePretzelMessage * WhitePretzelPrice + GoldMilitaryMessage * GoldMilitaryPrice + SilverMilitaryMessage * SilverMilitaryPrice + donationmessage;
+        TextView total = (TextView) findViewById(R.id.FinalizationTotal);
+        total.setText("Total: $" + totalamt);
     }
 
     public void ToCustInfo(View view) {

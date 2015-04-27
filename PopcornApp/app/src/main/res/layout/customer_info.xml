@@ -38,13 +38,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:ems="10"
                     android:inputType="textCapWords|textPersonName"
                     android:maxLength="15"
                     android:nextFocusDown="@+id/LnameBox"
                     android:nextFocusRight="@id/LnameBox"
-                    android:textColor="@color/TextColor"
-                    android:hint="John" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -67,12 +67,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:ems="10"
                     android:inputType="textCapWords|textPersonName"
                     android:maxLength="15"
                     android:nextFocusRight="@+id/StreetNumberBox"
-                    android:textColor="@color/TextColor"
-                    android:hint="Smith" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -95,11 +95,11 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+
                     android:inputType="number"
                     android:maxLength="7"
                     android:nextFocusRight="@+id/StreetNameBox"
-                    android:textColor="@color/TextColor"
-                    android:hint="555" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -122,11 +122,11 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+
                     android:inputType="textCapWords|textPostalAddress"
                     android:maxLength="15"
                     android:nextFocusRight="@id/CityBox"
-                    android:textColor="@color/TextColor"
-                    android:hint="Everyday Lane" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -149,13 +149,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:ems="10"
+                    android:inputType="textCapWords"
                     android:maxLength="15"
                     android:nextFocusDown="@+id/ZipBox"
                     android:nextFocusRight="@id/ZipBox"
-                    android:textColor="@color/TextColor"
-                    android:inputType="textCapWords"
-                    android:hint="Gotham City" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -177,7 +177,7 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:spinnerMode="dialog"
-                    android:textColor="@color/TextColor"/>
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -204,8 +204,7 @@
                     android:maxLength="5"
                     android:nextFocusDown="@+id/PnumberBox"
                     android:nextFocusRight="@id/PnumberBox"
-                    android:textColor="@color/TextColor"
-                    android:hint="12345" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -229,11 +228,10 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="phone"
-                    android:maxLength="10"
+                    android:maxLength="11"
                     android:nextFocusDown="@+id/EmailBox"
                     android:nextFocusRight="@id/EmailBox"
-                    android:textColor="@color/TextColor"
-                    android:hint="123456789" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -260,8 +258,7 @@
                     android:maxLength="30"
                     android:nextFocusDown="@+id/NextButton"
                     android:nextFocusRight="@id/NextButton"
-                    android:textColor="@color/TextColor"
-                    android:hint="jsmith@aol.com" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
         </TableLayout>
 

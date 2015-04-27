@@ -32,22 +32,22 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.state_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
+        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
+        // Apply the adapter to the spinner
         StateSpinner.setAdapter(adapter);
     }
 
-    public void onItemSelected(AdapterView<?> parent, View view,
+    public void onItemSelected(AdapterView<?> parentView, View view,
                                int pos, long id) {
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
-        StateSpinner.setOnItemSelectedListener(this);
-        ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
+        ((TextView)parentView.getChildAt(0)).setTextColor(Color.WHITE);
     }
 
-    public void onNothingSelected(AdapterView<?> parent) {
+    public void onNothingSelected(AdapterView<?> parentView) {
         // Another interface callback
+        ((TextView)parentView.getChildAt(0)).setTextColor(Color.WHITE);
     }
 
     public void ToFinalize(View view) {

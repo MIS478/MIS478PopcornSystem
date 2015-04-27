@@ -219,30 +219,31 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingBottom="10dp">
+            android:layout_height="fill_parent">
 
             <TextView
                 android:id="@+id/FinalizationBuffChed"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingBottom="10dp"
                 android:text="Buffalo Cheddar Cheese"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:textColor="@color/TextColor" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingBottom="10dp">
+            android:layout_height="fill_parent">
 
             <TextView
                 android:id="@+id/FinalizationCarmCorn"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingBottom="10dp"
                 android:text="Premium Caramel Corn"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/TextColor" />
@@ -251,14 +252,14 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingBottom="10dp">
+            android:layout_height="fill_parent">
 
             <TextView
                 android:id="@+id/FinalizationCheeseLove"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingBottom="10dp"
                 android:text="Cheese Lover's Collection"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/TextColor" />
@@ -267,14 +268,14 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingBottom="15dp">
+            android:layout_height="fill_parent">
 
             <TextView
-                android:id="@+id/FinalizationWhitePretzels"
+                android:id="@+id/FinalizationWhitePretzel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingBottom="10dp"
                 android:text="White Chocolatey Pretzels"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/TextColor" />
@@ -283,14 +284,14 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingBottom="15dp">
+            android:layout_height="fill_parent">
 
             <TextView
                 android:id="@+id/FinalizationGoldMilitary"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingBottom="10dp"
                 android:text="Gold Level Military"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/TextColor" />
@@ -299,34 +300,41 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingBottom="15dp">
+            android:layout_height="fill_parent">
 
             <TextView
                 android:id="@+id/FinalizationSilverMilitary"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingBottom="10dp"
                 android:text="Silver Level Military"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/TextColor" />
 
         </TableRow>
 
-        <TextView
-            android:id="@+id/FinalizationDonationAmt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Donation Amount: $"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/TextColor"
-            android:textSize="@dimen/abc_text_size_medium_material" />
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/FinalizationDonationAmt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Donation of $"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/abc_text_size_medium_material" />
+        </TableRow>
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/FinalizationTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingTop="20dp"
             android:text="Total:"
             android:textAlignment="viewStart"
             android:textAppearance="?android:attr/textAppearanceLarge"
