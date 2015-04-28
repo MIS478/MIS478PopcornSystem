@@ -47,11 +47,6 @@
             android:label="@string/title_activity_DenLeaderMain">
         </activity>
         <activity
-            android:name=".DenSalesTracking"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_den_sales_tracking">
-        </activity>
-        <activity
             android:name=".ViewScouts"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_view_scouts">
@@ -67,11 +62,6 @@
             android:label="@string/title_activity_scout_main_page">
         </activity>
         <activity
-            android:name=".DeliveryCustomerInfo"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_delivery_customer_info">
-        </activity>
-        <activity
             android:name=".Donation"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_donation">
@@ -82,24 +72,9 @@
             android:label="@string/title_activity_order_finalization">
         </activity>
         <activity
-            android:name=".AdminFunctions"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_admin_functions">
-        </activity>
-        <activity
             android:name=".AddScout"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_add_scout">
-        </activity>
-        <activity
-            android:name=".AddProduct"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_add_product">
-        </activity>
-        <activity
-            android:name=".DenGoal"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_den_goal">
         </activity>
         <activity
             android:name=".SellProducts"

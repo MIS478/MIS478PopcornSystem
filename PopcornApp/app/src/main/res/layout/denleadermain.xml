@@ -109,8 +109,7 @@
                 android:layout_weight=".35"
                 android:clickable="true"
                 android:onClick="toScouts"
-                android:text="View Scouts"
-                android:enabled="false" />
+                android:text="View Scouts" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -160,14 +159,14 @@
                 android:layout_weight=".1" />
 
             <Button
-                android:id="@+id/DenMainAdminFunctions"
+                android:id="@+id/AdminFuncAddScoutsButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".35"
                 android:clickable="true"
-                android:onClick="toAdminButton"
-                android:text="Admin Functions" />
+                android:onClick="toAddScouts"
+                android:text="Add Scouts" />
 
             <Space
                 android:layout_width="wrap_content"

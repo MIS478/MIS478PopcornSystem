@@ -30,7 +30,7 @@ public class DenLeaderMain extends ActionBarActivity {
     }
     public void toSalesTracking (View view)
     {
-        Intent toSalesTracking = new Intent(this, DenSalesTracking.class);
+        Intent toSalesTracking = new Intent(this, PastSales.class);
         startActivity(toSalesTracking);
     }
     public void toProducts (View view)
@@ -38,10 +38,10 @@ public class DenLeaderMain extends ActionBarActivity {
         Intent toDenProducts = new Intent(this, DenSalesItems.class);
         startActivity(toDenProducts);
     }
-    public void toAdminButton (View view)
+    public void toAddScouts (View view)
     {
-        Intent toAdminButton = new Intent(this, AdminFunctions.class);
-        startActivity(toAdminButton);
+        Intent toAddScouts = new Intent(this, AddScout.class);
+        startActivity(toAddScouts);
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -60,12 +60,8 @@ public class DenLeaderMain extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.DenGoal) {
-            Intent intent = new Intent(this, DenGoal.class);
-            startActivity(intent);
-        }
         if (id == R.id.densalestracking) {
-            Intent intent = new Intent(this, DenSalesTracking.class);
+            Intent intent = new Intent(this, PastSales.class);
             startActivity(intent);
         }
         if (id == R.id.log) {
