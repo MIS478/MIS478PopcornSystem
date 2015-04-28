@@ -4,15 +4,23 @@ import android.content.Intent;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class OrderFinalization extends ActionBarActivity {
-    public static final String url_create_product = "http://207.179.202.218:1515/joe/send.php";
+    public static final String url_create_product = "http://207.179.202.218:1515/joe/sendold.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -103,9 +111,9 @@ public class OrderFinalization extends ActionBarActivity {
         {
             CheeseLove.setVisibility(View.GONE);
         } else if (CheeseLoveMessage == 1){
-            CheeseLove.setText("Cheese Lover's Collection");
+            CheeseLove.setText("Cheese Lover s Collection");
         } else {
-            CheeseLove.setText("Cheese Lover's Collection x" + CheeseLoveMessage);
+            CheeseLove.setText("Cheese Lover s Collection x" + CheeseLoveMessage);
         }
 
         //Fills in the number of White Chocolatey Pretzels
@@ -190,7 +198,55 @@ public class OrderFinalization extends ActionBarActivity {
         TextView SilverMilitary = (TextView) findViewById(R.id.FinalizationSilverMilitary);
         TextView donation = (TextView) findViewById(R.id.FinalizationDonationAmt);
         TextView total = (TextView) findViewById(R.id.FinalizationTotal);
+        String a = fName.getText().toString();//
+        String b = lName.getText().toString();//
+        String c = address.getText().toString();//
+        String d = city.getText().toString();//
+        String e = state.getText().toString(); //
+        String f = zip.getText().toString();//
+        String g = phone.getText().toString();//
+        String h = email.getText().toString(); //
+        String i = BuffChed.getText().toString();//
+        String j = CarmCorn.getText().toString();//
+        String k = CheeseLove.getText().toString(); //error
+        k =  k.replace("'", "");
+        String l = WhitePretzel.getText().toString();//
+        String m = GoldMilitary.getText().toString(); // works
+        String n= SilverMilitary.getText().toString();//
+        String o = donation.getText().toString();//
+        String p= total.getText().toString();///
+
+
+//
+
+
         JSONParser jsonParser = new JSONParser();
+
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("fname", a));
+        params.add(new BasicNameValuePair("lname", b));
+        params.add(new BasicNameValuePair("address", c));
+        params.add(new BasicNameValuePair("city", d));
+        params.add(new BasicNameValuePair("state", e));
+        params.add(new BasicNameValuePair("zip", f));
+        params.add(new BasicNameValuePair("phone", g));
+        params.add(new BasicNameValuePair("email", h));
+        params.add(new BasicNameValuePair("buffched", i));
+        params.add(new BasicNameValuePair("caramel", j));
+        params.add(new BasicNameValuePair("cheese", k));
+        params.add(new BasicNameValuePair("whitechoc", l));
+        params.add(new BasicNameValuePair("gold", m));
+        params.add(new BasicNameValuePair("silver", n));
+        params.add(new BasicNameValuePair("donation", o));
+        params.add(new BasicNameValuePair("total", p));
+
+
+
+        // getting JSON Object
+        // Note that create product url accepts POST method
+        JSONObject json = jsonParser.makeHttpRequest(url_create_product,
+                "POST", params);
+        Log.d("Create Response", json.toString());
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
