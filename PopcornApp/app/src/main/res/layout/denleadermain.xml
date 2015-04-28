@@ -75,20 +75,6 @@
                 android:textColor="@color/TextColor" />
         </TableRow>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="30dp"
-            android:text="Leaderboard"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/TextColor" />
-
-        <ListView
-            android:id="@+id/listView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

@@ -69,14 +69,27 @@ public class DeliveryMode extends ListActivity {
 
                 line.toString();
                 String[] splitArray = line.split("\\}");
-
+                String[] temp;
+                //load into temp array
+                String[] holder = new String[10];
+                int delim = 0;
+                String ts;
+            for (int i = 0; i < splitArray.length -1; i++)
+            {
+                temp = splitArray[i].split(",");
+                temp = temp[delim].split(":");
+                delim =1;
+                ts = temp[1];
+                ts = ts.substring(1,ts.length() -1);
+                holder[i] = ts;
+            }
                splitArray[10] = "";
 
 
 
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                    R.layout.activity_delivery_mode, R.id.label, splitArray);
+                    R.layout.activity_delivery_mode, R.id.label, holder);
             setListAdapter(adapter);
         } catch (IOException e) {
             e.printStackTrace();
@@ -104,66 +117,107 @@ public class DeliveryMode extends ListActivity {
 
 
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        String item = (String) getListAdapter().getItem(position);
-        String[] SplitByComma = item.split(",");
+        ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        nameValuePairs.add(new BasicNameValuePair("year", "420"));
 
-       String name, address, phone, email, ordered, total,paid,delivered;
-
-        String[] namea, addressa, phonea, emaila, ordereda, totala,paida,delivereda;
-
-        namea = SplitByComma[1].split(":");
-        name = namea[1];
-        name = name.substring(1,name.length() -1);
-
-        addressa = SplitByComma[2].split(":");
-        address = addressa[1];
-        address = address.substring(1,address.length() -1);
-
-        phonea = SplitByComma[3].split(":");
-        phone = phonea[1];
-        phone = phone.substring(1,phone.length() -1);
-
-        emaila = SplitByComma[4].split(":");
-        email = emaila[1];
-        email = email.substring(1,email.length() -1);
-
-        ordereda = SplitByComma[5].split(":");
-        ordered = ordereda[1];
-        ordered = ordered.substring(1,ordered.length() -1);
-
-        totala = SplitByComma[6].split(":");
-        total = totala[1];
-        total = total.substring(1,total.length() -1);
-
-        paida = SplitByComma[7].split(":");
-        paid = paida[1];
-        paid = paid.substring(1,paid.length() -1);
-
-        delivereda = SplitByComma[8].split(":");
-        delivered = delivereda[1];
-        delivered = delivered.substring(1,delivered.length() -1);
+        InputStream is = null;
+        //http post
+        try {
+            HttpClient httpclient = new DefaultHttpClient();
+            HttpPost httppost = new HttpPost(KEY_121);
+            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+            HttpResponse response = httpclient.execute(httppost);
+            HttpEntity entity = response.getEntity();
+            is = entity.getContent();
 
 
-                 new AlertDialog.Builder(this)
-                .setTitle("Customer Information")
-                .setMessage("Name: " + name + "\n" +
-                        "Address: " + address + "\n" +
-                        "Phone: " + phone +"\n" +
-                        "Email: " + email +"\n" +
-                        "Ordered Products: " + ordered +"\n" +
-                        "Total: $" + total + "\n" +
-                        "Paid: " + paid + "\n" +
-                        "Delivered: "+ delivered)
-                         .setPositiveButton("Set order Delivered",
-                                 new DialogInterface.OnClickListener() {
-                                     public void onClick(DialogInterface dialog, int id) {
-                                        //stoopid android
+        } catch (Exception e) {
+            Log.e("log_tag", "Error in http connection " + e.toString());
+        }
+        //convert response to string
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+            StringBuilder sb = new StringBuilder();
+            String line = null;
+            line = reader.readLine();
 
-                                     }
-                                 })
+            line.toString();
+            String[] splitArray = line.split("\\}");
+           int delim = 1;
+            if (position == 0)
+            {
+                delim = 0;
+            }
 
-                         .show();
+            String[] SplitByComma = splitArray[position].split(",");
 
+            String name, address, phone, email, ordered, total,paid,delivered;
+
+            String[] namea, addressa, phonea, emaila, ordereda, totala,paida,delivereda;
+
+            namea = SplitByComma[delim].split(":");
+            name = namea[1];
+            name = name.substring(1,name.length() -1);
+            delim++;
+
+            addressa = SplitByComma[delim].split(":");
+            address = addressa[1];
+            address = address.substring(1,address.length() -1);
+            delim++;
+
+            phonea = SplitByComma[delim].split(":");
+            phone = phonea[1];
+            phone = phone.substring(1,phone.length() -1);
+            delim++;
+
+            emaila = SplitByComma[delim].split(":");
+            email = emaila[1];
+            email = email.substring(1,email.length() -1);
+            delim++;
+
+            ordereda = SplitByComma[delim].split(":");
+            ordered = ordereda[1];
+            ordered = ordered.substring(1,ordered.length() -1);
+            delim++;
+
+            totala = SplitByComma[delim].split(":");
+            total = totala[1];
+            total = total.substring(1,total.length() -1);
+            delim++;
+
+            paida = SplitByComma[delim].split(":");
+            paid = paida[1];
+            paid = paid.substring(1,paid.length() -1);
+            delim++;
+
+            delivereda = SplitByComma[delim].split(":");
+            delivered = delivereda[1];
+            delivered = delivered.substring(1,delivered.length() -1);
+            delim++;
+
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Customer Information")
+                    .setMessage("Name: " + name + "\n" +
+                            "Address: " + address + "\n" +
+                            "Phone: " + phone +"\n" +
+                            "Email: " + email +"\n" +
+                            "Ordered Products: " + ordered +"\n" +
+                            "Total: $" + total + "\n" +
+                            "Paid: " + paid + "\n" +
+                            "Delivered: "+ delivered)
+                    .setPositiveButton("Set order Delivered",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    //stoopid android
+
+                                }
+                            })
+
+                    .show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

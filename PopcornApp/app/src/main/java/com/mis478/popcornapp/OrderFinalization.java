@@ -111,9 +111,9 @@ public class OrderFinalization extends ActionBarActivity {
         {
             CheeseLove.setVisibility(View.GONE);
         } else if (CheeseLoveMessage == 1){
-            CheeseLove.setText("Cheese Lover s Collection");
+            CheeseLove.setText("Cheese Lover's Collection");
         } else {
-            CheeseLove.setText("Cheese Lover s Collection x" + CheeseLoveMessage);
+            CheeseLove.setText("Cheese Lover's Collection x" + CheeseLoveMessage);
         }
 
         //Fills in the number of White Chocolatey Pretzels
