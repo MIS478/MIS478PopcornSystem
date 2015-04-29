@@ -42,8 +42,8 @@
                     android:ems="10"
                     android:inputType="textCapWords|textPersonName"
                     android:maxLength="15"
-                    android:nextFocusDown="@+id/user_name"
-                    android:nextFocusRight="@id/user_name"
+                    android:nextFocusDown="@+id/LnameBox"
+                    android:nextFocusRight="@id/LnameBox"
                     android:textColor="@color/TextColor" />
 
             </TableRow>
@@ -62,7 +62,7 @@
                     android:textColor="@color/TextColor" />
 
                 <EditText
-                    android:id="@+id/user_name"
+                    android:id="@+id/LnameBox"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
 
                     android:inputType="textCapWords|textPostalAddress"
                     android:maxLength="15"
-                    android:nextFocusRight="@id/lname"
+                    android:nextFocusRight="@id/CityBox"
                     android:textColor="@color/TextColor" />
 
             </TableRow>
@@ -144,7 +144,7 @@
                     android:textColor="@color/TextColor" />
 
                 <EditText
-                    android:id="@+id/lname"
+                    android:id="@+id/CityBox"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -153,8 +153,8 @@
                     android:ems="10"
                     android:inputType="textCapWords"
                     android:maxLength="15"
-                    android:nextFocusDown="@+id/price_progress"
-                    android:nextFocusRight="@id/price_progress"
+                    android:nextFocusDown="@+id/ZipBox"
+                    android:nextFocusRight="@id/ZipBox"
                     android:textColor="@color/TextColor" />
             </TableRow>
 
@@ -194,7 +194,7 @@
                     android:textColor="@color/TextColor" />
 
                 <EditText
-                    android:id="@+id/price_progress"
+                    android:id="@+id/ZipBox"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -202,8 +202,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="5"
-                    android:nextFocusDown="@+id/pass"
-                    android:nextFocusRight="@id/pass"
+                    android:nextFocusDown="@+id/PnumberBox"
+                    android:nextFocusRight="@id/PnumberBox"
                     android:textColor="@color/TextColor" />
             </TableRow>
 
@@ -222,15 +222,15 @@
                     android:textColor="@color/TextColor" />
 
                 <EditText
-                    android:id="@+id/pass"
+                    android:id="@+id/PnumberBox"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="phone"
                     android:maxLength="11"
-                    android:nextFocusDown="@+id/total_sales"
-                    android:nextFocusRight="@id/total_sales"
+                    android:nextFocusDown="@+id/EmailBox"
+                    android:nextFocusRight="@id/EmailBox"
                     android:textColor="@color/TextColor" />
             </TableRow>
 
@@ -249,7 +249,7 @@
                     android:textColor="@color/TextColor" />
 
                 <EditText
-                    android:id="@+id/total_sales"
+                    android:id="@+id/EmailBox"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
