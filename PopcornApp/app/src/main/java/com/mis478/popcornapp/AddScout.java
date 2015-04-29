@@ -31,6 +31,11 @@ public class AddScout extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_add_scout, menu);
         return true;
+
+    }
+    public void back(View view) {
+        Intent intent = new Intent(this, DenLeaderMain.class);
+        startActivity(intent);
     }
     public void AddScout(View view) {
         TextView sn = (TextView) findViewById(R.id.Scout_number);
@@ -44,24 +49,24 @@ public class AddScout extends ActionBarActivity {
         TextView ts = (TextView) findViewById(R.id.total_sales);
         TextView pg = (TextView) findViewById(R.id.personal_goal);
         TextView dg = (TextView) findViewById(R.id.den_goal);
-        String a = sn.toString();//
-        String b = un.toString();//
-        String c = fn.toString();//
-        String d = ln.toString();//
-        String e = sg.toString(); //
-        String f = pp.toString();//
-        String g = dn.toString();//
-        String h = p.toString(); //
-        String i = ts.toString();//
-        String j = pg.toString();//
-        String k = dg.toString(); //
+        String a = sn.getText().toString();//
+        String b = un.getText().toString();//
+        String c = fn.getText().toString();//
+        String d = ln.getText().toString();//
+        String e = sg.getText().toString(); //
+        String f = pp.getText().toString();//
+        String g = dn.getText().toString();//
+        String h = p.getText().toString(); //
+        String i = ts.getText().toString();//
+        String j = pg.getText().toString();//
+        String k = dg.getText().toString(); //
 
         JSONParser jsonParser = new JSONParser();
 
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("a", a));
         params.add(new BasicNameValuePair("b", b));
-       /* params.add(new BasicNameValuePair("c", c));
+        params.add(new BasicNameValuePair("c", c));
         params.add(new BasicNameValuePair("d", d));
         params.add(new BasicNameValuePair("e", e));
         params.add(new BasicNameValuePair("f", f));
@@ -70,17 +75,17 @@ public class AddScout extends ActionBarActivity {
         params.add(new BasicNameValuePair("i", i));
         params.add(new BasicNameValuePair("j", j));
         params.add(new BasicNameValuePair("k", k));
-        */
 
 
 
+        // wont allow duplicates
         // getting JSON Object
         // Note that create product url accepts POST method
         JSONObject json = jsonParser.makeHttpRequest(url_create_product,
                 "POST", params);
         Log.d("Create Response", json.toString());
-      //  Intent intent = new Intent(this, ScoutMainPage.class);
-      //  startActivity(intent);
+       Intent intent = new Intent(this, DenLeaderMain.class);
+       startActivity(intent);
 
     }
 
@@ -94,6 +99,36 @@ public class AddScout extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if (id == R.id.scoutGoal) {
+            Intent intent = new Intent(this, ScoutGoal.class);
+            startActivity(intent);
+        }
+        if (id == R.id.deliveryMode) {
+            Intent intent = new Intent(this, DeliveryMode.class);
+            startActivity(intent);
+        }
+        if (id == R.id.pastSales) {
+            Intent intent = new Intent(this, PastSales.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.sales_mode) {
+            Intent intent = new Intent(this, SellProducts.class);
+            startActivity(intent);
+        }
+        if (id == R.id.donation) {
+            Intent intent = new Intent(this, Donation.class);
+            startActivity(intent);
+        }
+        if (id == R.id.ScoutMain) {
+            Intent intent = new Intent(this, ScoutMainPage.class);
+            startActivity(intent);
+        }
+        if (id == R.id.log) {
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

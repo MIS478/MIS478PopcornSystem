@@ -88,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
                     android:onClick="Delivery"
-                    android:text="Delivery Mode\n(not finished)" />
+                    android:text="Delivery Mode" />
 
                 <Space
                     android:layout_width="0dp"
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".35"
                     android:onClick="Past"
-                    android:text="Past Sales\n(not finished)" />
+                    android:text="Past Sales" />
 
                 <Space
                     android:layout_width="0dp"
