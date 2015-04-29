@@ -1,13 +1,24 @@
 package com.mis478.popcornapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AddScout extends ActionBarActivity {
-
+    public static final String url_create_product = "http://207.179.202.218:1515/joe/addscout.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +31,57 @@ public class AddScout extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_add_scout, menu);
         return true;
+    }
+    public void AddScout(View view) {
+        TextView sn = (TextView) findViewById(R.id.Scout_number);
+        TextView un = (TextView) findViewById(R.id.user_name);
+        TextView fn = (TextView) findViewById(R.id.fname);
+        TextView ln = (TextView) findViewById(R.id.lname);
+        TextView sg = (TextView) findViewById(R.id.sales_goal);
+        TextView pp = (TextView) findViewById(R.id.prize_progress);
+        TextView dn = (TextView) findViewById(R.id.den_number);
+        TextView p = (TextView) findViewById(R.id.pass);
+        TextView ts = (TextView) findViewById(R.id.total_sales);
+        TextView pg = (TextView) findViewById(R.id.personal_goal);
+        TextView dg = (TextView) findViewById(R.id.den_goal);
+        String a = sn.toString();//
+        String b = un.toString();//
+        String c = fn.toString();//
+        String d = ln.toString();//
+        String e = sg.toString(); //
+        String f = pp.toString();//
+        String g = dn.toString();//
+        String h = p.toString(); //
+        String i = ts.toString();//
+        String j = pg.toString();//
+        String k = dg.toString(); //
+
+        JSONParser jsonParser = new JSONParser();
+
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("a", a));
+        params.add(new BasicNameValuePair("b", b));
+       /* params.add(new BasicNameValuePair("c", c));
+        params.add(new BasicNameValuePair("d", d));
+        params.add(new BasicNameValuePair("e", e));
+        params.add(new BasicNameValuePair("f", f));
+        params.add(new BasicNameValuePair("g", g));
+        params.add(new BasicNameValuePair("h", h));
+        params.add(new BasicNameValuePair("i", i));
+        params.add(new BasicNameValuePair("j", j));
+        params.add(new BasicNameValuePair("k", k));
+        */
+
+
+
+        // getting JSON Object
+        // Note that create product url accepts POST method
+        JSONObject json = jsonParser.makeHttpRequest(url_create_product,
+                "POST", params);
+        Log.d("Create Response", json.toString());
+      //  Intent intent = new Intent(this, ScoutMainPage.class);
+      //  startActivity(intent);
+
     }
 
     @Override

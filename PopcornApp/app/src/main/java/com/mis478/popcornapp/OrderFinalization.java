@@ -247,6 +247,8 @@ public class OrderFinalization extends ActionBarActivity {
         JSONObject json = jsonParser.makeHttpRequest(url_create_product,
                 "POST", params);
         Log.d("Create Response", json.toString());
+        Intent intent = new Intent(this, ScoutMainPage.class);
+        startActivity(intent);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
