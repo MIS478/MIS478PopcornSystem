@@ -1,12 +1,10 @@
 package com.mis478.popcornapp;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.telephony.PhoneNumberUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 
@@ -58,14 +55,14 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
 
         //finds the EditText boxes on the screen that contain the Customer's info
         EditText fName = (EditText) findViewById(R.id.FnameBox);
-        EditText lName = (EditText) findViewById(R.id.LnameBox);
+        EditText lName = (EditText) findViewById(R.id.user_name);
         EditText streetNumber = (EditText) findViewById(R.id.StreetNumberBox);
         EditText streetName = (EditText) findViewById(R.id.StreetNameBox);
-        EditText city = (EditText) findViewById(R.id.CityBox);
+        EditText city = (EditText) findViewById(R.id.lname);
         Spinner state = (Spinner) findViewById(R.id.StateSpinner);
-        EditText zip = (EditText) findViewById(R.id.ZipBox);
-        EditText phoneNumber = (EditText) findViewById(R.id.PnumberBox);
-        EditText email = (EditText) findViewById(R.id.EmailBox);
+        EditText zip = (EditText) findViewById(R.id.price_progress);
+        EditText phoneNumber = (EditText) findViewById(R.id.pass);
+        EditText email = (EditText) findViewById(R.id.total_sales);
 
         //parses the EditText into a string
         String fNameText = fName.getText().toString();
