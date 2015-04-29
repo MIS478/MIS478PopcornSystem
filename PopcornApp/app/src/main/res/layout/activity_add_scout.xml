@@ -298,7 +298,7 @@
                     android:text="   Den Goal"
                     android:id="@+id/dengoallabel"
                     android:textColor="@color/TextColor"
-                    android:paddiingLeft = "15dp"
+                    android:paddingLeft = "15dp"
                     android:layout_column="0" />
 
                 <EditText

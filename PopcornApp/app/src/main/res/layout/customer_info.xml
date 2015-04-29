@@ -122,10 +122,9 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-
                     android:inputType="textCapWords|textPostalAddress"
                     android:maxLength="15"
-                    android:nextFocusRight="@id/CityBox"
+                    android:nextFocusRight="@+id/CityBox"
                     android:textColor="@color/TextColor" />
 
             </TableRow>
