@@ -45,7 +45,7 @@
                     android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="number|textNoSuggestions"
                     android:maxLength="6"
                     android:nextFocusDown="@+id/user_name"
                     android:nextFocusRight="@id/user_name"
@@ -74,7 +74,7 @@
                     android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="textNoSuggestions"
                     android:maxLength="7"
                     android:nextFocusDown="@+id/fname"
                     android:nextFocusRight="@id/fname"
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:ems="10"
-                    android:inputType="textPostalAddress"
+                    android:inputType="textNoSuggestions|textCapSentences|textPersonName"
                     android:nextFocusDown="@+id/lname"
                     android:nextFocusRight="@id/lname"
                     android:textColor="@color/TextColor" />
@@ -130,6 +130,7 @@
                     android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:inputType="textNoSuggestions|textCapSentences|textPersonName"
                     android:nextFocusDown="@+id/sales_goal"
                     android:nextFocusRight="@id/sales_goal"
                     android:textColor="@color/TextColor" />
@@ -156,6 +157,7 @@
                     android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:inputType="number"
                     android:nextFocusDown="@+id/prize_progress"
                     android:nextFocusRight="@id/prize_progress"
                     android:textColor="@color/TextColor" />
@@ -182,6 +184,7 @@
                     android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:inputType="number"
                     android:nextFocusDown="@+id/pass"
                     android:nextFocusRight="@id/pass"
                     android:textColor="@color/TextColor" />
@@ -237,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:ems="10"
-                    android:inputType="phone"
+                    android:inputType="textNoSuggestions|textPassword"
                     android:maxLength="3"
                     android:nextFocusDown="@+id/total_sales"
                     android:nextFocusRight="@id/total_sales"
@@ -265,7 +268,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:ems="10"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:nextFocusDown="@+id/NextButton"
                     android:nextFocusRight="@id/NextButton"
                     android:textColor="@color/TextColor" />
@@ -287,6 +290,7 @@
 
                 <EditText
                     android:id="@+id/personal_goal"
+                    style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -305,12 +309,13 @@
                     android:layout_height="wrap_content"
                     android:layout_column="0"
                     android:paddingLeft="15dp"
-                    android:text="   Den Goal"
+                    android:text="Den Goal"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/den_goal"
+                    style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
@@ -320,36 +325,34 @@
 
         </TableLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="10.18">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp">
 
             <Button
                 android:id="@+id/BackButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="left"
-                android:clickable="true"
+                android:layout_weight=".1"
                 android:onClick="back"
                 android:text="@string/back" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8" />
 
             <Button
                 android:id="@+id/NextButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="bottom|right"
-                android:clickable="true"
+                android:layout_weight=".1"
                 android:onClick="AddScout"
                 android:text="@string/next" />
-        </RelativeLayout>
+        </LinearLayout>
 
 
     </LinearLayout>
