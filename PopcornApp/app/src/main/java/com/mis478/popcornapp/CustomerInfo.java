@@ -9,14 +9,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 
 public class CustomerInfo extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
-    Spinner StateSpinner;
     Intent intent;
 
     @Override
@@ -25,14 +22,6 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         setContentView(R.layout.customer_info);
         intent = getIntent();
         setTitle("Customer Information");
-        StateSpinner = (Spinner) findViewById(R.id.StateSpinner);
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.state_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        StateSpinner.setAdapter(adapter);
     }
 
     public void onItemSelected(AdapterView<?> parentView, View view,
@@ -59,7 +48,7 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         EditText streetNumber = (EditText) findViewById(R.id.StreetNumberBox);
         EditText streetName = (EditText) findViewById(R.id.StreetNameBox);
         EditText city = (EditText) findViewById(R.id.CityBox);
-        Spinner state = (Spinner) findViewById(R.id.StateSpinner);
+        EditText state = (EditText) findViewById(R.id.StateEditText);
         EditText zip = (EditText) findViewById(R.id.ZipBox);
         EditText phoneNumber = (EditText) findViewById(R.id.PnumberBox);
         EditText email = (EditText) findViewById(R.id.EmailBox);
@@ -70,7 +59,7 @@ public class CustomerInfo extends ActionBarActivity implements AdapterView.OnIte
         String streetNumberText = streetNumber.getText().toString();
         String streetNameText = streetName.getText().toString();
         String cityText = city.getText().toString();
-        String stateText = state.getSelectedItem().toString();
+        String stateText = state.getText().toString();
         String zipText = zip.getText().toString();
         String phoneNumberText = phoneNumber.getText().toString();
         String emailText = email.getText().toString();

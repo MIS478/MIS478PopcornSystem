@@ -40,7 +40,7 @@
                     android:layout_weight="1"
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:ems="10"
-                    android:inputType="textCapWords|textPersonName"
+                    android:inputType="textNoSuggestions|textCapWords|textPersonName"
                     android:maxLength="15"
                     android:nextFocusDown="@+id/LnameBox"
                     android:nextFocusRight="@id/LnameBox"
@@ -69,7 +69,7 @@
                     android:layout_weight="1"
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:ems="10"
-                    android:inputType="textCapWords|textPersonName"
+                    android:inputType="textNoSuggestions|textCapWords|textPersonName"
                     android:maxLength="15"
                     android:nextFocusRight="@+id/StreetNumberBox"
                     android:textColor="@color/TextColor" />
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
 
-                    android:inputType="number"
+                    android:inputType="number|textNoSuggestions"
                     android:maxLength="7"
                     android:nextFocusRight="@+id/StreetNameBox"
                     android:textColor="@color/TextColor" />
@@ -122,7 +122,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textCapWords|textPostalAddress"
+                    android:inputType="textNoSuggestions|textCapWords|textPostalAddress"
                     android:maxLength="15"
                     android:nextFocusRight="@+id/CityBox"
                     android:textColor="@color/TextColor" />
@@ -150,7 +150,7 @@
                     android:layout_weight="1"
                     android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     android:ems="10"
-                    android:inputType="textCapWords"
+                    android:inputType="textNoSuggestions|textCapWords"
                     android:maxLength="15"
                     android:nextFocusDown="@+id/ZipBox"
                     android:nextFocusRight="@id/ZipBox"
@@ -170,12 +170,14 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/TextColor" />
 
-                <Spinner
-                    android:id="@+id/StateSpinner"
-                    style="@style/SpinnerCubScoutTheme"
-                    android:layout_width="30dp"
+                <EditText
+                    android:id="@+id/StateEditText"
+                    style="@style/EditTextCubScoutTheme"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:spinnerMode="dialog"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:inputType="textNoSuggestions|textCapCharacters"
+                    android:maxLength="2"
                     android:textColor="@color/TextColor" />
             </TableRow>
 
@@ -199,7 +201,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="number"
+                    android:inputType="number|textNoSuggestions"
                     android:maxLength="5"
                     android:nextFocusDown="@+id/PnumberBox"
                     android:nextFocusRight="@id/PnumberBox"
@@ -226,7 +228,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="phone"
+                    android:inputType="textNoSuggestions|phone"
                     android:maxLength="11"
                     android:nextFocusDown="@+id/EmailBox"
                     android:nextFocusRight="@id/EmailBox"
@@ -253,7 +255,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textEmailAddress|textNoSuggestions"
                     android:maxLength="30"
                     android:nextFocusDown="@+id/NextButton"
                     android:nextFocusRight="@id/NextButton"
