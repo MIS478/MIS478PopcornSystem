@@ -185,8 +185,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:nextFocusDown="@+id/pass"
-                    android:nextFocusRight="@id/pass"
+                    android:nextFocusDown="@+id/den_number"
+                    android:nextFocusRight="@id/den_number"
                     android:textColor="@color/TextColor" />
             </TableRow>
 
