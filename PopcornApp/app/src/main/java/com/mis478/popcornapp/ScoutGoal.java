@@ -1,21 +1,35 @@
 package com.mis478.popcornapp;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ScoutGoal extends ActionBarActivity {
     int PersonalGoalInt;
-
+    public static final String url_create_product = "http://207.179.202.218:1515/joe/updategoal.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scout_goal);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
         setTitle("Your Goals");
         //Get info from the previous screen
       //  Intent intent = getIntent();
@@ -61,6 +75,31 @@ public class ScoutGoal extends ActionBarActivity {
         }
     }
 
+    public void magic(View view) {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            EditText amt = (EditText) findViewById(R.id.SetGoalEditText);
+            String amtholder = amt.getText().toString();
+            String test = extras.getString("string");
+            String value = extras.getString("name");
+            String[] SplitByComma = test.split(",");
+
+            String[] pass = SplitByComma[7].split(":");
+            String temp = pass[1];
+            temp = temp.substring(1,temp.length() -1);
+            JSONParser jsonParser = new JSONParser();
+
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("a", value));
+            params.add(new BasicNameValuePair("b", amtholder));
+            params.add(new BasicNameValuePair("c", temp));
+
+            JSONObject json = jsonParser.makeHttpRequest(url_create_product,
+                    "POST", params);
+            Log.d("Create Response", json.toString());
+
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
