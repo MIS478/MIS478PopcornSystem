@@ -1,8 +1,8 @@
 package com.mis478.popcornapp;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,9 +19,9 @@ public class ScoutMainPage extends ActionBarActivity {
         Intent intent = getIntent();
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-           String test = extras.getString("string");
-           String value = extras.getString("name");
-           String[] alldata = extras.getStringArray("all");
+            String test = extras.getString("string");
+            String value = extras.getString("name");
+            String[] alldata = extras.getStringArray("all");
         }
     }
 
@@ -29,11 +29,13 @@ public class ScoutMainPage extends ActionBarActivity {
         Intent back = new Intent(this, SellProducts.class);
         startActivity(back);
     }
+
     public void Donation(View view) {
 
         Intent donate = new Intent(this, Donation.class);
         startActivity(donate);
     }
+
     public void Delivery(View view) {
         Intent x = new Intent(this, DeliveryMode.class);
         Bundle extras = getIntent().getExtras();
@@ -43,10 +45,11 @@ public class ScoutMainPage extends ActionBarActivity {
             String[] alldata = extras.getStringArray("all");
             x.putExtra("name", value);
             x.putExtra("all", alldata);
-            x.putExtra("string",test);
+            x.putExtra("string", test);
         }
         startActivity(x);
     }
+
     public void Status(View view) {
         Intent x = new Intent(this, ScoutStatusPage.class);
         Bundle extras = getIntent().getExtras();
@@ -56,25 +59,29 @@ public class ScoutMainPage extends ActionBarActivity {
             String[] alldata = extras.getStringArray("all");
             x.putExtra("name", value);
             x.putExtra("all", alldata);
-            x.putExtra("string",test);
+            x.putExtra("string", test);
         }
 
         startActivity(x);
     }
+
     public void Log(View view) {
         Intent intent = new Intent(getApplicationContext(), Login.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
+
     public void Past(View view) {
         Intent x = new Intent(this, PastSales.class);
         startActivity(x);
     }
+
     public void View(View view) {
 
-     //    Intent x = new Intent(this, ViewProducts.class);
-     //   startActivity(x);
+        //    Intent x = new Intent(this, ViewProducts.class);
+        //   startActivity(x);
     }
+
     public void Goal(View view) {
         Intent x = new Intent(this, ScoutGoal.class);
         Bundle extras = getIntent().getExtras();
@@ -84,10 +91,11 @@ public class ScoutMainPage extends ActionBarActivity {
             String[] alldata = extras.getStringArray("all");
             x.putExtra("name", value);
             x.putExtra("all", alldata);
-            x.putExtra("string",test);
+            x.putExtra("string", test);
         }
         startActivity(x);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

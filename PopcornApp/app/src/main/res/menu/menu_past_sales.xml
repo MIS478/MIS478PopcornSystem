@@ -1,14 +1,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context="com.mis478.popcornapp.PastSales">
-    <item android:id="@+id/ScoutMainMenu" android:title="Main Menu"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/SaleModeMenu" android:title="Sales Mode"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/ScoutGoalMenu" android:title="Goal"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/DeliveryModeMenu" android:title="Delivery Mode"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/LogoutMenu" android:title="Log Out"
-        android:orderInCategory="100" app:showAsAction="never" />
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mis478.popcornapp.PastSales">
+    <item
+        android:id="@+id/ScoutMainMenu"
+        android:orderInCategory="100"
+        android:title="Main Menu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/SaleModeMenu"
+        android:orderInCategory="100"
+        android:title="Sales Mode"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ScoutGoalMenu"
+        android:orderInCategory="100"
+        android:title="Goal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/DeliveryModeMenu"
+        android:orderInCategory="100"
+        android:title="Delivery Mode"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/LogoutMenu"
+        android:orderInCategory="100"
+        android:title="Log Out"
+        app:showAsAction="never" />
 </menu>

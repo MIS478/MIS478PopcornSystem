@@ -2,14 +2,12 @@ package com.mis478.popcornapp;
 
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 
 public class SellProducts extends ActionBarActivity {
@@ -228,7 +226,7 @@ public class SellProducts extends ActionBarActivity {
         startActivity(OrderedProducts);
     }
 
-//not used at the moment
+    //not used at the moment
     public void CustInfo(View view) {
         //bundles the ordered products into an intent and then goes to the customer screen
         OrderedProducts = new Intent(this, CustomerInfo.class);

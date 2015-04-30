@@ -1,20 +1,22 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mis478.popcornapp.AddScout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/BGColor"
     android:fillViewport="false"
-    android:id="@+id/a">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mis478.popcornapp.AddScout">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="20dp"
         android:paddingRight="10dp"
+        android:paddingTop="20dp"
         android:weightSum="1">
 
 
@@ -30,24 +32,24 @@
                     android:id="@+id/ScoutNumberLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
                     android:text="Scout Number"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/Scout_number"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:maxLength="6"
                     android:inputType="textPersonName"
-                    android:textColor="@color/TextColor"
+                    android:maxLength="6"
                     android:nextFocusDown="@+id/user_name"
                     android:nextFocusRight="@id/user_name"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -59,24 +61,24 @@
                     android:id="@+id/UserNameLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
                     android:text="User Name"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/user_name"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:layout_weight="1"
-                    android:maxLength="7"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:textColor="@color/TextColor"
+                    android:maxLength="7"
                     android:nextFocusDown="@+id/fname"
                     android:nextFocusRight="@id/fname"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -88,22 +90,22 @@
                     android:id="@+id/fnamelabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
                     android:text="First Name"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/fname"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:ems="10"
                     android:inputType="textPostalAddress"
-                    android:textColor="@color/TextColor"
                     android:nextFocusDown="@+id/lname"
                     android:nextFocusRight="@id/lname"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
 
             </TableRow>
 
@@ -115,22 +117,22 @@
                     android:id="@+id/lnamelabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
                     android:text="Last Name"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/lname"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:textColor="@color/TextColor"
                     android:nextFocusDown="@+id/sales_goal"
                     android:nextFocusRight="@id/sales_goal"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -141,22 +143,22 @@
                     android:id="@+id/salesgoallabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
                     android:text="Sales Goal"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/sales_goal"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:textColor="@color/TextColor"
                     android:nextFocusDown="@+id/prize_progress"
                     android:nextFocusRight="@id/prize_progress"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -167,22 +169,22 @@
                     android:id="@+id/priceprogresslabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
                     android:text="Prize Progress"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/prize_progress"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:textColor="@color/TextColor"
                     android:nextFocusDown="@+id/pass"
                     android:nextFocusRight="@id/pass"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -190,28 +192,28 @@
                 android:layout_height="fill_parent">
 
                 <TextView
+                    android:id="@+id/dennumberlabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:text="Den Number"
+                    android:layout_column="0"
                     android:paddingLeft="15dp"
-                    android:id="@+id/dennumberlabel"
-                    android:layout_column="0" />
+                    android:text="Den Number"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/TextColor" />
 
                 <EditText
+                    android:id="@+id/den_number"
+                    style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
+                    android:layout_column="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:id="@+id/den_number"
+                    android:inputType="number"
                     android:maxLength="3"
-                    android:textColor="@color/TextColor"
                     android:nextFocusDown="@+id/pass"
                     android:nextFocusRight="@id/pass"
-                    style="@style/EditTextCubScoutTheme"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -223,23 +225,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
+                    android:paddingLeft="15dp"
                     android:text="Pass"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/pass"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:ems="10"
-                    android:maxLength="3"
                     android:inputType="phone"
-                    android:textColor="@color/TextColor"
+                    android:maxLength="3"
                     android:nextFocusDown="@+id/total_sales"
                     android:nextFocusRight="@id/total_sales"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -251,22 +253,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
+                    android:paddingLeft="15dp"
                     android:text="Total Sales"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft="15dp" />
+                    android:textColor="@color/TextColor" />
 
                 <EditText
                     android:id="@+id/total_sales"
                     style="@style/EditTextCubScoutTheme"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:ems="10"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/TextColor"
                     android:nextFocusDown="@+id/NextButton"
                     android:nextFocusRight="@id/NextButton"
-                    android:layout_column="2" />
+                    android:textColor="@color/TextColor" />
             </TableRow>
 
             <TableRow
@@ -274,46 +276,46 @@
                 android:layout_height="fill_parent">
 
                 <TextView
+                    android:id="@+id/personalgoallabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Personal Goal"
-                    android:id="@+id/personalgoallabel"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/TextColor"
+                    android:layout_column="0"
                     android:paddingLeft="15dp"
-                    android:layout_column="0" />
+                    android:text="Personal Goal"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/TextColor" />
 
                 <EditText
+                    android:id="@+id/personal_goal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
+                    android:layout_column="2"
                     android:ems="10"
-                    android:id="@+id/personal_goal"
-                    android:layout_column="2" />
+                    android:inputType="number" />
             </TableRow>
 
             <TableRow
+                android:id="@+id/DenGoalLabel"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/DenGoalLabel">
+                android:layout_height="fill_parent">
 
                 <TextView
+                    android:id="@+id/dengoallabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_column="0"
+                    android:paddingLeft="15dp"
                     android:text="   Den Goal"
-                    android:id="@+id/dengoallabel"
-                    android:textColor="@color/TextColor"
-                    android:paddingLeft = "15dp"
-                    android:layout_column="0" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/TextColor" />
 
                 <EditText
+                    android:id="@+id/den_goal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
+                    android:layout_column="2"
                     android:ems="10"
-                    android:id="@+id/den_goal"
-                    android:layout_column="2" />
+                    android:inputType="number" />
             </TableRow>
 
         </TableLayout>
@@ -328,13 +330,13 @@
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:clickable="true"
-                android:text="@string/back"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:onClick="back"/>
+                android:layout_alignParentTop="true"
+                android:layout_gravity="left"
+                android:clickable="true"
+                android:onClick="back"
+                android:text="@string/back" />
 
             <Button
                 android:id="@+id/NextButton"
@@ -345,8 +347,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_gravity="bottom|right"
                 android:clickable="true"
-                android:text="@string/next"
-                android:onClick="AddScout"/>
+                android:onClick="AddScout"
+                android:text="@string/next" />
         </RelativeLayout>
 
 

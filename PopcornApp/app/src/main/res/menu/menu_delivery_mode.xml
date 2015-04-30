@@ -2,14 +2,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.mis478.popcornapp.DeliveryMode">
-    <item android:id="@+id/ScoutMainMenu" android:title="Main Menu"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/SaleModeMenu" android:title="Sales Mode"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/ScoutGoalMenu" android:title="Goal"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/PastSalesMenu" android:title="Past Sales"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/LogoutMenu" android:title="Log Out"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/ScoutMainMenu"
+        android:orderInCategory="100"
+        android:title="Main Menu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/SaleModeMenu"
+        android:orderInCategory="100"
+        android:title="Sales Mode"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ScoutGoalMenu"
+        android:orderInCategory="100"
+        android:title="Goal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/PastSalesMenu"
+        android:orderInCategory="100"
+        android:title="Past Sales"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/LogoutMenu"
+        android:orderInCategory="100"
+        android:title="Log Out"
+        app:showAsAction="never" />
 </menu>

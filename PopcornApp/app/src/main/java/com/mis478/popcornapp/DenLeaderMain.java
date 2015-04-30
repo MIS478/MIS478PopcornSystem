@@ -1,8 +1,8 @@
 package com.mis478.popcornapp;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,26 +23,26 @@ public class DenLeaderMain extends ActionBarActivity {
         Intent intent = getIntent();
     }
 
-    public void toScouts (View view)
-    {
+    public void toScouts(View view) {
         Intent toScouts = new Intent(this, ViewScouts.class);
         startActivity(toScouts);
     }
-    public void toSalesTracking (View view)
-    {
+
+    public void toSalesTracking(View view) {
         Intent toSalesTracking = new Intent(this, PastSales.class);
         startActivity(toSalesTracking);
     }
-    public void toProducts (View view)
-    {
+
+    public void toProducts(View view) {
         Intent toDenProducts = new Intent(this, DenSalesItems.class);
         startActivity(toDenProducts);
     }
-    public void toAddScouts (View view)
-    {
+
+    public void toAddScouts(View view) {
         Intent toAddScouts = new Intent(this, AddScout.class);
         startActivity(toAddScouts);
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_denleadermain, menu);

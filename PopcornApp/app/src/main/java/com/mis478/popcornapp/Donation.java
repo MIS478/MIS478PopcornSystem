@@ -19,8 +19,7 @@ public class Donation extends ActionBarActivity {
     Intent intent;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donation);
         //Get info from the previous screen

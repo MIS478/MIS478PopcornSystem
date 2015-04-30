@@ -1,483 +1,485 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mis478.popcornapp.ScoutStatusPage"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/plz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BGColor"
     android:clickable="true"
     android:nestedScrollingEnabled="false"
     android:onClick="Next"
-    android:background="@color/BGColor">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mis478.popcornapp.ScoutStatusPage">
 
     <TextView
+        android:id="@+id/Weclome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome Scout:"
-        android:id="@+id/Weclome"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
-        android:layout_alignParentTop="true"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scout name from Server"
-        android:id="@+id/ScoutNameInput"
-        android:textColor="@color/TextColor"
         android:paddingLeft="15dp"
-        android:layout_above="@+id/TotalSales"
-        android:layout_centerHorizontal="true" />
+        android:text="Welcome Scout:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/ScoutNameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Your Total Sales are: "
+        android:layout_above="@+id/TotalSales"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="15dp"
+        android:text="Scout name from Server"
+        android:textColor="@color/TextColor" />
+
+    <TextView
         android:id="@+id/TotalSales"
-        android:layout_below="@+id/Weclome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Weclome"
         android:layout_alignStart="@+id/Weclome"
+        android:layout_below="@+id/Weclome"
         android:layout_marginTop="38dp"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/TotalSalesInput"
-        android:textColor="@color/TextColor"
         android:paddingLeft="15dp"
-        android:layout_alignBottom="@+id/TotalSales"
-        android:layout_centerHorizontal="true" />
+        android:text="Your Total Sales are: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/TotalSalesInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Your Personal Goal:"
+        android:layout_alignBottom="@+id/TotalSales"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
+
+    <TextView
         android:id="@+id/PersonalGoal"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/TotalSalesInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TotalSales"
         android:layout_alignStart="@+id/TotalSales"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:layout_below="@+id/TotalSalesInput"
+        android:layout_marginTop="38dp"
+        android:paddingLeft="15dp"
+        android:text="Your Personal Goal:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/DenGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Your Den Goal:"
-        android:id="@+id/DenGoal"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/PersonalGoal"
         android:layout_alignLeft="@+id/PersonalGoal"
         android:layout_alignStart="@+id/PersonalGoal"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"/>
+        android:layout_below="@+id/PersonalGoal"
+        android:layout_marginTop="42dp"
+        android:paddingLeft="15dp"
+        android:text="Your Den Goal:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/PersonalGoalAmt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/PersonalGoalAmt"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_above="@+id/DenGoal"
         android:layout_alignLeft="@+id/TotalSalesInput"
-        android:layout_alignStart="@+id/TotalSalesInput" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/TotalSalesInput"
+        android:paddingLeft="15dp"
         android:text="from server"
+        android:textColor="@color/TextColor" />
+
+    <TextView
         android:id="@+id/DenGoalAmt"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/DenGoal"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="1"
         android:id="@+id/textView17"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/DenGoal"
-        android:layout_alignStart="@+id/DenGoal" />
+        android:layout_alignStart="@+id/DenGoal"
+        android:layout_centerVertical="true"
+        android:paddingLeft="15dp"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="2"
         android:id="@+id/textView18"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView17"
-        android:layout_alignStart="@+id/textView17" />
+        android:layout_alignStart="@+id/textView17"
+        android:layout_below="@+id/textView17"
+        android:paddingLeft="15dp"
+        android:text="2"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="3"
         android:id="@+id/textView19"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView18"
-        android:layout_alignStart="@+id/textView18" />
+        android:layout_alignStart="@+id/textView18"
+        android:layout_below="@+id/textView18"
+        android:paddingLeft="15dp"
+        android:text="3"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="4"
         android:id="@+id/textView29"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView19"
-        android:layout_alignStart="@+id/textView19" />
+        android:layout_alignStart="@+id/textView19"
+        android:layout_below="@+id/textView19"
+        android:paddingLeft="15dp"
+        android:text="4"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="5"
         android:id="@+id/textView30"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView29"
-        android:layout_alignStart="@+id/textView29" />
+        android:layout_alignStart="@+id/textView29"
+        android:layout_below="@+id/textView29"
+        android:paddingLeft="15dp"
+        android:text="5"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="6"
         android:id="@+id/textView31"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView30"
-        android:layout_alignStart="@+id/textView30" />
+        android:layout_alignStart="@+id/textView30"
+        android:layout_below="@+id/textView30"
+        android:paddingLeft="15dp"
+        android:text="6"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="7"
         android:id="@+id/textView32"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView31"
-        android:layout_alignStart="@+id/textView31" />
+        android:layout_alignStart="@+id/textView31"
+        android:layout_below="@+id/textView31"
+        android:paddingLeft="15dp"
+        android:text="7"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="8"
         android:id="@+id/textView33"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView32"
-        android:layout_alignStart="@+id/textView32" />
+        android:layout_alignStart="@+id/textView32"
+        android:layout_below="@+id/textView32"
+        android:paddingLeft="15dp"
+        android:text="8"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="9"
         android:id="@+id/textView34"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView33"
-        android:layout_alignStart="@+id/textView33" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView33"
+        android:layout_below="@+id/textView33"
+        android:paddingLeft="15dp"
+        android:text="9"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="10"
-        android:id="@+id/textView35"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_below="@+id/textView34"
-        android:layout_alignLeft="@+id/textView34"
-        android:layout_alignStart="@+id/textView34" />
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" from server"
-        android:id="@+id/name1"
-        android:textColor="@color/TextColor"
+        android:layout_alignLeft="@+id/textView34"
+        android:layout_alignStart="@+id/textView34"
+        android:layout_below="@+id/textView34"
         android:paddingLeft="15dp"
+        android:text="10"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView17"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name2"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_above="@+id/textView19"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name3"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_alignBottom="@+id/textView19"
         android:layout_alignLeft="@+id/name2"
-        android:layout_alignStart="@+id/name2" />
+        android:layout_alignStart="@+id/name2"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name4"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_above="@+id/textView30"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name5"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_above="@+id/textView31"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name6"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_above="@+id/textView32"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name7"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_alignBottom="@+id/textView32"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name8"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_above="@+id/textView34"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name9"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_above="@+id/textView35"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
+        android:id="@+id/name10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="from server"
-        android:id="@+id/name10"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
         android:layout_alignBottom="@+id/textView35"
         android:layout_toLeftOf="@+id/DenGoalAmt"
-        android:layout_toStartOf="@+id/DenGoalAmt" />
+        android:layout_toStartOf="@+id/DenGoalAmt"
+        android:paddingLeft="15dp"
+        android:text="from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Rank"
         android:id="@+id/textView46"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/textView17"
+        android:layout_alignEnd="@+id/textView35"
         android:layout_alignRight="@+id/textView35"
-        android:layout_alignEnd="@+id/textView35" />
+        android:paddingLeft="15dp"
+        android:text="Rank"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Name"
         android:id="@+id/textView47"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/PersonalGoal"
         android:layout_alignTop="@+id/textView46"
-        android:layout_alignRight="@+id/PersonalGoal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:text="Name"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Total Sold"
+        android:textColor="@color/TextColor" />
+
+    <TextView
         android:id="@+id/textView48"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView47"
+        android:layout_toEndOf="@+id/DenGoalAmt"
         android:layout_toRightOf="@+id/DenGoalAmt"
-        android:layout_toEndOf="@+id/DenGoalAmt" />
+        android:paddingLeft="15dp"
+        android:text="Total Sold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total1"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView48"
+        android:layout_alignRight="@+id/textView48"
         android:layout_alignTop="@+id/name1"
-        android:layout_alignRight="@+id/textView48"
-        android:layout_alignEnd="@+id/textView48" />
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total2"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_alignTop="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/total1"
-        android:layout_alignStart="@+id/total1" />
+        android:layout_alignStart="@+id/total1"
+        android:layout_alignTop="@+id/name2"
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total3"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_alignTop="@+id/name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/total2"
-        android:layout_alignStart="@+id/total2" />
+        android:layout_alignStart="@+id/total2"
+        android:layout_alignTop="@+id/name3"
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total4"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_alignTop="@+id/name4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/total3"
-        android:layout_alignStart="@+id/total3" />
+        android:layout_alignStart="@+id/total3"
+        android:layout_alignTop="@+id/name4"
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total5"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_alignTop="@+id/name5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/total4"
-        android:layout_alignStart="@+id/total4" />
+        android:layout_alignStart="@+id/total4"
+        android:layout_alignTop="@+id/name5"
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total6"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView48"
+        android:layout_alignRight="@+id/textView48"
         android:layout_alignTop="@+id/name6"
-        android:layout_alignRight="@+id/textView48"
-        android:layout_alignEnd="@+id/textView48" />
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total7"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView48"
+        android:layout_alignRight="@+id/textView48"
         android:layout_alignTop="@+id/name7"
-        android:layout_alignRight="@+id/textView48"
-        android:layout_alignEnd="@+id/textView48" />
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total8"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_alignTop="@+id/name8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/total7"
-        android:layout_alignStart="@+id/total7" />
+        android:layout_alignStart="@+id/total7"
+        android:layout_alignTop="@+id/name8"
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" from server"
         android:id="@+id/total9"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_above="@+id/textView35"
-        android:layout_alignRight="@+id/textView48"
-        android:layout_alignEnd="@+id/textView48" />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" from server"
-        android:id="@+id/total10"
-        android:textColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:layout_alignTop="@+id/name10"
+        android:layout_above="@+id/textView35"
+        android:layout_alignEnd="@+id/textView48"
         android:layout_alignRight="@+id/textView48"
-        android:layout_alignEnd="@+id/textView48" />
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
+
+    <TextView
+        android:id="@+id/total10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView48"
+        android:layout_alignRight="@+id/textView48"
+        android:layout_alignTop="@+id/name10"
+        android:paddingLeft="15dp"
+        android:text=" from server"
+        android:textColor="@color/TextColor" />
 
 </RelativeLayout>

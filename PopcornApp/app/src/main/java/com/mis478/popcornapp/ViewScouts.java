@@ -5,15 +5,12 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ExpandableListView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -29,15 +26,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by Lloyd on 3/29/2015.
  */
-public class ViewScouts  extends ListActivity
-{
+public class ViewScouts extends ListActivity {
     public static final String KEY_121 = "http://207.179.202.218:1515/joe/1.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +60,7 @@ public class ViewScouts  extends ListActivity
         }
         //convert response to string
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
             StringBuilder sb = new StringBuilder();
             String line = null;
             line = reader.readLine();
@@ -77,18 +72,15 @@ public class ViewScouts  extends ListActivity
             String[] holder = new String[10];
             int delim = 1;
             String ts;
-            for (int i = 0; i < splitArray.length -1; i++)
-            {
+            for (int i = 0; i < splitArray.length - 1; i++) {
                 temp = splitArray[i].split(",");
                 temp = temp[delim].split(":");
-                delim =2;
+                delim = 2;
                 ts = temp[1];
-                ts = ts.substring(1,ts.length() -1);
+                ts = ts.substring(1, ts.length() - 1);
                 holder[i] = ts;
             }
             splitArray[10] = "";
-
-
 
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -116,6 +108,7 @@ public class ViewScouts  extends ListActivity
         }
 
     }
+
     protected void onListItemClick(ListView l, View v, int position, long id) {
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
         nameValuePairs.add(new BasicNameValuePair("year", "420"));
@@ -136,7 +129,7 @@ public class ViewScouts  extends ListActivity
         }
         //convert response to string
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
             StringBuilder sb = new StringBuilder();
             String line = null;
             line = reader.readLine();
@@ -144,28 +137,27 @@ public class ViewScouts  extends ListActivity
             line.toString();
             String[] splitArray = line.split("\\}");
             int delim = 2;
-            if (position == 0)
-            {
+            if (position == 0) {
                 delim = 1;
             }
 
             String[] SplitByComma = splitArray[position].split(",");
 
 
-            String name,  phone, email, salesgoal, total,paid,delivered;
+            String name, phone, email, salesgoal, total, paid, delivered;
 
-            String[] namea, phonea, emaila, salesgoala, totala,paida,delivereda;
+            String[] namea, phonea, emaila, salesgoala, totala, paida, delivereda;
 
             namea = SplitByComma[delim].split(":");
             name = namea[1];
-            name = name.substring(1,name.length() -1);
+            name = name.substring(1, name.length() - 1);
             delim++;
             delim++;
             delim++;
 
             salesgoala = SplitByComma[delim].split(":");
             salesgoal = salesgoala[1];
-            salesgoal = salesgoal.substring(1,salesgoal.length() -1);
+            salesgoal = salesgoal.substring(1, salesgoal.length() - 1);
             delim++;
             delim++;
             delim++;
@@ -173,24 +165,22 @@ public class ViewScouts  extends ListActivity
 
             totala = SplitByComma[delim].split(":");
             total = totala[1];
-            total = total.substring(1,total.length() -1);
-
-
-
+            total = total.substring(1, total.length() - 1);
 
 
             new AlertDialog.Builder(this)
                     .setTitle("Scout Information")
                     .setMessage("Username: " + name + "\n" +
 
-                            "Sales Goal: $" + salesgoal +"\n" +
+                            "Sales Goal: $" + salesgoal + "\n" +
                             "Total sales: $" + total)
-                                            .show();
+                    .show();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

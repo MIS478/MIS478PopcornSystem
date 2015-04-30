@@ -1,14 +1,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context="com.mis478.popcornapp.ViewScouts">
-    <item android:id="@+id/DenLeaderMainMenu" android:title="Main Menu"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/AddScoutMenu" android:title="Add Scout"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/DenSalesTrackingMenu" android:title="Den Sales Tracking"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/ViewProductsMenu" android:title="View Products"
-        android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/LogoutMenu" android:title="Logout"
-        android:orderInCategory="100" app:showAsAction="never" />
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mis478.popcornapp.ViewScouts">
+    <item
+        android:id="@+id/DenLeaderMainMenu"
+        android:orderInCategory="100"
+        android:title="Main Menu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/AddScoutMenu"
+        android:orderInCategory="100"
+        android:title="Add Scout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/DenSalesTrackingMenu"
+        android:orderInCategory="100"
+        android:title="Den Sales Tracking"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ViewProductsMenu"
+        android:orderInCategory="100"
+        android:title="View Products"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/LogoutMenu"
+        android:orderInCategory="100"
+        android:title="Logout"
+        app:showAsAction="never" />
 </menu>

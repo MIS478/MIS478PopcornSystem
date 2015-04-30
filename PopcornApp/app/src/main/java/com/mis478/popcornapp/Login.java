@@ -2,12 +2,10 @@ package com.mis478.popcornapp;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
@@ -19,25 +17,18 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.sql.*;
-import javax.sql.*;
-import java.*;
 import java.util.ArrayList;
-
-import javax.*;
 
 public class Login extends ActionBarActivity {
 
     Integer x = 1;
     Integer y = 1;
     public static final String KEY_121 = "http://207.179.202.218:1515/joe/1.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +38,8 @@ public class Login extends ActionBarActivity {
 
         StrictMode.setThreadPolicy(policy);
     }
-    public void ConnectToDatabase(View View){
+
+    public void ConnectToDatabase(View View) {
         InputStream is = null;
 
         EditText LoginEditText = (EditText) findViewById(R.id.LoginUsername);
@@ -57,11 +49,11 @@ public class Login extends ActionBarActivity {
         String result = "";
         //the year data to send
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("year","420"));
+        nameValuePairs.add(new BasicNameValuePair("year", "420"));
 
 
         //http post
-        try{
+        try {
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(KEY_121);
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
@@ -70,12 +62,12 @@ public class Login extends ActionBarActivity {
             is = entity.getContent();
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             Log.e("log_tag", "Error in http connection " + e.toString());
         }
         //convert response to string
-        try{
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
             StringBuilder sb = new StringBuilder();
             String line = null;
             while ((line = reader.readLine()) != null) {
@@ -86,10 +78,8 @@ public class Login extends ActionBarActivity {
                 for (int i = 0; i < splitArray.length; i++) {
 
                     if (splitArray[i].contains(LoginText) && splitArray[i].contains(PasswordText)
-                            && !LoginText.equals("") && !PasswordText.equals(""))
-                    {
-                        if (LoginText.equals("John") && PasswordText.equals("111"))
-                        {
+                            && !LoginText.equals("") && !PasswordText.equals("")) {
+                        if (LoginText.equals("John") && PasswordText.equals("111")) {
 
                             Intent intent = new Intent(this, DenLeaderMain.class);
                             intent.putExtra("name", LoginText);
@@ -98,56 +88,54 @@ public class Login extends ActionBarActivity {
                         } else {
 
                             Intent intent = new Intent(this, ScoutStatusPage.class);
-                           intent.putExtra("name", LoginText);
+                            intent.putExtra("name", LoginText);
                             intent.putExtra("all", splitArray);
 
                             intent.putExtra("string", splitArray[i]);
                             startActivity(intent);
                             break;
-                                }
-                    } else if( i == (splitArray.length -1))
-                       {
-                           new AlertDialog.Builder(this)
-                                   .setTitle("Incorrect login")
-                                   .setMessage("You entered the wrong password or username")
-                                   .setIcon(android.R.drawable.ic_dialog_alert)
-                                   .show();
-                       }
+                        }
+                    } else if (i == (splitArray.length - 1)) {
+                        new AlertDialog.Builder(this)
+                                .setTitle("Incorrect login")
+                                .setMessage("You entered the wrong password or username")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
                     }
-
-
                 }
 
-            is.close();
-            result=sb.toString();
 
-        }catch(Exception e){
-            Log.e("log_tag", "Error converting result "+e.toString());
+            }
+
+            is.close();
+            result = sb.toString();
+
+        } catch (Exception e) {
+            Log.e("log_tag", "Error converting result " + e.toString());
         }
         //parse json data
 
 
-}
+    }
+
     public void Login(View view) {
 
         EditText LoginEditText = (EditText) findViewById(R.id.LoginUsername);
         EditText PasswordEditText = (EditText) findViewById(R.id.LoginPassword);
         String LoginText = LoginEditText.getText().toString();
         String PasswordText = PasswordEditText.getText().toString();
-        if (LoginText.equals("scout") && PasswordText.equals("123") ) {
+        if (LoginText.equals("scout") && PasswordText.equals("123")) {
             Intent intent = new Intent(this, ScoutStatusPage.class);
             startActivity(intent);
-        }
-        else if (LoginText.equals("leader") && PasswordText.equals("123"))
-        {
+        } else if (LoginText.equals("leader") && PasswordText.equals("123")) {
             Intent intent = new Intent(this, DenLeaderMain.class);
             startActivity(intent);
-        }
-        else { new AlertDialog.Builder(this)
-                .setTitle("Incorrect login")
-                .setMessage("You entered the wrong password or username")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
+        } else {
+            new AlertDialog.Builder(this)
+                    .setTitle("Incorrect login")
+                    .setMessage("You entered the wrong password or username")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
 
         }
     }

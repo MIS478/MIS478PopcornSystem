@@ -1,21 +1,18 @@
 package com.mis478.popcornapp;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collections;
 
 
 public class ScoutStatusPage extends ActionBarActivity {
     String value;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +20,7 @@ public class ScoutStatusPage extends ActionBarActivity {
         setTitle("Scout Status");
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-             value = extras.getString("name");
+            value = extras.getString("name");
             TextView a = (TextView) findViewById(R.id.ScoutNameInput);
             a.setText(value);
 
@@ -32,19 +29,19 @@ public class ScoutStatusPage extends ActionBarActivity {
             TextView b = (TextView) findViewById(R.id.TotalSalesInput);
             String[] TotalSales = SplitByComma[8].split(":");
             String temp = TotalSales[1];
-            temp = temp.substring(1,temp.length() -1);
+            temp = temp.substring(1, temp.length() - 1);
             b.setText("$" + temp);
 
             TextView Personal = (TextView) findViewById(R.id.PersonalGoalAmt);
             String[] persongoal = SplitByComma[9].split(":");
             String temp2 = persongoal[1];
-            temp2 = temp2.substring(1,temp2.length() -1);
+            temp2 = temp2.substring(1, temp2.length() - 1);
             Personal.setText("$" + temp2);
 
             TextView DenG = (TextView) findViewById(R.id.DenGoalAmt);
             String[] dengoal = SplitByComma[10].split(":");
             String temp3 = dengoal[1];
-            temp3 = temp3.substring(1,temp3.length() -1);
+            temp3 = temp3.substring(1, temp3.length() - 1);
             DenG.setText("$" + temp3);
 
             //leaderboard stuff
@@ -76,15 +73,15 @@ public class ScoutStatusPage extends ActionBarActivity {
             String[] alldata = extras.getStringArray("all");
             //worlds sloppiest sorting loop
             Integer top = 0;
-            Integer  two = 0;
-            Integer  three = 0;
-            Integer  four = 0;
-            Integer  five = 0;
-            Integer  six = 0;
-            Integer  seven = 0;
-            Integer  eight = 0;
-            Integer  nine = 0;
-            Integer  ten = 0;
+            Integer two = 0;
+            Integer three = 0;
+            Integer four = 0;
+            Integer five = 0;
+            Integer six = 0;
+            Integer seven = 0;
+            Integer eight = 0;
+            Integer nine = 0;
+            Integer ten = 0;
             //totholder
             String[] holder;
             String holder2;
@@ -108,37 +105,35 @@ public class ScoutStatusPage extends ActionBarActivity {
             String[] finalarrayname = new String[10];
             String[] finalarraytot = new String[10];
             //       temp = alldata[1];
-            for (int i = 0; i < alldata.length -1; i++)
-            {
+            for (int i = 0; i < alldata.length - 1; i++) {
                 //tot
-              holder = alldata[i].split(",");
-              holder = holder[delim].split(":");
+                holder = alldata[i].split(",");
+                holder = holder[delim].split(":");
                 //for whatever reason 8 is the total sales point for the first loop
                 // and 9 is the total sales point for all others
                 delim = 9;
-              holder2 = holder[1];
-              holder2 = holder2;
-              holder2 = holder2.substring(1, holder2.length() -1);
-              inthold = Integer.parseInt(holder2);
-              anarray[i] = inthold;
-              //name
-              namehold = alldata[i].split(",");
-              namehold = namehold[delimname].split(":");
-              delimname =3;
-              namehold2 = namehold[1];
-              namehold2 = namehold2.substring(1, namehold2.length() -1);
+                holder2 = holder[1];
+                holder2 = holder2;
+                holder2 = holder2.substring(1, holder2.length() - 1);
+                inthold = Integer.parseInt(holder2);
+                anarray[i] = inthold;
+                //name
+                namehold = alldata[i].split(",");
+                namehold = namehold[delimname].split(":");
+                delimname = 3;
+                namehold2 = namehold[1];
+                namehold2 = namehold2.substring(1, namehold2.length() - 1);
                 //loading the double
-              dub[i] = (namehold2 +":"+ inthold.toString());
+                dub[i] = (namehold2 + ":" + inthold.toString());
 
             }
             Arrays.sort(anarray, Collections.reverseOrder());
-            for (int i = 0; i < dub.length; i++)
-            {
+            for (int i = 0; i < dub.length; i++) {
 
                 namehold = dub[i].split(":");
                 namehold2 = namehold[1];
                 inthold = Integer.parseInt(namehold2);
-                for (int h = 0; h < anarray.length ; h++) {
+                for (int h = 0; h < anarray.length; h++) {
 
                     if (inthold == anarray[h]) {
                         finalarrayname[h] = namehold[0];
@@ -181,13 +176,13 @@ public class ScoutStatusPage extends ActionBarActivity {
         if (extras != null) {
 
             value = extras.getString("name");
-       ToScoutMain.putExtra("name", value);
+            ToScoutMain.putExtra("name", value);
 
-       String[] alldata = extras.getStringArray("all");
-        ToScoutMain.putExtra("all", alldata);
+            String[] alldata = extras.getStringArray("all");
+            ToScoutMain.putExtra("all", alldata);
 
-            String test =  extras.getString("string");
-        ToScoutMain.putExtra("string",test);
+            String test = extras.getString("string");
+            ToScoutMain.putExtra("string", test);
         }
 
         startActivity(ToScoutMain);

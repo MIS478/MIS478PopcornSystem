@@ -1,16 +1,14 @@
 package com.mis478.popcornapp;
 
 import android.app.AlertDialog;
+import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.StrictMode;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-import android.app.ListActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -62,30 +60,27 @@ public class DeliveryMode extends ListActivity {
         }
         //convert response to string
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
             StringBuilder sb = new StringBuilder();
             String line = null;
             line = reader.readLine();
 
-                line.toString();
-                String[] splitArray = line.split("\\}");
-                String[] temp;
-                //load into temp array
-                String[] holder = new String[10];
-                int delim = 0;
-                String ts;
-            for (int i = 0; i < splitArray.length -1; i++)
-            {
+            line.toString();
+            String[] splitArray = line.split("\\}");
+            String[] temp;
+            //load into temp array
+            String[] holder = new String[10];
+            int delim = 0;
+            String ts;
+            for (int i = 0; i < splitArray.length - 1; i++) {
                 temp = splitArray[i].split(",");
                 temp = temp[delim].split(":");
-                delim =1;
+                delim = 1;
                 ts = temp[1];
-                ts = ts.substring(1,ts.length() -1);
+                ts = ts.substring(1, ts.length() - 1);
                 holder[i] = ts;
             }
-               splitArray[10] = "";
-
-
+            splitArray[10] = "";
 
 
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -106,9 +101,9 @@ public class DeliveryMode extends ListActivity {
                 String test = extras.getString("string");
 
                 // use your custom layout
-              //  ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-               //         R.layout.activity_delivery_mode, R.id.label, values);
-             //   setListAdapter(adapter);
+                //  ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                //         R.layout.activity_delivery_mode, R.id.label, values);
+                //   setListAdapter(adapter);
             }
 
 
@@ -136,63 +131,62 @@ public class DeliveryMode extends ListActivity {
         }
         //convert response to string
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
             StringBuilder sb = new StringBuilder();
             String line = null;
             line = reader.readLine();
 
             line.toString();
             String[] splitArray = line.split("\\}");
-           int delim = 1;
-            if (position == 0)
-            {
+            int delim = 1;
+            if (position == 0) {
                 delim = 0;
             }
 
             String[] SplitByComma = splitArray[position].split(",");
 
-            String name, address, phone, email, ordered, total,paid,delivered;
+            String name, address, phone, email, ordered, total, paid, delivered;
 
-            String[] namea, addressa, phonea, emaila, ordereda, totala,paida,delivereda;
+            String[] namea, addressa, phonea, emaila, ordereda, totala, paida, delivereda;
 
             namea = SplitByComma[delim].split(":");
             name = namea[1];
-            name = name.substring(1,name.length() -1);
+            name = name.substring(1, name.length() - 1);
             delim++;
 
             addressa = SplitByComma[delim].split(":");
             address = addressa[1];
-            address = address.substring(1,address.length() -1);
+            address = address.substring(1, address.length() - 1);
             delim++;
 
             phonea = SplitByComma[delim].split(":");
             phone = phonea[1];
-            phone = phone.substring(1,phone.length() -1);
+            phone = phone.substring(1, phone.length() - 1);
             delim++;
 
             emaila = SplitByComma[delim].split(":");
             email = emaila[1];
-            email = email.substring(1,email.length() -1);
+            email = email.substring(1, email.length() - 1);
             delim++;
 
             ordereda = SplitByComma[delim].split(":");
             ordered = ordereda[1];
-            ordered = ordered.substring(1,ordered.length() -1);
+            ordered = ordered.substring(1, ordered.length() - 1);
             delim++;
 
             totala = SplitByComma[delim].split(":");
             total = totala[1];
-            total = total.substring(1,total.length() -1);
+            total = total.substring(1, total.length() - 1);
             delim++;
 
             paida = SplitByComma[delim].split(":");
             paid = paida[1];
-            paid = paid.substring(1,paid.length() -1);
+            paid = paid.substring(1, paid.length() - 1);
             delim++;
 
             delivereda = SplitByComma[delim].split(":");
             delivered = delivereda[1];
-            delivered = delivered.substring(1,delivered.length() -1);
+            delivered = delivered.substring(1, delivered.length() - 1);
             delim++;
 
 
@@ -200,12 +194,12 @@ public class DeliveryMode extends ListActivity {
                     .setTitle("Customer Information")
                     .setMessage("Name: " + name + "\n" +
                             "Address: " + address + "\n" +
-                            "Phone: " + phone +"\n" +
-                            "Email: " + email +"\n" +
-                            "Ordered Products: " + ordered +"\n" +
+                            "Phone: " + phone + "\n" +
+                            "Email: " + email + "\n" +
+                            "Ordered Products: " + ordered + "\n" +
                             "Total: $" + total + "\n" +
                             "Paid: " + paid + "\n" +
-                            "Delivered: "+ delivered)
+                            "Delivered: " + delivered)
                     .setPositiveButton("Set order Delivered",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {

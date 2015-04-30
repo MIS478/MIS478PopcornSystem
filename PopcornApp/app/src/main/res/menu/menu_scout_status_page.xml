@@ -2,18 +2,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.mis478.popcornapp.ScoutStatusPage">
-    <item android:id="@+id/scoutGoal" android:title="Scout Goal"
-        android:orderInCategory="101" app:showAsAction="never" />
-    <item android:id="@+id/deliveryMode" android:title="Delivery Mode"
-        android:orderInCategory="102" app:showAsAction="never" />
-    <item android:id="@+id/pastSales" android:title="Past Sales"
-        android:orderInCategory="103" app:showAsAction="never" />
-    <item android:id="@+id/sales_mode" android:title="Sales Mode"
-        android:orderInCategory="101" app:showAsAction="never" />
-    <item android:id="@+id/donation" android:title="Donation"
-        android:orderInCategory="102" app:showAsAction="never" />
-    <item android:id="@+id/ScoutMain" android:title="Scout Main"
-        android:orderInCategory="102" app:showAsAction="never" />
-    <item android:id="@+id/log" android:title="Log Out"
-        android:orderInCategory="103" app:showAsAction="never" />
+    <item
+        android:id="@+id/scoutGoal"
+        android:orderInCategory="101"
+        android:title="Scout Goal"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/deliveryMode"
+        android:orderInCategory="102"
+        android:title="Delivery Mode"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/pastSales"
+        android:orderInCategory="103"
+        android:title="Past Sales"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/sales_mode"
+        android:orderInCategory="101"
+        android:title="Sales Mode"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/donation"
+        android:orderInCategory="102"
+        android:title="Donation"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ScoutMain"
+        android:orderInCategory="102"
+        android:title="Scout Main"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/log"
+        android:orderInCategory="103"
+        android:title="Log Out"
+        app:showAsAction="never" />
 </menu>

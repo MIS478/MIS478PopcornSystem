@@ -1,9 +1,9 @@
 package com.mis478.popcornapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -21,6 +21,7 @@ import java.util.List;
 
 public class OrderFinalization extends ActionBarActivity {
     public static final String url_create_product = "http://207.179.202.218:1515/joe/sendold.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -83,10 +84,9 @@ public class OrderFinalization extends ActionBarActivity {
         //Fills in the number of Buffalo Cheddar Cheese
         int BuffChedMessage = Integer.parseInt(info.getString("BUFFCHEDAMT"));
         TextView BuffChed = (TextView) findViewById(R.id.FinalizationBuffChed);
-        if(BuffChedMessage == 0)
-        {
-        BuffChed.setVisibility(View.GONE);
-        } else if (BuffChedMessage == 1){
+        if (BuffChedMessage == 0) {
+            BuffChed.setVisibility(View.GONE);
+        } else if (BuffChedMessage == 1) {
             BuffChed.setText("Buffalo Cheddar Cheese");
         } else {
             BuffChed.setText("Buffalo Cheddar Cheese x" + BuffChedMessage);
@@ -95,10 +95,9 @@ public class OrderFinalization extends ActionBarActivity {
         //Fills in the number of Premium Caramel Corn
         int CarmCornMessage = Integer.parseInt(info.getString("CARMCORNAMT"));
         TextView CarmCorn = (TextView) findViewById(R.id.FinalizationCarmCorn);
-        if(CarmCornMessage == 0)
-        {
+        if (CarmCornMessage == 0) {
             CarmCorn.setVisibility(View.GONE);
-        } else if (CarmCornMessage == 1){
+        } else if (CarmCornMessage == 1) {
             CarmCorn.setText("Premium Caramel Corn");
         } else {
             CarmCorn.setText("Premium Caramel Corn x" + CarmCornMessage);
@@ -107,10 +106,9 @@ public class OrderFinalization extends ActionBarActivity {
         //Fills in the number of Cheese Lover's Collection
         int CheeseLoveMessage = Integer.parseInt(info.getString("CHEESELOVEAMT"));
         TextView CheeseLove = (TextView) findViewById(R.id.FinalizationCheeseLove);
-        if(CheeseLoveMessage == 0)
-        {
+        if (CheeseLoveMessage == 0) {
             CheeseLove.setVisibility(View.GONE);
-        } else if (CheeseLoveMessage == 1){
+        } else if (CheeseLoveMessage == 1) {
             CheeseLove.setText("Cheese Lover's Collection");
         } else {
             CheeseLove.setText("Cheese Lover's Collection x" + CheeseLoveMessage);
@@ -119,10 +117,9 @@ public class OrderFinalization extends ActionBarActivity {
         //Fills in the number of White Chocolatey Pretzels
         int WhitePretzelMessage = Integer.parseInt(info.getString("WHITEPRETZELAMT"));
         TextView WhitePretzel = (TextView) findViewById(R.id.FinalizationWhitePretzel);
-        if(WhitePretzelMessage == 0)
-        {
+        if (WhitePretzelMessage == 0) {
             WhitePretzel.setVisibility(View.GONE);
-        } else if (WhitePretzelMessage == 1){
+        } else if (WhitePretzelMessage == 1) {
             WhitePretzel.setText("White Chocolatey Pretzels");
         } else {
             WhitePretzel.setText("White Chocolatey Pretzels x" + WhitePretzelMessage);
@@ -131,10 +128,9 @@ public class OrderFinalization extends ActionBarActivity {
         //Fills in the number of Gold Level Military
         int GoldMilitaryMessage = Integer.parseInt(info.getString("GOLDMILITARYAMT"));
         TextView GoldMilitary = (TextView) findViewById(R.id.FinalizationGoldMilitary);
-        if(GoldMilitaryMessage == 0)
-        {
+        if (GoldMilitaryMessage == 0) {
             GoldMilitary.setVisibility(View.GONE);
-        } else if (GoldMilitaryMessage == 1){
+        } else if (GoldMilitaryMessage == 1) {
             GoldMilitary.setText("Gold Level Military");
         } else {
             GoldMilitary.setText("Gold Level Military x" + GoldMilitaryMessage);
@@ -143,10 +139,9 @@ public class OrderFinalization extends ActionBarActivity {
         //Fills in the number of Silver Level Military
         int SilverMilitaryMessage = Integer.parseInt(info.getString("SILVERMILITARYAMT"));
         TextView SilverMilitary = (TextView) findViewById(R.id.FinalizationSilverMilitary);
-        if(SilverMilitaryMessage == 0)
-        {
+        if (SilverMilitaryMessage == 0) {
             SilverMilitary.setVisibility(View.GONE);
-        } else if (SilverMilitaryMessage == 1){
+        } else if (SilverMilitaryMessage == 1) {
             SilverMilitary.setText("Silver Level Military");
         } else {
             SilverMilitary.setText("Silver Level Military x" + SilverMilitaryMessage);
@@ -155,8 +150,7 @@ public class OrderFinalization extends ActionBarActivity {
         //fills in the donation amount if any
         int donationmessage = Integer.parseInt(info.getString("DONATIONAMT"));
         TextView donation = (TextView) findViewById(R.id.FinalizationDonationAmt);
-        if (donationmessage == 0)
-        {
+        if (donationmessage == 0) {
             donation.setVisibility(View.GONE);
         } else {
             donation.setText("Donation of $" + donationmessage);
@@ -209,12 +203,12 @@ public class OrderFinalization extends ActionBarActivity {
         String i = BuffChed.getText().toString();//
         String j = CarmCorn.getText().toString();//
         String k = CheeseLove.getText().toString(); //error
-        k =  k.replace("'", "");
+        k = k.replace("'", "");
         String l = WhitePretzel.getText().toString();//
         String m = GoldMilitary.getText().toString(); // works
-        String n= SilverMilitary.getText().toString();//
+        String n = SilverMilitary.getText().toString();//
         String o = donation.getText().toString();//
-        String p= total.getText().toString();///
+        String p = total.getText().toString();///
 
 
 //
@@ -239,7 +233,6 @@ public class OrderFinalization extends ActionBarActivity {
         params.add(new BasicNameValuePair("silver", n));
         params.add(new BasicNameValuePair("donation", o));
         params.add(new BasicNameValuePair("total", p));
-
 
 
         // getting JSON Object

@@ -1,9 +1,9 @@
 package com.mis478.popcornapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +23,7 @@ import java.util.List;
 public class ScoutGoal extends ActionBarActivity {
     int PersonalGoalInt;
     public static final String url_create_product = "http://207.179.202.218:1515/joe/updategoal.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class ScoutGoal extends ActionBarActivity {
         StrictMode.setThreadPolicy(policy);
         setTitle("Your Goals");
         //Get info from the previous screen
-      //  Intent intent = getIntent();
+        //  Intent intent = getIntent();
         //db world
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -41,7 +42,7 @@ public class ScoutGoal extends ActionBarActivity {
             String[] SplitByComma = test.split(",");
             String[] personal = SplitByComma[9].split(":");
             String temp = personal[1];
-            temp = temp.substring(1,temp.length() -1);
+            temp = temp.substring(1, temp.length() - 1);
 
             String value = extras.getString("name");
 
@@ -56,14 +57,14 @@ public class ScoutGoal extends ActionBarActivity {
             TextView textView2 = (TextView) findViewById(R.id.TotalSoldAmt);
             String[] TotalSales = SplitByComma[8].split(":");
             String temp2 = TotalSales[1];
-            temp2 = temp2.substring(1,temp2.length() -1);
+            temp2 = temp2.substring(1, temp2.length() - 1);
             textView2.setText("$" + temp2);
 
             //pack goal
             TextView textView3 = (TextView) findViewById(R.id.PackAmt);
             String[] pack = SplitByComma[10].split(":");
             String temp3 = pack[1];
-            temp3 = temp3.substring(1,temp3.length() -1);
+            temp3 = temp3.substring(1, temp3.length() - 1);
             textView3.setText("$" + temp3);
 
             int hold = Integer.parseInt(temp2);
@@ -86,7 +87,7 @@ public class ScoutGoal extends ActionBarActivity {
 
             String[] pass = SplitByComma[7].split(":");
             String temp = pass[1];
-            temp = temp.substring(1,temp.length() -1);
+            temp = temp.substring(1, temp.length() - 1);
             JSONParser jsonParser = new JSONParser();
 
             List<NameValuePair> params = new ArrayList<NameValuePair>();

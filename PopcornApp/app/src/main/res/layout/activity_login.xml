@@ -15,27 +15,27 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/aaaa"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to the Cub Scout App"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/TextColor"
             android:gravity="center_horizontal"
             android:paddingBottom="30dp"
-            android:id="@+id/aaaa" />
+            android:text="Welcome to the Cub Scout App"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/TextColor" />
 
         <EditText
             android:id="@+id/LoginUsername"
             style="@style/EditTextCubScoutTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
+            android:gravity="center_horizontal"
             android:hint="Username"
             android:inputType="text"
             android:nextFocusRight="@+id/LoginPassword"
-            android:textColor="@color/TextColor"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="@color/TextColor" />
 
         <EditText
             android:id="@+id/LoginPassword"
@@ -43,14 +43,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/LoginUsername"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:gravity="center_horizontal"
             android:hint="Password"
             android:inputType="textPassword|text"
             android:nextFocusRight="@+id/LoginPassword"
-            android:textColor="@color/TextColor"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
             android:paddingTop="15dp"
-            android:ems="10"/>
+            android:textColor="@color/TextColor" />
 
         <Button
             android:id="@+id/LoginSubmitButton"
@@ -58,21 +58,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/LoginPassword"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="53dp"
             android:onClick="ConnectToDatabase"
             android:text="Submit"
-            android:textColor="@color/TextColor"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="@color/TextColor" />
 
         <TextView
+            android:id="@+id/textView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="30dp"
             android:text="Scout = joe/123 Den = John/111"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/TextColor"
-            android:gravity="center_horizontal"
-            android:paddingBottom="30dp"
-            android:id="@+id/textView23"
             android:textSize="16dp" />
 
     </LinearLayout>
