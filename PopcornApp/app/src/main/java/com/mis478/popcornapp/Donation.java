@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -83,6 +84,12 @@ public class Donation extends ActionBarActivity {
         startActivity(CustInfo);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_donation, menu);
+        return true;
+    }
 
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -91,15 +98,30 @@ public class Donation extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.ScoutMainMenu) {
+            Intent intent = new Intent(this, ScoutMainPage.class);
+            startActivity(intent);
         }
-        if (id == R.id.SalesModeBtn) {
+        if (id == R.id.SaleModeMenu) {
             Intent intent = new Intent(this, SellProducts.class);
             startActivity(intent);
         }
-        if (id == R.id.CustomerInfo) {
-            Intent intent = new Intent(this, CustomerInfo.class);
+        if (id == R.id.ScoutGoalMenu) {
+            Intent intent = new Intent(this, ScoutGoal.class);
+            startActivity(intent);
+        }
+        if (id == R.id.DeliveryModeMenu) {
+            Intent intent = new Intent(this, DeliveryMode.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.PastSalesMenu) {
+            Intent intent = new Intent(this, PastSales.class);
+            startActivity(intent);
+        }
+        if (id == R.id.LogoutMenu) {
+            Intent intent = new Intent(getApplicationContext(), Login.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

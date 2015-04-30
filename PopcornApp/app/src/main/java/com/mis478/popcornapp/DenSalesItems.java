@@ -1,8 +1,5 @@
 package com.mis478.popcornapp;
 
-/**
- * Created by Lloyd on 4/26/2015.
- */
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -82,7 +79,7 @@ public class DenSalesItems extends ActionBarActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_scout_status_page, menu);
+        getMenuInflater().inflate(R.menu.menu_den_sales_page, menu);
         return true;
     }
 
@@ -94,34 +91,27 @@ public class DenSalesItems extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        if (id == R.id.scoutGoal) {
-            Intent intent = new Intent(this, ScoutGoal.class);
+        if (id == R.id.DenLeaderMainMenu) {
+            Intent intent = new Intent(this, DenLeaderMain.class);
             startActivity(intent);
         }
-        if (id == R.id.deliveryMode) {
-            Intent intent = new Intent(this, DeliveryMode.class);
+        if (id == R.id.AddScoutMenu) {
+            Intent intent = new Intent(this, AddScout.class);
             startActivity(intent);
         }
-        if (id == R.id.pastSales) {
+        if (id == R.id.DenSalesTrackingMenu) {
             Intent intent = new Intent(this, PastSales.class);
             startActivity(intent);
         }
-        if (id == R.id.sales_mode) {
-            Intent intent = new Intent(this, SellProducts.class);
+        if (id == R.id.ViewProductsMenu) {
+            Intent intent = new Intent(this, DenSalesItems.class);
             startActivity(intent);
         }
-        if (id == R.id.donation) {
-            Intent intent = new Intent(this, Donation.class);
+        if (id == R.id.ViewScoutsMenu) {
+            Intent intent = new Intent(this, ViewScouts.class);
             startActivity(intent);
         }
-        if (id == R.id.ScoutMain) {
-            Intent intent = new Intent(this, ScoutMainPage.class);
-            startActivity(intent);
-        }
-        if (id == R.id.log) {
+        if (id == R.id.LogoutMenu) {
             Intent intent = new Intent(getApplicationContext(), Login.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

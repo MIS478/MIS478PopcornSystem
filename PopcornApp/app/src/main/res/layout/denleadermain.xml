@@ -103,14 +103,14 @@
                 android:layout_weight=".1" />
 
             <Button
-                android:id="@+id/DenMainSalesTrackingButton"
+                android:id="@+id/AddScoutButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".35"
                 android:clickable="true"
-                android:onClick="toSalesTracking"
-                android:text="Den Sales Tracking" />
+                android:onClick="toAddScouts"
+                android:text="Add Scouts" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -145,14 +145,14 @@
                 android:layout_weight=".1" />
 
             <Button
-                android:id="@+id/AdminFuncAddScoutsButton"
+                android:id="@+id/DenMainSalesTrackingButton"
                 style="@style/ButtonCubScoutTheme"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".35"
                 android:clickable="true"
-                android:onClick="toAddScouts"
-                android:text="Add Scouts" />
+                android:onClick="toSalesTracking"
+                android:text="Den Sales Tracking" />
 
             <Space
                 android:layout_width="wrap_content"

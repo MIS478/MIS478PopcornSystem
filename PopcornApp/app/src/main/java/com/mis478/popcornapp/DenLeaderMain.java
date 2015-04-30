@@ -45,7 +45,7 @@ public class DenLeaderMain extends ActionBarActivity {
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_scout_status_page, menu);
+        getMenuInflater().inflate(R.menu.menu_denleadermain, menu);
         return true;
     }
 
@@ -57,14 +57,27 @@ public class DenLeaderMain extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.DenLeaderMainMenu) {
+            Intent intent = new Intent(this, DenLeaderMain.class);
+            startActivity(intent);
         }
-        if (id == R.id.densalestracking) {
+        if (id == R.id.AddScoutMenu) {
+            Intent intent = new Intent(this, AddScout.class);
+            startActivity(intent);
+        }
+        if (id == R.id.DenSalesTrackingMenu) {
             Intent intent = new Intent(this, PastSales.class);
             startActivity(intent);
         }
-        if (id == R.id.log) {
+        if (id == R.id.ViewProductsMenu) {
+            Intent intent = new Intent(this, DenSalesItems.class);
+            startActivity(intent);
+        }
+        if (id == R.id.ViewScoutsMenu) {
+            Intent intent = new Intent(this, ViewScouts.class);
+            startActivity(intent);
+        }
+        if (id == R.id.LogoutMenu) {
             Intent intent = new Intent(getApplicationContext(), Login.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

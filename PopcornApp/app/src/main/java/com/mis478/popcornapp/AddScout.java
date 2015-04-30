@@ -19,6 +19,7 @@ import java.util.List;
 
 public class AddScout extends ActionBarActivity {
     public static final String url_create_product = "http://207.179.202.218:1515/joe/addscout.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,17 +27,11 @@ public class AddScout extends ActionBarActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_add_scout, menu);
-        return true;
-
-    }
     public void back(View view) {
         Intent intent = new Intent(this, DenLeaderMain.class);
         startActivity(intent);
     }
+
     public void AddScout(View view) {
         TextView sn = (TextView) findViewById(R.id.Scout_number);
         TextView un = (TextView) findViewById(R.id.user_name);
@@ -77,15 +72,22 @@ public class AddScout extends ActionBarActivity {
         params.add(new BasicNameValuePair("k", k));
 
 
-
         // wont allow duplicates
         // getting JSON Object
         // Note that create product url accepts POST method
         JSONObject json = jsonParser.makeHttpRequest(url_create_product,
                 "POST", params);
         Log.d("Create Response", json.toString());
-       Intent intent = new Intent(this, DenLeaderMain.class);
-       startActivity(intent);
+        Intent intent = new Intent(this, DenLeaderMain.class);
+        startActivity(intent);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_add_scout, menu);
+        return true;
 
     }
 
@@ -97,35 +99,27 @@ public class AddScout extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        if (id == R.id.scoutGoal) {
-            Intent intent = new Intent(this, ScoutGoal.class);
+        if (id == R.id.DenLeaderMainMenu) {
+            Intent intent = new Intent(this, DenLeaderMain.class);
             startActivity(intent);
         }
-        if (id == R.id.deliveryMode) {
-            Intent intent = new Intent(this, DeliveryMode.class);
+        if (id == R.id.AddScoutMenu) {
+            Intent intent = new Intent(this, AddScout.class);
             startActivity(intent);
         }
-        if (id == R.id.pastSales) {
+        if (id == R.id.DenSalesTrackingMenu) {
             Intent intent = new Intent(this, PastSales.class);
             startActivity(intent);
         }
-
-        if (id == R.id.sales_mode) {
-            Intent intent = new Intent(this, SellProducts.class);
+        if (id == R.id.ViewProductsMenu) {
+            Intent intent = new Intent(this, DenSalesItems.class);
             startActivity(intent);
         }
-        if (id == R.id.donation) {
-            Intent intent = new Intent(this, Donation.class);
+        if (id == R.id.ViewScoutsMenu) {
+            Intent intent = new Intent(this, ViewScouts.class);
             startActivity(intent);
         }
-        if (id == R.id.ScoutMain) {
-            Intent intent = new Intent(this, ScoutMainPage.class);
-            startActivity(intent);
-        }
-        if (id == R.id.log) {
+        if (id == R.id.LogoutMenu) {
             Intent intent = new Intent(getApplicationContext(), Login.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

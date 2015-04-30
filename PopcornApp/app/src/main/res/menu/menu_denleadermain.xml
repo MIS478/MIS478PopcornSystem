@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context="com.mis478.popcornapp.AddScout">
-    <item android:id="@+id/DenLeaderMainMenu" android:title="Main Menu"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.mis478.popcornapp.DenLeaderMain">
+    <item android:id="@+id/AddScoutMenu" android:title="Add Scout"
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/DenSalesTrackingMenu" android:title="Den Sales Tracking"
         android:orderInCategory="100" app:showAsAction="never" />

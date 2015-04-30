@@ -151,21 +151,4 @@ public class Login extends ActionBarActivity {
 
         }
     }
-//    public void clrUN(View view) {
-//        EditText username = (EditText) findViewById(R.id.editText);
-//        //so it doesn't reset if they hit it again
-//        if (x == 1) {
-//            username.setText("");
-//            x++;
-//        }
-//
-//    }
-//    public void clrPASS(View view) {
-//        EditText pass = (EditText) findViewById(R.id.editText2);
-//        //so it doesn't reset if they hit it again
-//        if (y == 1) {
-//            pass.setText("");
-//            y++;
-//        }
-//    }
 }
