@@ -134,7 +134,7 @@
                 android:cropToPadding="false"
                 android:onClick="BuffChedDesc"
                 android:scaleType="fitCenter"
-                android:src="@drawable/buffalochedcheese" />
+                android:src="@drawable/military" />
 
             <Space
                 android:layout_width="0dp"
@@ -186,7 +186,7 @@
                 android:layout_weight=".15"
                 android:onClick="CarmCornDesc"
                 android:scaleType="fitCenter"
-                android:src="@drawable/caramelcorn" />
+                android:src="@drawable/military" />
 
             <Space
                 android:layout_width="0dp"
@@ -330,7 +330,7 @@
                 android:cropToPadding="false"
                 android:onClick="CheeseLoveDesc"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cheeselovers" />
+                android:src="@drawable/military" />
 
             <Space
                 android:layout_width="0dp"
@@ -382,7 +382,7 @@
                 android:layout_weight=".15"
                 android:onClick="WhitePretzelDesc"
                 android:scaleType="fitCenter"
-                android:src="@drawable/whitechocpretzel" />
+                android:src="@drawable/military" />
 
             <Space
                 android:layout_width="0dp"
